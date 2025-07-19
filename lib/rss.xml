@@ -1,4 +1,697 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 19 Jul 2025 16:09:13 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 19 Jul 2025 16:08:50 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 19 Jul 2025 16:15:20 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 19 Jul 2025 16:15:15 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[_img]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="_img/0.jpg" href="_img\0.jpg" target="_self" rel="noopener nofollow">0</a>
+<br><a class="internal-link" data-href="_img/001f898833334581524e5e9c6d4eb367_MD5.jpeg" href="_img\001f898833334581524e5e9c6d4eb367_md5.jpeg" target="_self" rel="noopener nofollow">001f898833334581524e5e9c6d4eb367_MD5</a>
+<br><a class="internal-link" data-href="_img/05d54827de3fe84413d24db5ee849500_MD5.jpeg" href="_img\05d54827de3fe84413d24db5ee849500_md5.jpeg" target="_self" rel="noopener nofollow">05d54827de3fe84413d24db5ee849500_MD5</a>
+<br><a class="internal-link" data-href="_img/0870904eb9600563274755ef5663028e_MD5.jpeg" href="_img\0870904eb9600563274755ef5663028e_md5.jpeg" target="_self" rel="noopener nofollow">0870904eb9600563274755ef5663028e_MD5</a>
+<br><a class="internal-link" data-href="_img/089315f96bab72ea8f76484a5a559bf4_MD5.jpeg" href="_img\089315f96bab72ea8f76484a5a559bf4_md5.jpeg" target="_self" rel="noopener nofollow">089315f96bab72ea8f76484a5a559bf4_MD5</a>
+<br><a class="internal-link" data-href="_img/0ade1c45dc2d8574b86633ff817b7afb_MD5.jpeg" href="_img\0ade1c45dc2d8574b86633ff817b7afb_md5.jpeg" target="_self" rel="noopener nofollow">0ade1c45dc2d8574b86633ff817b7afb_MD5</a>
+<br><a class="internal-link" data-href="_img/0c4214dc22b9e615a1ad482572cf7320.jpg" href="_img\0c4214dc22b9e615a1ad482572cf7320.jpg" target="_self" rel="noopener nofollow">0c4214dc22b9e615a1ad482572cf7320</a>
+<br><a class="internal-link" data-href="_img/0d379887bdb349ceb87f9735e07be435.jpg" href="_img\0d379887bdb349ceb87f9735e07be435.jpg" target="_self" rel="noopener nofollow">0d379887bdb349ceb87f9735e07be435</a>
+<br><a class="internal-link" data-href="_img/16a918015c41965da767ec2dc21f0e07_MD5.jpeg" href="_img\16a918015c41965da767ec2dc21f0e07_md5.jpeg" target="_self" rel="noopener nofollow">16a918015c41965da767ec2dc21f0e07_MD5</a>
+<br><a class="internal-link" data-href="_img/1736b098f6582af3bff668c543550664_MD5.jpeg" href="_img\1736b098f6582af3bff668c543550664_md5.jpeg" target="_self" rel="noopener nofollow">1736b098f6582af3bff668c543550664_MD5</a>
+<br><a class="internal-link" data-href="_img/1740cacecf6771d71ec96dd47ab72edb_MD5.jpeg" href="_img\1740cacecf6771d71ec96dd47ab72edb_md5.jpeg" target="_self" rel="noopener nofollow">1740cacecf6771d71ec96dd47ab72edb_MD5</a>
+<br><a class="internal-link" data-href="_img/18849bfdbb71a14e5964d3a6a373dfdd_MD5.jpeg" href="_img\18849bfdbb71a14e5964d3a6a373dfdd_md5.jpeg" target="_self" rel="noopener nofollow">18849bfdbb71a14e5964d3a6a373dfdd_MD5</a>
+<br><a class="internal-link" data-href="_img/19faffa95abae52134993a9c34f3b593.jpg" href="_img\19faffa95abae52134993a9c34f3b593.jpg" target="_self" rel="noopener nofollow">19faffa95abae52134993a9c34f3b593</a>
+<br><a class="internal-link" data-href="_img/1x1卷积核的作用.png" href="_img\1x1卷积核的作用.png" target="_self" rel="noopener nofollow">1x1卷积核的作用</a>
+<br><a class="internal-link" data-href="_img/2086a1af54bfe576d764ea3963364f0a_MD5.jpeg" href="_img\2086a1af54bfe576d764ea3963364f0a_md5.jpeg" target="_self" rel="noopener nofollow">2086a1af54bfe576d764ea3963364f0a_MD5</a>
+<br><a class="internal-link" data-href="_img/218486ffec135c212278628e0cfced64_MD5.jpeg" href="_img\218486ffec135c212278628e0cfced64_md5.jpeg" target="_self" rel="noopener nofollow">218486ffec135c212278628e0cfced64_MD5</a>
+<br><a class="internal-link" data-href="_img/24bf44ad47029e819f248baf5707558d_MD5.jpeg" href="_img\24bf44ad47029e819f248baf5707558d_md5.jpeg" target="_self" rel="noopener nofollow">24bf44ad47029e819f248baf5707558d_MD5</a>
+<br><a class="internal-link" data-href="_img/2698efac4c0bde7b9e5a86245a19f69b_MD5.jpeg" href="_img\2698efac4c0bde7b9e5a86245a19f69b_md5.jpeg" target="_self" rel="noopener nofollow">2698efac4c0bde7b9e5a86245a19f69b_MD5</a>
+<br><a class="internal-link" data-href="_img/2bc55dc17cbe7f1ccaec1b352ef0f4ed_MD5.mp4" href="_img\2bc55dc17cbe7f1ccaec1b352ef0f4ed_md5.mp4" target="_self" rel="noopener nofollow">2bc55dc17cbe7f1ccaec1b352ef0f4ed_MD5</a>
+<br><a class="internal-link" data-href="_img/2d35d0c404fabea0154d773dc84302b2.gif" href="_img\2d35d0c404fabea0154d773dc84302b2.gif" target="_self" rel="noopener nofollow">2d35d0c404fabea0154d773dc84302b2</a>
+<br><a class="internal-link" data-href="_img/2e66f970a909f5a84f89bace56e4a776_MD5.jpeg" href="_img\2e66f970a909f5a84f89bace56e4a776_md5.jpeg" target="_self" rel="noopener nofollow">2e66f970a909f5a84f89bace56e4a776_MD5</a>
+<br><a class="internal-link" data-href="_img/2f30dbc5588e83ccbafd04578b4b6a6d_MD5.jpeg" href="_img\2f30dbc5588e83ccbafd04578b4b6a6d_md5.jpeg" target="_self" rel="noopener nofollow">2f30dbc5588e83ccbafd04578b4b6a6d_MD5</a>
+<br><a class="internal-link" data-href="_img/33c0706acae7261b40ddf14274a8b13c_MD5.jpeg" href="_img\33c0706acae7261b40ddf14274a8b13c_md5.jpeg" target="_self" rel="noopener nofollow">33c0706acae7261b40ddf14274a8b13c_MD5</a>
+<br><a class="internal-link" data-href="_img/34aa2ab8f1766cb0c4d7a7f183a08379_MD5.jpeg" href="_img\34aa2ab8f1766cb0c4d7a7f183a08379_md5.jpeg" target="_self" rel="noopener nofollow">34aa2ab8f1766cb0c4d7a7f183a08379_MD5</a>
+<br><a class="internal-link" data-href="_img/38c7d3c19e37a832ec961d20cc579ec3_MD5.jpeg" href="_img\38c7d3c19e37a832ec961d20cc579ec3_md5.jpeg" target="_self" rel="noopener nofollow">38c7d3c19e37a832ec961d20cc579ec3_MD5</a>
+<br><a class="internal-link" data-href="_img/3dd5116ea1680349948bdcc6ee1128a7_MD5.jpeg" href="_img\3dd5116ea1680349948bdcc6ee1128a7_md5.jpeg" target="_self" rel="noopener nofollow">3dd5116ea1680349948bdcc6ee1128a7_MD5</a>
+<br><a class="internal-link" data-href="_img/479d649c65c9742fc781009f94c2907d.jpg" href="_img\479d649c65c9742fc781009f94c2907d.jpg" target="_self" rel="noopener nofollow">479d649c65c9742fc781009f94c2907d</a>
+<br><a class="internal-link" data-href="_img/4d441ed7819c569d47dc7d9336eae810_MD5.jpeg" href="_img\4d441ed7819c569d47dc7d9336eae810_md5.jpeg" target="_self" rel="noopener nofollow">4d441ed7819c569d47dc7d9336eae810_MD5</a>
+<br><a class="internal-link" data-href="_img/4ea2f3b5cd76b77d747256c2d2683f20_MD5.jpeg" href="_img\4ea2f3b5cd76b77d747256c2d2683f20_md5.jpeg" target="_self" rel="noopener nofollow">4ea2f3b5cd76b77d747256c2d2683f20_MD5</a>
+<br><a class="internal-link" data-href="_img/4f7d88f2fe6f1951ddd0ced6c2abd29c_MD5.jpeg" href="_img\4f7d88f2fe6f1951ddd0ced6c2abd29c_md5.jpeg" target="_self" rel="noopener nofollow">4f7d88f2fe6f1951ddd0ced6c2abd29c_MD5</a>
+<br><a class="internal-link" data-href="_img/51a5aec5f4e78beb6ed7594a02bdf9b0_MD5.jpeg" href="_img\51a5aec5f4e78beb6ed7594a02bdf9b0_md5.jpeg" target="_self" rel="noopener nofollow">51a5aec5f4e78beb6ed7594a02bdf9b0_MD5</a>
+<br><a class="internal-link" data-href="_img/54cfe61a3186db559903d54682e30815_MD5.jpeg" href="_img\54cfe61a3186db559903d54682e30815_md5.jpeg" target="_self" rel="noopener nofollow">54cfe61a3186db559903d54682e30815_MD5</a>
+<br><a class="internal-link" data-href="_img/56ef155cf67a5cb073541e01abd3b111_MD5.jpeg" href="_img\56ef155cf67a5cb073541e01abd3b111_md5.jpeg" target="_self" rel="noopener nofollow">56ef155cf67a5cb073541e01abd3b111_MD5</a>
+<br><a class="internal-link" data-href="_img/58f139db3a9cc555bf035c6781ef7fb6_MD5.jpeg" href="_img\58f139db3a9cc555bf035c6781ef7fb6_md5.jpeg" target="_self" rel="noopener nofollow">58f139db3a9cc555bf035c6781ef7fb6_MD5</a>
+<br><a class="internal-link" data-href="_img/5b6a20a63099ddf2b25762f2b60c3cdc_MD5.jpeg" href="_img\5b6a20a63099ddf2b25762f2b60c3cdc_md5.jpeg" target="_self" rel="noopener nofollow">5b6a20a63099ddf2b25762f2b60c3cdc_MD5</a>
+<br><a class="internal-link" data-href="_img/5e85c13690e100a3e55bc3e5cb4b5d1d_MD5.jpeg" href="_img\5e85c13690e100a3e55bc3e5cb4b5d1d_md5.jpeg" target="_self" rel="noopener nofollow">5e85c13690e100a3e55bc3e5cb4b5d1d_MD5</a>
+<br><a class="internal-link" data-href="_img/66dc908e5ba089c4803d745cfbfea4bb_MD5.jpeg" href="_img\66dc908e5ba089c4803d745cfbfea4bb_md5.jpeg" target="_self" rel="noopener nofollow">66dc908e5ba089c4803d745cfbfea4bb_MD5</a>
+<br><a class="internal-link" data-href="_img/68eda009c8a30f29257882cec5f96ea0_MD5.jpeg" href="_img\68eda009c8a30f29257882cec5f96ea0_md5.jpeg" target="_self" rel="noopener nofollow">68eda009c8a30f29257882cec5f96ea0_MD5</a>
+<br><a class="internal-link" data-href="_img/6a9bea11f7da08d3a9289567779566c8_MD5.jpeg" href="_img\6a9bea11f7da08d3a9289567779566c8_md5.jpeg" target="_self" rel="noopener nofollow">6a9bea11f7da08d3a9289567779566c8_MD5</a>
+<br><a class="internal-link" data-href="_img/6bc09e64d3ab1c8ffe51151c8c40cc29.jpg" href="_img\6bc09e64d3ab1c8ffe51151c8c40cc29.jpg" target="_self" rel="noopener nofollow">6bc09e64d3ab1c8ffe51151c8c40cc29</a>
+<br><a class="internal-link" data-href="_img/6fbc4dcadf3b5e5dc16a623fb4e51966.jpg" href="_img\6fbc4dcadf3b5e5dc16a623fb4e51966.jpg" target="_self" rel="noopener nofollow">6fbc4dcadf3b5e5dc16a623fb4e51966</a>
+<br><a class="internal-link" data-href="_img/7078abb33eb548f9bdfd082447533f75_MD5.jpeg" href="_img\7078abb33eb548f9bdfd082447533f75_md5.jpeg" target="_self" rel="noopener nofollow">7078abb33eb548f9bdfd082447533f75_MD5</a>
+<br><a class="internal-link" data-href="_img/72318cc8ec7e008477dd4a8de6bbc01a_MD5.jpeg" href="_img\72318cc8ec7e008477dd4a8de6bbc01a_md5.jpeg" target="_self" rel="noopener nofollow">72318cc8ec7e008477dd4a8de6bbc01a_MD5</a>
+<br><a class="internal-link" data-href="_img/75a99cccda1f7045cb15c1f00b8ca7e8_MD5.jpeg" href="_img\75a99cccda1f7045cb15c1f00b8ca7e8_md5.jpeg" target="_self" rel="noopener nofollow">75a99cccda1f7045cb15c1f00b8ca7e8_MD5</a>
+<br><a class="internal-link" data-href="_img/777509131324b4943c07a506600ad74b_MD5.jpeg" href="_img\777509131324b4943c07a506600ad74b_md5.jpeg" target="_self" rel="noopener nofollow">777509131324b4943c07a506600ad74b_MD5</a>
+<br><a class="internal-link" data-href="_img/7ab8b633fc08f7554e71a4b7bbde9614_MD5.jpeg" href="_img\7ab8b633fc08f7554e71a4b7bbde9614_md5.jpeg" target="_self" rel="noopener nofollow">7ab8b633fc08f7554e71a4b7bbde9614_MD5</a>
+<br><a class="internal-link" data-href="_img/7fe65e38a29ad180faa15baf6f557fac_MD5.jpeg" href="_img\7fe65e38a29ad180faa15baf6f557fac_md5.jpeg" target="_self" rel="noopener nofollow">7fe65e38a29ad180faa15baf6f557fac_MD5</a>
+<br><a class="internal-link" data-href="_img/81a943d3d4079b9762df632741385154_MD5.jpeg" href="_img\81a943d3d4079b9762df632741385154_md5.jpeg" target="_self" rel="noopener nofollow">81a943d3d4079b9762df632741385154_MD5</a>
+<br><a class="internal-link" data-href="_img/85767f6295cd8d878744592a8eae858d_MD5.jpeg" href="_img\85767f6295cd8d878744592a8eae858d_md5.jpeg" target="_self" rel="noopener nofollow">85767f6295cd8d878744592a8eae858d_MD5</a>
+<br><a class="internal-link" data-href="_img/89d6a45ad2f880f68bd64e61ccdaf057.png" href="_img\89d6a45ad2f880f68bd64e61ccdaf057.png" target="_self" rel="noopener nofollow">89d6a45ad2f880f68bd64e61ccdaf057</a>
+<br><a class="internal-link" data-href="_img/8c8af77629db4ad742cfcd33e77b78ce_MD5.jpeg" href="_img\8c8af77629db4ad742cfcd33e77b78ce_md5.jpeg" target="_self" rel="noopener nofollow">8c8af77629db4ad742cfcd33e77b78ce_MD5</a>
+<br><a class="internal-link" data-href="_img/8ef5ef02a978513d2e9cb8df931b4264_MD5.jpeg" href="_img\8ef5ef02a978513d2e9cb8df931b4264_md5.jpeg" target="_self" rel="noopener nofollow">8ef5ef02a978513d2e9cb8df931b4264_MD5</a>
+<br><a class="internal-link" data-href="_img/8fb3445a89d12c8f83b395c325612e34_MD5.jpeg" href="_img\8fb3445a89d12c8f83b395c325612e34_md5.jpeg" target="_self" rel="noopener nofollow">8fb3445a89d12c8f83b395c325612e34_MD5</a>
+<br><a class="internal-link" data-href="_img/9d8ef2230ba53a0d17e955d29c906ecb.jpg" href="_img\9d8ef2230ba53a0d17e955d29c906ecb.jpg" target="_self" rel="noopener nofollow">9d8ef2230ba53a0d17e955d29c906ecb</a>
+<br><a class="internal-link" data-href="_img/传送门.gif" href="_img\传送门.gif" target="_self" rel="noopener nofollow">传送门</a>
+<br><a class="internal-link" data-href="_img/从GAN到WGAN(-GP)的改进.png" href="_img\从gan到wgan(-gp)的改进.png" target="_self" rel="noopener nofollow">从GAN到WGAN(-GP)的改进</a>
+<br><a class="internal-link" data-href="_img/单层感知器代码.png" href="_img\单层感知器代码.png" target="_self" rel="noopener nofollow">单层感知器代码</a>
+<br><a class="internal-link" data-href="_img/单层感知器求导.png" href="_img\单层感知器求导.png" target="_self" rel="noopener nofollow">单层感知器求导</a>
+<br><a class="internal-link" data-href="_img/单个卷积层的结构和维度关系.png" href="_img\单个卷积层的结构和维度关系.png" target="_self" rel="noopener nofollow">单个卷积层的结构和维度关系</a>
+<br><a class="internal-link" data-href="_img/地平线西之绝境——植被交互.mp4" href="_img\地平线西之绝境——植被交互.mp4" target="_self" rel="noopener nofollow">地平线西之绝境——植被交互</a>
+<br><a class="internal-link" data-href="_img/多层感知器代码.png" href="_img\多层感知器代码.png" target="_self" rel="noopener nofollow">多层感知器代码</a>
+<br><a class="internal-link" data-href="_img/多层感知器求导.png" href="_img\多层感知器求导.png" target="_self" rel="noopener nofollow">多层感知器求导</a>
+<br><a class="internal-link" data-href="_img/多层梯度反向传播.png" href="_img\多层梯度反向传播.png" target="_self" rel="noopener nofollow">多层梯度反向传播</a>
+<br><a class="internal-link" data-href="_img/反向传播中δ的意义.png" href="_img\反向传播中δ的意义.png" target="_self" rel="noopener nofollow">反向传播中δ的意义</a>
+<br><a class="internal-link" data-href="_img/各种网络的性能比较.png" href="_img\各种网络的性能比较.png" target="_self" rel="noopener nofollow">各种网络的性能比较</a>
+<br><a class="internal-link" data-href="_img/各种divergence对应于GAN的形式.png" href="_img\各种divergence对应于gan的形式.png" target="_self" rel="noopener nofollow">各种divergence对应于GAN的形式</a>
+<br><a class="internal-link" data-href="_img/集线器.gif" href="_img\集线器.gif" target="_self" rel="noopener nofollow">集线器</a>
+<br><a class="internal-link" data-href="_img/加上对code进行判别的VAEGAN.png" href="_img\加上对code进行判别的vaegan.png" target="_self" rel="noopener nofollow">加上对code进行判别的VAEGAN</a>
+<br><a class="internal-link" data-href="_img/节点.png" href="_img\节点.png" target="_self" rel="noopener nofollow">节点</a>
+<br><a class="internal-link" data-href="_img/节点一览.png" href="_img\节点一览.png" target="_self" rel="noopener nofollow">节点一览</a>
+<br><a class="internal-link" data-href="_img/快捷控制台.gif" href="_img\快捷控制台.gif" target="_self" rel="noopener nofollow">快捷控制台</a>
+<br><a class="internal-link" data-href="_img/连接交换器.gif" href="_img\连接交换器.gif" target="_self" rel="noopener nofollow">连接交换器</a>
+<br><a class="internal-link" data-href="_img/两种CGAN的模型.png" href="_img\两种cgan的模型.png" target="_self" rel="noopener nofollow">两种CGAN的模型</a>
+<br><a class="internal-link" data-href="_img/模型类的另一种实现sequential.png" href="_img\模型类的另一种实现sequential.png" target="_self" rel="noopener nofollow">模型类的另一种实现sequential</a>
+<br><a class="internal-link" data-href="_img/判别模型作为生成器.png" href="_img\判别模型作为生成器.png" target="_self" rel="noopener nofollow">判别模型作为生成器</a>
+<br><a class="internal-link" data-href="_img/切换到GPU上.png" href="_img\切换到gpu上.png" target="_self" rel="noopener nofollow">切换到GPU上</a>
+<br><a class="internal-link" data-href="_img/申请模板.txt" href="_img\申请模板.txt" target="_self" rel="noopener nofollow">申请模板</a>
+<br><a class="internal-link" data-href="_img/四元数乘法公式.png" href="_img\四元数乘法公式.png" target="_self" rel="noopener nofollow">四元数乘法公式</a>
+<br><a class="internal-link" data-href="_img/四元数旋转的理解.png" href="_img\四元数旋转的理解.png" target="_self" rel="noopener nofollow">四元数旋转的理解</a>
+<br><a class="internal-link" data-href="_img/四元数运算法则.png" href="_img\四元数运算法则.png" target="_self" rel="noopener nofollow">四元数运算法则</a>
+<br><a class="internal-link" data-href="_img/坍塌效果.png" href="_img\坍塌效果.png" target="_self" rel="noopener nofollow">坍塌效果</a>
+<br><a class="internal-link" data-href="_img/提取图片特征codes的三种方法.png" href="_img\提取图片特征codes的三种方法.png" target="_self" rel="noopener nofollow">提取图片特征codes的三种方法</a>
+<br><a class="internal-link" data-href="_img/听说WGAN-GP配合Adam优化器有奇效.png" href="_img\听说wgan-gp配合adam优化器有奇效.png" target="_self" rel="noopener nofollow">听说WGAN-GP配合Adam优化器有奇效</a>
+<br><a class="internal-link" data-href="_img/通过transform生成更多训练样本.png" href="_img\通过transform生成更多训练样本.png" target="_self" rel="noopener nofollow">通过transform生成更多训练样本</a>
+<br><a class="internal-link" data-href="_img/统计得到的rgb均值和方差，进行image normalization‘.png" href="_img\统计得到的rgb均值和方差，进行image-normalization‘.png" target="_self" rel="noopener nofollow">统计得到的rgb均值和方差，进行image normalization‘</a>
+<br><a class="internal-link" data-href="_img/效果一览.png" href="_img\效果一览.png" target="_self" rel="noopener nofollow">效果一览</a>
+<br><a class="internal-link" data-href="_img/训练数据的保存和加载.png" href="_img\训练数据的保存和加载.png" target="_self" rel="noopener nofollow">训练数据的保存和加载</a>
+<br><a class="internal-link" data-href="_img/一张图理解字体渲染中的大小及其转换 - 哔哩哔哩.jpg" href="_img\一张图理解字体渲染中的大小及其转换-哔哩哔哩.jpg" target="_self" rel="noopener nofollow">一张图理解字体渲染中的大小及其转换 - 哔哩哔哩</a>
+<br><a class="internal-link" data-href="_img/游戏中的空间转换.png" href="_img\游戏中的空间转换.png" target="_self" rel="noopener nofollow">游戏中的空间转换</a>
+<br><a class="internal-link" data-href="_img/自编码网络Decoder可视为一个Gennerator.png" href="_img\自编码网络decoder可视为一个gennerator.png" target="_self" rel="noopener nofollow">自编码网络Decoder可视为一个Gennerator</a>
+<br><a class="internal-link" data-href="_img/自定义linear层.png" href="_img\自定义linear层.png" target="_self" rel="noopener nofollow">自定义linear层</a>
+<br><a class="internal-link" data-href="_img/自动排列0.gif" href="_img\自动排列0.gif" target="_self" rel="noopener nofollow">自动排列0</a>
+<br><a class="internal-link" data-href="_img/自动排列1.gif" href="_img\自动排列1.gif" target="_self" rel="noopener nofollow">自动排列1</a>
+<br><a class="internal-link" data-href="_img/a33a491ff5bf92837f5206bbdd1bbd86_MD5.jpeg" href="_img\a33a491ff5bf92837f5206bbdd1bbd86_md5.jpeg" target="_self" rel="noopener nofollow">a33a491ff5bf92837f5206bbdd1bbd86_MD5</a>
+<br><a class="internal-link" data-href="_img/a4c96f7e904746c1bcb8bb8a43c5995e_MD5.jpeg" href="_img\a4c96f7e904746c1bcb8bb8a43c5995e_md5.jpeg" target="_self" rel="noopener nofollow">a4c96f7e904746c1bcb8bb8a43c5995e_MD5</a>
+<br><a class="internal-link" data-href="_img/a6424505ee1bc0a86f486bca594467ce_MD5.jpeg" href="_img\a6424505ee1bc0a86f486bca594467ce_md5.jpeg" target="_self" rel="noopener nofollow">a6424505ee1bc0a86f486bca594467ce_MD5</a>
+<br><a class="internal-link" data-href="_img/a649a892d7bc3250527b8e49814bcc6e_MD5.jpeg" href="_img\a649a892d7bc3250527b8e49814bcc6e_md5.jpeg" target="_self" rel="noopener nofollow">a649a892d7bc3250527b8e49814bcc6e_MD5</a>
+<br><a class="internal-link" data-href="_img/a776fcd61376d00bb0e462d09f26c7a8_MD5.jpeg" href="_img\a776fcd61376d00bb0e462d09f26c7a8_md5.jpeg" target="_self" rel="noopener nofollow">a776fcd61376d00bb0e462d09f26c7a8_MD5</a>
+<br><a class="internal-link" data-href="_img/ACES流程.png" href="_img\aces流程.png" target="_self" rel="noopener nofollow">ACES流程</a>
+<br><a class="internal-link" data-href="_img/ACES流程2013.png" href="_img\aces流程2013.png" target="_self" rel="noopener nofollow">ACES流程2013</a>
+<br><a class="internal-link" data-href="_img/ACES流程实例.png" href="_img\aces流程实例.png" target="_self" rel="noopener nofollow">ACES流程实例</a>
+<br><a class="internal-link" data-href="_img/b1edd4a0c76582437bcc0110f289620f_MD5.jpeg" href="_img\b1edd4a0c76582437bcc0110f289620f_md5.jpeg" target="_self" rel="noopener nofollow">b1edd4a0c76582437bcc0110f289620f_MD5</a>
+<br><a class="internal-link" data-href="_img/b261403d16f5bdab059c549b0fc70956_MD5.jpeg" href="_img\b261403d16f5bdab059c549b0fc70956_md5.jpeg" target="_self" rel="noopener nofollow">b261403d16f5bdab059c549b0fc70956_MD5</a>
+<br><a class="internal-link" data-href="_img/b3f8d0f55f1a13e7a6e8edc5a4b981d8.jpg" href="_img\b3f8d0f55f1a13e7a6e8edc5a4b981d8.jpg" target="_self" rel="noopener nofollow">b3f8d0f55f1a13e7a6e8edc5a4b981d8</a>
+<br><a class="internal-link" data-href="_img/b524a8efcf9a5340602a3d52bb530ea8_MD5.jpeg" href="_img\b524a8efcf9a5340602a3d52bb530ea8_md5.jpeg" target="_self" rel="noopener nofollow">b524a8efcf9a5340602a3d52bb530ea8_MD5</a>
+<br><a class="internal-link" data-href="_img/b73c5e18f421086bacf870f7a0522827_MD5.jpeg" href="_img\b73c5e18f421086bacf870f7a0522827_md5.jpeg" target="_self" rel="noopener nofollow">b73c5e18f421086bacf870f7a0522827_MD5</a>
+<br><a class="internal-link" data-href="_img/bandicam 2024-11-30 11-35-23-523 1.mp4" href="_img\bandicam-2024-11-30-11-35-23-523-1.mp4" target="_self" rel="noopener nofollow">bandicam 2024-11-30 11-35-23-523 1</a>
+<br><a class="internal-link" data-href="_img/bandicam 2024-11-30 11-35-23-523.mp4" href="_img\bandicam-2024-11-30-11-35-23-523.mp4" target="_self" rel="noopener nofollow">bandicam 2024-11-30 11-35-23-523</a>
+<br><a class="internal-link" data-href="_img/BatchNormalization.png" href="_img\batchnormalization.png" target="_self" rel="noopener nofollow">BatchNormalization</a>
+<br><a class="internal-link" data-href="_img/bc9c24a9bf9e0d405ea9a5d5f3a8583e_MD5.jpeg" href="_img\bc9c24a9bf9e0d405ea9a5d5f3a8583e_md5.jpeg" target="_self" rel="noopener nofollow">bc9c24a9bf9e0d405ea9a5d5f3a8583e_MD5</a>
+<br><a class="internal-link" data-href="_img/be97bc91ad108a45024a7b8975741a6a_MD5.jpeg" href="_img\be97bc91ad108a45024a7b8975741a6a_md5.jpeg" target="_self" rel="noopener nofollow">be97bc91ad108a45024a7b8975741a6a_MD5</a>
+<br><a class="internal-link" data-href="_img/bee1fe86eef62b3aace9afafddd89efb_MD5.jpeg" href="_img\bee1fe86eef62b3aace9afafddd89efb_md5.jpeg" target="_self" rel="noopener nofollow">bee1fe86eef62b3aace9afafddd89efb_MD5</a>
+<br><a class="internal-link" data-href="_img/BiGAN的思路.png" href="_img\bigan的思路.png" target="_self" rel="noopener nofollow">BiGAN的思路</a>
+<br><a class="internal-link" data-href="_img/c06e1c5265898d8ff53506bb147d4093_MD5.jpeg" href="_img\c06e1c5265898d8ff53506bb147d4093_md5.jpeg" target="_self" rel="noopener nofollow">c06e1c5265898d8ff53506bb147d4093_MD5</a>
+<br><a class="internal-link" data-href="_img/c318e40fe27995eb424d47fe43456c37_MD5.jpeg" href="_img\c318e40fe27995eb424d47fe43456c37_md5.jpeg" target="_self" rel="noopener nofollow">c318e40fe27995eb424d47fe43456c37_MD5</a>
+<br><a class="internal-link" data-href="_img/c32ccd9b290dc85052b2962d413341a5_MD5.jpeg" href="_img\c32ccd9b290dc85052b2962d413341a5_md5.jpeg" target="_self" rel="noopener nofollow">c32ccd9b290dc85052b2962d413341a5_MD5</a>
+<br><a class="internal-link" data-href="_img/c51e67fcb98d1595bad38973ea155be4_MD5.mp4" href="_img\c51e67fcb98d1595bad38973ea155be4_md5.mp4" target="_self" rel="noopener nofollow">c51e67fcb98d1595bad38973ea155be4_MD5</a>
+<br><a class="internal-link" data-href="_img/c6807ef2ebd12cd53bdca3fbc71fb145.jpg" href="_img\c6807ef2ebd12cd53bdca3fbc71fb145.jpg" target="_self" rel="noopener nofollow">c6807ef2ebd12cd53bdca3fbc71fb145</a>
+<br><a class="internal-link" data-href="_img/c9d573b8dcabc6f1ca471eceaceadf3b_MD5.jpeg" href="_img\c9d573b8dcabc6f1ca471eceaceadf3b_md5.jpeg" target="_self" rel="noopener nofollow">c9d573b8dcabc6f1ca471eceaceadf3b_MD5</a>
+<br><a class="internal-link" data-href="_img/cc701ff6980d7b6a88230972c34ef130_MD5.jpeg" href="_img\cc701ff6980d7b6a88230972c34ef130_md5.jpeg" target="_self" rel="noopener nofollow">cc701ff6980d7b6a88230972c34ef130_MD5</a>
+<br><a class="internal-link" data-href="_img/CGAN的生成判别模型的基本思路和公式.png" href="_img\cgan的生成判别模型的基本思路和公式.png" target="_self" rel="noopener nofollow">CGAN的生成判别模型的基本思路和公式</a>
+<br><a class="internal-link" data-href="_img/CycleGAN的简单原理.png" href="_img\cyclegan的简单原理.png" target="_self" rel="noopener nofollow">CycleGAN的简单原理</a>
+<br><a class="internal-link" data-href="_img/CycleGAN与隐写术与有效性.png" href="_img\cyclegan与隐写术与有效性.png" target="_self" rel="noopener nofollow">CycleGAN与隐写术与有效性</a>
+<br><a class="internal-link" data-href="_img/CycleVAEGAN(搁这叠buff呢).png" href="_img\cyclevaegan(搁这叠buff呢).png" target="_self" rel="noopener nofollow">CycleVAEGAN(搁这叠buff呢)</a>
+<br><a class="internal-link" data-href="_img/d7e6a1aee8713ab5f714ee5bdf5a6936.jpg" href="_img\d7e6a1aee8713ab5f714ee5bdf5a6936.jpg" target="_self" rel="noopener nofollow">d7e6a1aee8713ab5f714ee5bdf5a6936</a>
+<br><a class="internal-link" data-href="_img/d8002470e1670b6299b79132cfd4ad69_MD5.jpeg" href="_img\d8002470e1670b6299b79132cfd4ad69_md5.jpeg" target="_self" rel="noopener nofollow">d8002470e1670b6299b79132cfd4ad69_MD5</a>
+<br><a class="internal-link" data-href="_img/d8d77b1cfc51f85d82ea065edc07ac76_MD5.jpeg" href="_img\d8d77b1cfc51f85d82ea065edc07ac76_md5.jpeg" target="_self" rel="noopener nofollow">d8d77b1cfc51f85d82ea065edc07ac76_MD5</a>
+<br><a class="internal-link" data-href="_img/de3d1b7fa55f3c82d16d5a4f5562b457_MD5.jpeg" href="_img\de3d1b7fa55f3c82d16d5a4f5562b457_md5.jpeg" target="_self" rel="noopener nofollow">de3d1b7fa55f3c82d16d5a4f5562b457_MD5</a>
+<br><a class="internal-link" data-href="_img/e0adebdf3010b7fd440d9f46350bbaa2_MD5.jpeg" href="_img\e0adebdf3010b7fd440d9f46350bbaa2_md5.jpeg" target="_self" rel="noopener nofollow">e0adebdf3010b7fd440d9f46350bbaa2_MD5</a>
+<br><a class="internal-link" data-href="_img/e6529354197e3c306eb5803d783c883b_MD5.jpeg" href="_img\e6529354197e3c306eb5803d783c883b_md5.jpeg" target="_self" rel="noopener nofollow">e6529354197e3c306eb5803d783c883b_MD5</a>
+<br><a class="internal-link" data-href="_img/eb86ba98db6e9c2fdb492d968852c371_MD5.jpeg" href="_img\eb86ba98db6e9c2fdb492d968852c371_md5.jpeg" target="_self" rel="noopener nofollow">eb86ba98db6e9c2fdb492d968852c371_MD5</a>
+<br><a class="internal-link" data-href="_img/ee2ba653c92efd194e2a0870063925ed_MD5.jpeg" href="_img\ee2ba653c92efd194e2a0870063925ed_md5.jpeg" target="_self" rel="noopener nofollow">ee2ba653c92efd194e2a0870063925ed_MD5</a>
+<br><a class="internal-link" data-href="_img/EMD的优势.png" href="_img\emd的优势.png" target="_self" rel="noopener nofollow">EMD的优势</a>
+<br><a class="internal-link" data-href="_img/EMD的约束条件.jpg" href="_img\emd的约束条件.jpg" target="_self" rel="noopener nofollow">EMD的约束条件</a>
+<br><a class="internal-link" data-href="_img/EMD之外的两种距离度量CD&amp;HD.png" href="_img\emd之外的两种距离度量cd&amp;hd.png" target="_self" rel="noopener nofollow">EMD之外的两种距离度量CD&amp;HD</a>
+<br><a class="internal-link" data-href="_img/f-divergence的定义和一些性质.png" href="_img\f-divergence的定义和一些性质.png" target="_self" rel="noopener nofollow">f-divergence的定义和一些性质</a>
+<br><a class="internal-link" data-href="_img/f2f668affa5c41c48a0317fb2f4e1ee5_MD5.jpeg" href="_img\f2f668affa5c41c48a0317fb2f4e1ee5_md5.jpeg" target="_self" rel="noopener nofollow">f2f668affa5c41c48a0317fb2f4e1ee5_MD5</a>
+<br><a class="internal-link" data-href="_img/f3bb741be955b30a107149068a4320a2.jpg" href="_img\f3bb741be955b30a107149068a4320a2.jpg" target="_self" rel="noopener nofollow">f3bb741be955b30a107149068a4320a2</a>
+<br><a class="internal-link" data-href="_img/f4449c557f6e9fecc2580f692384b7b9_MD5.jpeg" href="_img\f4449c557f6e9fecc2580f692384b7b9_md5.jpeg" target="_self" rel="noopener nofollow">f4449c557f6e9fecc2580f692384b7b9_MD5</a>
+<br><a class="internal-link" data-href="_img/f803b2fcac60e94f8e2047c14bd48bce_MD5.jpeg" href="_img\f803b2fcac60e94f8e2047c14bd48bce_md5.jpeg" target="_self" rel="noopener nofollow">f803b2fcac60e94f8e2047c14bd48bce_MD5</a>
+<br><a class="internal-link" data-href="_img/f86be44618b7ed4e800b6ff9de85bb9d_MD5.jpeg" href="_img\f86be44618b7ed4e800b6ff9de85bb9d_md5.jpeg" target="_self" rel="noopener nofollow">f86be44618b7ed4e800b6ff9de85bb9d_MD5</a>
+<br><a class="internal-link" data-href="_img/ffbf39c1d41e704f4854c37b4553b2a9_MD5.jpeg" href="_img\ffbf39c1d41e704f4854c37b4553b2a9_md5.jpeg" target="_self" rel="noopener nofollow">ffbf39c1d41e704f4854c37b4553b2a9_MD5</a>
+<br><a class="internal-link" data-href="_img/flatten类.png" href="_img\flatten类.png" target="_self" rel="noopener nofollow">flatten类</a>
+<br><a class="internal-link" data-href="_img/GAN的目标函和f-divergence任意替换的公式(原理在李宏毅第5课 意义不大 懒得贴出).png" href="_img\gan的目标函和f-divergence任意替换的公式(原理在李宏毅第5课-意义不大-懒得贴出).png" target="_self" rel="noopener nofollow">GAN的目标函和f-divergence任意替换的公式(原理在李宏毅第5课 意义不大 懒得贴出)</a>
+<br><a class="internal-link" data-href="_img/GAN的特点1.png" href="_img\gan的特点1.png" target="_self" rel="noopener nofollow">GAN的特点1</a>
+<br><a class="internal-link" data-href="_img/GAN模型原始paper的对于生成和判别器的思路和公式.png" href="_img\gan模型原始paper的对于生成和判别器的思路和公式.png" target="_self" rel="noopener nofollow">GAN模型原始paper的对于生成和判别器的思路和公式</a>
+<br><a class="internal-link" data-href="_img/GAN目标函数.png" href="_img\gan目标函数.png" target="_self" rel="noopener nofollow">GAN目标函数</a>
+<br><a class="internal-link" data-href="_img/GAN判别模型输出标量只是相对概念.png" href="_img\gan判别模型输出标量只是相对概念.png" target="_self" rel="noopener nofollow">GAN判别模型输出标量只是相对概念</a>
+<br><a class="internal-link" data-href="_img/GAN清晰而VAE模糊的原因.png" href="_img\gan清晰而vae模糊的原因.png" target="_self" rel="noopener nofollow">GAN清晰而VAE模糊的原因</a>
+<br><a class="internal-link" data-href="_img/GAN求解公式的意义.png" href="_img\gan求解公式的意义.png" target="_self" rel="noopener nofollow">GAN求解公式的意义</a>
+<br><a class="internal-link" data-href="_img/GAN全流程.png" href="_img\gan全流程.png" target="_self" rel="noopener nofollow">GAN全流程</a>
+<br><a class="internal-link" data-href="_img/GAN生成模型的最大似然求解.png" href="_img\gan生成模型的最大似然求解.png" target="_self" rel="noopener nofollow">GAN生成模型的最大似然求解</a>
+<br><a class="internal-link" data-href="_img/GAN生成模型和判别模型的优势互补.png" href="_img\gan生成模型和判别模型的优势互补.png" target="_self" rel="noopener nofollow">GAN生成模型和判别模型的优势互补</a>
+<br><a class="internal-link" data-href="_img/GAN实际操作时G的loss.png" href="_img\gan实际操作时g的loss.png" target="_self" rel="noopener nofollow">GAN实际操作时G的loss</a>
+<br><a class="internal-link" data-href="_img/GAN为什么G不宜更新过快.png" href="_img\gan为什么g不宜更新过快.png" target="_self" rel="noopener nofollow">GAN为什么G不宜更新过快</a>
+<br><a class="internal-link" data-href="_img/GAN先训练生成器的原因.png" href="_img\gan先训练生成器的原因.png" target="_self" rel="noopener nofollow">GAN先训练生成器的原因</a>
+<br><a class="internal-link" data-href="_img/GAN一个解释和疑问.png" href="_img\gan一个解释和疑问.png" target="_self" rel="noopener nofollow">GAN一个解释和疑问</a>
+<br><a class="internal-link" data-href="_img/GAN中对G目标函数进行化简的推导和证明.jpg" href="_img\gan中对g目标函数进行化简的推导和证明.jpg" target="_self" rel="noopener nofollow">GAN中对G目标函数进行化简的推导和证明</a>
+<br><a class="internal-link" data-href="_img/GAN中每次迭代Discriminator的进化.png" href="_img\gan中每次迭代discriminator的进化.png" target="_self" rel="noopener nofollow">GAN中每次迭代Discriminator的进化</a>
+<br><a class="internal-link" data-href="_img/GAN中判别器的loss为什么是BinaryCrossEntropy.png" href="_img\gan中判别器的loss为什么是binarycrossentropy.png" target="_self" rel="noopener nofollow">GAN中判别器的loss为什么是BinaryCrossEntropy</a>
+<br><a class="internal-link" data-href="_img/GAN中求得D参数后G参数的求解以及JS散度和目标函数的关系.png" href="_img\gan中求得d参数后g参数的求解以及js散度和目标函数的关系.png" target="_self" rel="noopener nofollow">GAN中求得D参数后G参数的求解以及JS散度和目标函数的关系</a>
+<br><a class="internal-link" data-href="_img/GAN中虚假样本对于判别模型的重要性.png" href="_img\gan中虚假样本对于判别模型的重要性.png" target="_self" rel="noopener nofollow">GAN中虚假样本对于判别模型的重要性</a>
+<br><a class="internal-link" data-href="_img/GAN中D的最值求解.png" href="_img\gan中d的最值求解.png" target="_self" rel="noopener nofollow">GAN中D的最值求解</a>
+<br><a class="internal-link" data-href="_img/GAN中JS散度很有可能退化为常数值.png" href="_img\gan中js散度很有可能退化为常数值.png" target="_self" rel="noopener nofollow">GAN中JS散度很有可能退化为常数值</a>
+<br><a class="internal-link" data-href="_img/GAN中JS散度为什么不合适.png" href="_img\gan中js散度为什么不合适.png" target="_self" rel="noopener nofollow">GAN中JS散度为什么不合适</a>
+<br><a class="internal-link" data-href="_img/grad中inplace的问题.png" href="_img\grad中inplace的问题.png" target="_self" rel="noopener nofollow">grad中inplace的问题</a>
+<br><a class="internal-link" data-href="_img/Houdini Master Settings.png" href="_img\houdini-master-settings.png" target="_self" rel="noopener nofollow">Houdini Master Settings</a>
+<br><a class="internal-link" data-href="_img/Houdini Master.gif" href="_img\houdini-master.gif" target="_self" rel="noopener nofollow">Houdini Master</a>
+<br><a class="internal-link" data-href="_img/image (1).png" href="_img\image-(1).png" target="_self" rel="noopener nofollow">image (1)</a>
+<br><a class="internal-link" data-href="_img/image (10) 1.png" href="_img\image-(10)-1.png" target="_self" rel="noopener nofollow">image (10) 1</a>
+<br><a class="internal-link" data-href="_img/image (10).png" href="_img\image-(10).png" target="_self" rel="noopener nofollow">image (10)</a>
+<br><a class="internal-link" data-href="_img/image (11).png" href="_img\image-(11).png" target="_self" rel="noopener nofollow">image (11)</a>
+<br><a class="internal-link" data-href="_img/image (12).png" href="_img\image-(12).png" target="_self" rel="noopener nofollow">image (12)</a>
+<br><a class="internal-link" data-href="_img/image (13).png" href="_img\image-(13).png" target="_self" rel="noopener nofollow">image (13)</a>
+<br><a class="internal-link" data-href="_img/image (14).png" href="_img\image-(14).png" target="_self" rel="noopener nofollow">image (14)</a>
+<br><a class="internal-link" data-href="_img/image (15).png" href="_img\image-(15).png" target="_self" rel="noopener nofollow">image (15)</a>
+<br><a class="internal-link" data-href="_img/image (16).png" href="_img\image-(16).png" target="_self" rel="noopener nofollow">image (16)</a>
+<br><a class="internal-link" data-href="_img/image (17).png" href="_img\image-(17).png" target="_self" rel="noopener nofollow">image (17)</a>
+<br><a class="internal-link" data-href="_img/image (18).png" href="_img\image-(18).png" target="_self" rel="noopener nofollow">image (18)</a>
+<br><a class="internal-link" data-href="_img/image (21).png" href="_img\image-(21).png" target="_self" rel="noopener nofollow">image (21)</a>
+<br><a class="internal-link" data-href="_img/image (22).png" href="_img\image-(22).png" target="_self" rel="noopener nofollow">image (22)</a>
+<br><a class="internal-link" data-href="_img/image (23).png" href="_img\image-(23).png" target="_self" rel="noopener nofollow">image (23)</a>
+<br><a class="internal-link" data-href="_img/image (24).png" href="_img\image-(24).png" target="_self" rel="noopener nofollow">image (24)</a>
+<br><a class="internal-link" data-href="_img/image (25).png" href="_img\image-(25).png" target="_self" rel="noopener nofollow">image (25)</a>
+<br><a class="internal-link" data-href="_img/image (26).png" href="_img\image-(26).png" target="_self" rel="noopener nofollow">image (26)</a>
+<br><a class="internal-link" data-href="_img/image (30).png" href="_img\image-(30).png" target="_self" rel="noopener nofollow">image (30)</a>
+<br><a class="internal-link" data-href="_img/image (37).png" href="_img\image-(37).png" target="_self" rel="noopener nofollow">image (37)</a>
+<br><a class="internal-link" data-href="_img/image (38).png" href="_img\image-(38).png" target="_self" rel="noopener nofollow">image (38)</a>
+<br><a class="internal-link" data-href="_img/image (39).png" href="_img\image-(39).png" target="_self" rel="noopener nofollow">image (39)</a>
+<br><a class="internal-link" data-href="_img/image (4).png" href="_img\image-(4).png" target="_self" rel="noopener nofollow">image (4)</a>
+<br><a class="internal-link" data-href="_img/image (40).png" href="_img\image-(40).png" target="_self" rel="noopener nofollow">image (40)</a>
+<br><a class="internal-link" data-href="_img/image (41).png" href="_img\image-(41).png" target="_self" rel="noopener nofollow">image (41)</a>
+<br><a class="internal-link" data-href="_img/image (42).png" href="_img\image-(42).png" target="_self" rel="noopener nofollow">image (42)</a>
+<br><a class="internal-link" data-href="_img/image (44).png" href="_img\image-(44).png" target="_self" rel="noopener nofollow">image (44)</a>
+<br><a class="internal-link" data-href="_img/image (45).png" href="_img\image-(45).png" target="_self" rel="noopener nofollow">image (45)</a>
+<br><a class="internal-link" data-href="_img/image (46).png" href="_img\image-(46).png" target="_self" rel="noopener nofollow">image (46)</a>
+<br><a class="internal-link" data-href="_img/image (7).png" href="_img\image-(7).png" target="_self" rel="noopener nofollow">image (7)</a>
+<br><a class="internal-link" data-href="_img/infoGAN的工作模式.png" href="_img\infogan的工作模式.png" target="_self" rel="noopener nofollow">infoGAN的工作模式</a>
+<br><a class="internal-link" data-href="_img/MG_80_change.gif" href="_img\mg_80_change.gif" target="_self" rel="noopener nofollow">MG_80_change</a>
+<br><a class="internal-link" data-href="_img/MG_80.gif" href="_img\mg_80.gif" target="_self" rel="noopener nofollow">MG_80</a>
+<br><a class="internal-link" data-href="_img/MG_Glass.png" href="_img\mg_glass.png" target="_self" rel="noopener nofollow">MG_Glass</a>
+<br><a class="internal-link" data-href="_img/MG_in_mid_out.gif" href="_img\mg_in_mid_out.gif" target="_self" rel="noopener nofollow">MG_in_mid_out</a>
+<br><a class="internal-link" data-href="_img/MG_in_mid.gif" href="_img\mg_in_mid.gif" target="_self" rel="noopener nofollow">MG_in_mid</a>
+<br><a class="internal-link" data-href="_img/module和data的.to().png" href="_img\module和data的.to().png" target="_self" rel="noopener nofollow">module和data的.to()</a>
+<br><a class="internal-link" data-href="_img/nn和F风格的层.png" href="_img\nn和f风格的层.png" target="_self" rel="noopener nofollow">nn和F风格的层</a>
+<br><a class="internal-link" data-href="_img/node exchanger.gif" href="_img\node-exchanger.gif" target="_self" rel="noopener nofollow">node exchanger</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20231031171407.png" href="_img\pasted-image-20231031171407.png" target="_self" rel="noopener nofollow">Pasted image 20231031171407</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20231106102059.png" href="_img\pasted-image-20231106102059.png" target="_self" rel="noopener nofollow">Pasted image 20231106102059</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218173917.png" href="_img\pasted-image-20240218173917.png" target="_self" rel="noopener nofollow">Pasted image 20240218173917</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218181116.png" href="_img\pasted-image-20240218181116.png" target="_self" rel="noopener nofollow">Pasted image 20240218181116</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218181826.png" href="_img\pasted-image-20240218181826.png" target="_self" rel="noopener nofollow">Pasted image 20240218181826</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182213.png" href="_img\pasted-image-20240218182213.png" target="_self" rel="noopener nofollow">Pasted image 20240218182213</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182252.png" href="_img\pasted-image-20240218182252.png" target="_self" rel="noopener nofollow">Pasted image 20240218182252</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182355.png" href="_img\pasted-image-20240218182355.png" target="_self" rel="noopener nofollow">Pasted image 20240218182355</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192527.png" href="_img\pasted-image-20240218192527.png" target="_self" rel="noopener nofollow">Pasted image 20240218192527</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192706.png" href="_img\pasted-image-20240218192706.png" target="_self" rel="noopener nofollow">Pasted image 20240218192706</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192808.png" href="_img\pasted-image-20240218192808.png" target="_self" rel="noopener nofollow">Pasted image 20240218192808</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218195619.png" href="_img\pasted-image-20240218195619.png" target="_self" rel="noopener nofollow">Pasted image 20240218195619</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218195958.png" href="_img\pasted-image-20240218195958.png" target="_self" rel="noopener nofollow">Pasted image 20240218195958</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218200258.png" href="_img\pasted-image-20240218200258.png" target="_self" rel="noopener nofollow">Pasted image 20240218200258</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218201614.png" href="_img\pasted-image-20240218201614.png" target="_self" rel="noopener nofollow">Pasted image 20240218201614</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218202423.png" href="_img\pasted-image-20240218202423.png" target="_self" rel="noopener nofollow">Pasted image 20240218202423</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218203439.png" href="_img\pasted-image-20240218203439.png" target="_self" rel="noopener nofollow">Pasted image 20240218203439</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218204944.png" href="_img\pasted-image-20240218204944.png" target="_self" rel="noopener nofollow">Pasted image 20240218204944</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218205532.png" href="_img\pasted-image-20240218205532.png" target="_self" rel="noopener nofollow">Pasted image 20240218205532</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218215425.png" href="_img\pasted-image-20240218215425.png" target="_self" rel="noopener nofollow">Pasted image 20240218215425</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240220215756.png" href="_img\pasted-image-20240220215756.png" target="_self" rel="noopener nofollow">Pasted image 20240220215756</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240220224727.png" href="_img\pasted-image-20240220224727.png" target="_self" rel="noopener nofollow">Pasted image 20240220224727</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240301001737.png" href="_img\pasted-image-20240301001737.png" target="_self" rel="noopener nofollow">Pasted image 20240301001737</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240303232531.png" href="_img\pasted-image-20240303232531.png" target="_self" rel="noopener nofollow">Pasted image 20240303232531</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304005554.png" href="_img\pasted-image-20240304005554.png" target="_self" rel="noopener nofollow">Pasted image 20240304005554</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304005822.png" href="_img\pasted-image-20240304005822.png" target="_self" rel="noopener nofollow">Pasted image 20240304005822</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304012928.png" href="_img\pasted-image-20240304012928.png" target="_self" rel="noopener nofollow">Pasted image 20240304012928</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014122.png" href="_img\pasted-image-20240304014122.png" target="_self" rel="noopener nofollow">Pasted image 20240304014122</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014213.png" href="_img\pasted-image-20240304014213.png" target="_self" rel="noopener nofollow">Pasted image 20240304014213</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014818.png" href="_img\pasted-image-20240304014818.png" target="_self" rel="noopener nofollow">Pasted image 20240304014818</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304015119.png" href="_img\pasted-image-20240304015119.png" target="_self" rel="noopener nofollow">Pasted image 20240304015119</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304015142.png" href="_img\pasted-image-20240304015142.png" target="_self" rel="noopener nofollow">Pasted image 20240304015142</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304020156.png" href="_img\pasted-image-20240304020156.png" target="_self" rel="noopener nofollow">Pasted image 20240304020156</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304222359.png" href="_img\pasted-image-20240304222359.png" target="_self" rel="noopener nofollow">Pasted image 20240304222359</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312002014.png" href="_img\pasted-image-20240312002014.png" target="_self" rel="noopener nofollow">Pasted image 20240312002014</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312003501.png" href="_img\pasted-image-20240312003501.png" target="_self" rel="noopener nofollow">Pasted image 20240312003501</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312003921.png" href="_img\pasted-image-20240312003921.png" target="_self" rel="noopener nofollow">Pasted image 20240312003921</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312004125.png" href="_img\pasted-image-20240312004125.png" target="_self" rel="noopener nofollow">Pasted image 20240312004125</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312233759.png" href="_img\pasted-image-20240312233759.png" target="_self" rel="noopener nofollow">Pasted image 20240312233759</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312234139.png" href="_img\pasted-image-20240312234139.png" target="_self" rel="noopener nofollow">Pasted image 20240312234139</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312234622.png" href="_img\pasted-image-20240312234622.png" target="_self" rel="noopener nofollow">Pasted image 20240312234622</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312235125.png" href="_img\pasted-image-20240312235125.png" target="_self" rel="noopener nofollow">Pasted image 20240312235125</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312235302.png" href="_img\pasted-image-20240312235302.png" target="_self" rel="noopener nofollow">Pasted image 20240312235302</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313004848.png" href="_img\pasted-image-20240313004848.png" target="_self" rel="noopener nofollow">Pasted image 20240313004848</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011352.png" href="_img\pasted-image-20240313011352.png" target="_self" rel="noopener nofollow">Pasted image 20240313011352</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011604.png" href="_img\pasted-image-20240313011604.png" target="_self" rel="noopener nofollow">Pasted image 20240313011604</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011657.png" href="_img\pasted-image-20240313011657.png" target="_self" rel="noopener nofollow">Pasted image 20240313011657</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011734.png" href="_img\pasted-image-20240313011734.png" target="_self" rel="noopener nofollow">Pasted image 20240313011734</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011844.png" href="_img\pasted-image-20240313011844.png" target="_self" rel="noopener nofollow">Pasted image 20240313011844</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313013455.png" href="_img\pasted-image-20240313013455.png" target="_self" rel="noopener nofollow">Pasted image 20240313013455</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313223807.png" href="_img\pasted-image-20240313223807.png" target="_self" rel="noopener nofollow">Pasted image 20240313223807</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240314003704.png" href="_img\pasted-image-20240314003704.png" target="_self" rel="noopener nofollow">Pasted image 20240314003704</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240314003904.png" href="_img\pasted-image-20240314003904.png" target="_self" rel="noopener nofollow">Pasted image 20240314003904</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240324170023.png" href="_img\pasted-image-20240324170023.png" target="_self" rel="noopener nofollow">Pasted image 20240324170023</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240324172813.png" href="_img\pasted-image-20240324172813.png" target="_self" rel="noopener nofollow">Pasted image 20240324172813</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240330213343.png" href="_img\pasted-image-20240330213343.png" target="_self" rel="noopener nofollow">Pasted image 20240330213343</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217011505.png" href="_img\pasted-image-20241217011505.png" target="_self" rel="noopener nofollow">Pasted image 20241217011505</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217014749.png" href="_img\pasted-image-20241217014749.png" target="_self" rel="noopener nofollow">Pasted image 20241217014749</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217020127.png" href="_img\pasted-image-20241217020127.png" target="_self" rel="noopener nofollow">Pasted image 20241217020127</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250427224627.png" href="_img\pasted-image-20250427224627.png" target="_self" rel="noopener nofollow">Pasted image 20250427224627</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250427233844.png" href="_img\pasted-image-20250427233844.png" target="_self" rel="noopener nofollow">Pasted image 20250427233844</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250504161204.png" href="_img\pasted-image-20250504161204.png" target="_self" rel="noopener nofollow">Pasted image 20250504161204</a>
+<br><a class="internal-link" data-href="_img/PatchGAN与凉宫春日.png" href="_img\patchgan与凉宫春日.png" target="_self" rel="noopener nofollow">PatchGAN与凉宫春日</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-115859.png" href="_img\popo-screenshot-20230423-115859.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-115859</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-120137.png" href="_img\popo-screenshot-20230423-120137.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-120137</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-120146.png" href="_img\popo-screenshot-20230423-120146.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-120146</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-164826.png" href="_img\popo-screenshot-20230423-164826.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-164826</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-095023.png" href="_img\popo-screenshot-20230424-095023.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-095023</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-102935.png" href="_img\popo-screenshot-20230424-102935.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-102935</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-103133.png" href="_img\popo-screenshot-20230424-103133.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-103133</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-103344.png" href="_img\popo-screenshot-20230424-103344.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-103344</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230515-101940.png" href="_img\popo-screenshot-20230515-101940.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230515-101940</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230516-165227.png" href="_img\popo-screenshot-20230516-165227.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230516-165227</a>
+<br><a class="internal-link" data-href="_img/POPO20231009-153520.jpg" href="_img\popo20231009-153520.jpg" target="_self" rel="noopener nofollow">POPO20231009-153520</a>
+<br><a class="internal-link" data-href="_img/python修饰器.png" href="_img\python修饰器.png" target="_self" rel="noopener nofollow">python修饰器</a>
+<br><a class="internal-link" data-href="_img/pytorch里面的cross_entropy和nll-loss.png" href="_img\pytorch里面的cross_entropy和nll-loss.png" target="_self" rel="noopener nofollow">pytorch里面的cross_entropy和nll-loss</a>
+<br><a class="internal-link" data-href="_img/QQ截图20210222220446.png" href="_img\qq截图20210222220446.png" target="_self" rel="noopener nofollow">QQ截图20210222220446</a>
+<br><a class="internal-link" data-href="_img/QQ截图20230306142455.png" href="_img\qq截图20230306142455.png" target="_self" rel="noopener nofollow">QQ截图20230306142455</a>
+<br><a class="internal-link" data-href="_img/quick console.gif" href="_img\quick-console.gif" target="_self" rel="noopener nofollow">quick console</a>
+<br><a class="internal-link" data-href="_img/ResNet实现以及shortcut的改进形式.png" href="_img\resnet实现以及shortcut的改进形式.png" target="_self" rel="noopener nofollow">ResNet实现以及shortcut的改进形式</a>
+<br><a class="internal-link" data-href="_img/Screenshot 2023-04-21 174029.png" href="_img\screenshot-2023-04-21-174029.png" target="_self" rel="noopener nofollow">Screenshot 2023-04-21 174029</a>
+<br><a class="internal-link" data-href="_img/Screenshot 2023-04-23 115724.png" href="_img\screenshot-2023-04-23-115724.png" target="_self" rel="noopener nofollow">Screenshot 2023-04-23 115724</a>
+<br><a class="internal-link" data-href="_img/SemanticConsistencyGAN或者XGAN.png" href="_img\semanticconsistencygan或者xgan.png" target="_self" rel="noopener nofollow">SemanticConsistencyGAN或者XGAN</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_15-56-27.png" href="_img\snipaste_2024-01-12_15-56-27.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_15-56-27</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_15-56-44.png" href="_img\snipaste_2024-01-12_15-56-44.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_15-56-44</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-04-07.png" href="_img\snipaste_2024-01-12_16-04-07.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-04-07</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-04-27.png" href="_img\snipaste_2024-01-12_16-04-27.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-04-27</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-28-38.png" href="_img\snipaste_2024-01-12_16-28-38.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-28-38</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-28-48.png" href="_img\snipaste_2024-01-12_16-28-48.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-28-48</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-53-28.png" href="_img\snipaste_2024-01-12_16-53-28.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-53-28</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-43-00.png" href="_img\snipaste_2024-07-13_15-43-00.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-43-00</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-47-20.png" href="_img\snipaste_2024-07-13_15-47-20.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-47-20</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-50-24.png" href="_img\snipaste_2024-07-13_15-50-24.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-50-24</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-00-40.png" href="_img\snipaste_2024-07-13_16-00-40.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-00-40</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-03-58.png" href="_img\snipaste_2024-07-13_16-03-58.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-03-58</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-04-45.png" href="_img\snipaste_2024-07-13_16-04-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-04-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-18-14 1.png" href="_img\snipaste_2024-07-13_16-18-14-1.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-18-14 1</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-18-14.png" href="_img\snipaste_2024-07-13_16-18-14.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-18-14</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-55-16.png" href="_img\snipaste_2024-07-13_16-55-16.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-55-16</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-55-32.png" href="_img\snipaste_2024-07-13_16-55-32.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-55-32</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_17-56-08.png" href="_img\snipaste_2024-07-13_17-56-08.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_17-56-08</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-17-15.png" href="_img\snipaste_2024-07-13_19-17-15.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-17-15</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-17-31.png" href="_img\snipaste_2024-07-13_19-17-31.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-17-31</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-28-13.png" href="_img\snipaste_2024-07-13_19-28-13.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-28-13</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-32-45.png" href="_img\snipaste_2024-07-13_19-32-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-32-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-40.png" href="_img\snipaste_2024-07-13_19-34-40.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-40</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-49.png" href="_img\snipaste_2024-07-13_19-34-49.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-49</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-59.png" href="_img\snipaste_2024-07-13_19-34-59.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-59</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-32-34.png" href="_img\snipaste_2024-07-13_20-32-34.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-32-34</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-34-31.png" href="_img\snipaste_2024-07-13_20-34-31.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-34-31</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-41-13.png" href="_img\snipaste_2024-07-13_20-41-13.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-41-13</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-57-05.png" href="_img\snipaste_2024-07-13_20-57-05.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-57-05</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-36.png" href="_img\snipaste_2024-07-13_21-04-36.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-36</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-45.png" href="_img\snipaste_2024-07-13_21-04-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-57.png" href="_img\snipaste_2024-07-13_21-04-57.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-57</a>
+<br><a class="internal-link" data-href="_img/softplus激活函数.png" href="_img\softplus激活函数.png" target="_self" rel="noopener nofollow">softplus激活函数</a>
+<br><a class="internal-link" data-href="_img/StackGan的简要原理.png" href="_img\stackgan的简要原理.png" target="_self" rel="noopener nofollow">StackGan的简要原理</a>
+<br><a class="internal-link" data-href="_img/tb_image_share_1720852998412 (1).jpg" href="_img\tb_image_share_1720852998412-(1).jpg" target="_self" rel="noopener nofollow">tb_image_share_1720852998412 (1)</a>
+<br>[TQ9}83]FX780DWJGZ6B2S<a class="internal-link" data-href="_img/TQ9}83]FX780DWJGZ6B2S[N.png" href="_img\tq9}83]fx780dwjgz6b2s[n.png" target="_self" rel="noopener nofollow">N</a>
+<br><a class="internal-link" data-href="_img/Unsupervised_CGAN的两种实现方法.png" href="_img\unsupervised_cgan的两种实现方法.png" target="_self" rel="noopener nofollow">Unsupervised_CGAN的两种实现方法</a>
+<br><a class="internal-link" data-href="_img/v2-54f8896c40de85525c7e9c59a8082734_720w.jpg" href="_img\v2-54f8896c40de85525c7e9c59a8082734_720w.jpg" target="_self" rel="noopener nofollow">v2-54f8896c40de85525c7e9c59a8082734_720w</a>
+<br><a class="internal-link" data-href="_img/v2-a6b1cf458d512ca7c337499344ce902a_720w.jpg" href="_img\v2-a6b1cf458d512ca7c337499344ce902a_720w.jpg" target="_self" rel="noopener nofollow">v2-a6b1cf458d512ca7c337499344ce902a_720w</a>
+<br><a class="internal-link" data-href="_img/VAE-GAN的简单流程.png" href="_img\vae-gan的简单流程.png" target="_self" rel="noopener nofollow">VAE-GAN的简单流程</a>
+<br><a class="internal-link" data-href="_img/VAE-GAN的具体步骤.png" href="_img\vae-gan的具体步骤.png" target="_self" rel="noopener nofollow">VAE-GAN的具体步骤</a>
+<br><a class="internal-link" data-href="_img/VAE与GAN相比的缺陷.png" href="_img\vae与gan相比的缺陷.png" target="_self" rel="noopener nofollow">VAE与GAN相比的缺陷</a>
+<br><a class="internal-link" data-href="_img/Variational Auto-Encoder网络的简要模型.png" href="_img\variational-auto-encoder网络的简要模型.png" target="_self" rel="noopener nofollow">Variational Auto-Encoder网络的简要模型</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP的导数趋于1.png" href="_img\wgan-gp的导数趋于1.png" target="_self" rel="noopener nofollow">WGAN-GP的导数趋于1</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP的提出.png" href="_img\wgan-gp的提出.png" target="_self" rel="noopener nofollow">WGAN-GP的提出</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP对data和G简单插值得到Ppenalty的问题和改进.png" href="_img\wgan-gp对data和g简单插值得到ppenalty的问题和改进.png" target="_self" rel="noopener nofollow">WGAN-GP对data和G简单插值得到Ppenalty的问题和改进</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP损失函数.png" href="_img\wgan-gp损失函数.png" target="_self" rel="noopener nofollow">WGAN-GP损失函数</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP新加项理解.png" href="_img\wgan-gp新加项理解.png" target="_self" rel="noopener nofollow">WGAN-GP新加项理解</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP有论文指出用谱范数可以满足Lipschitz约束.png" href="_img\wgan-gp有论文指出用谱范数可以满足lipschitz约束.png" target="_self" rel="noopener nofollow">WGAN-GP有论文指出用谱范数可以满足Lipschitz约束</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP最终loss函数以及一些intuitional的解释.png" href="_img\wgan-gp最终loss函数以及一些intuitional的解释.png" target="_self" rel="noopener nofollow">WGAN-GP最终loss函数以及一些intuitional的解释</a>
+<br><a class="internal-link" data-href="_img/WGAN原始论文对1-Lipschitz约束的解决方法.png" href="_img\wgan原始论文对1-lipschitz约束的解决方法.png" target="_self" rel="noopener nofollow">WGAN原始论文对1-Lipschitz约束的解决方法</a>
+<br><a class="internal-link" data-href="_img/WGAN中Lipschitz的具体实现.png" href="_img\wgan中lipschitz的具体实现.png" target="_self" rel="noopener nofollow">WGAN中Lipschitz的具体实现</a>
+<br><a class="internal-link" data-href="_img/WGAN中wasserstein距离的最终化简式子以及Lipschitz约束及其缺点.png" href="_img\wgan中wasserstein距离的最终化简式子以及lipschitz约束及其缺点.png" target="_self" rel="noopener nofollow">WGAN中wasserstein距离的最终化简式子以及Lipschitz约束及其缺点</a>
+<br><a class="internal-link" data-href="_img/white1_00000.png" href="_img\white1_00000.png" target="_self" rel="noopener nofollow">white1_00000</a>
+<br><a class="internal-link" data-href="_img/xetmcci_LOD0.png" href="_img\xetmcci_lod0.png" target="_self" rel="noopener nofollow">xetmcci_LOD0</a>
+]]></description><link>_img\_img.html</link><guid isPermaLink="false">_img/_img.md</guid><pubDate>Mon, 16 Dec 2024 18:15:29 GMT</pubDate></item><item><title><![CDATA[Dolag的静态网站]]></title><description><![CDATA[ 
+ <br><br><br>这是一个用Obsidian生成的纯静态的网站，主要用于发布一些平日的笔记和一些我所参与开发的软件工具的文档。
+然而平时是懒狗一条不太记笔记的，看看就好。<br><br>
+<br><a class="internal-link" data-href="_img/0.jpg" href="_img\0.jpg" target="_self" rel="noopener nofollow">0</a>
+<br><a class="internal-link" data-href="_img/001f898833334581524e5e9c6d4eb367_MD5.jpeg" href="_img\001f898833334581524e5e9c6d4eb367_md5.jpeg" target="_self" rel="noopener nofollow">001f898833334581524e5e9c6d4eb367_MD5</a>
+<br><a class="internal-link" data-href="_img/05d54827de3fe84413d24db5ee849500_MD5.jpeg" href="_img\05d54827de3fe84413d24db5ee849500_md5.jpeg" target="_self" rel="noopener nofollow">05d54827de3fe84413d24db5ee849500_MD5</a>
+<br><a class="internal-link" data-href="_img/0870904eb9600563274755ef5663028e_MD5.jpeg" href="_img\0870904eb9600563274755ef5663028e_md5.jpeg" target="_self" rel="noopener nofollow">0870904eb9600563274755ef5663028e_MD5</a>
+<br><a class="internal-link" data-href="_img/089315f96bab72ea8f76484a5a559bf4_MD5.jpeg" href="_img\089315f96bab72ea8f76484a5a559bf4_md5.jpeg" target="_self" rel="noopener nofollow">089315f96bab72ea8f76484a5a559bf4_MD5</a>
+<br><a class="internal-link" data-href="_img/0ade1c45dc2d8574b86633ff817b7afb_MD5.jpeg" href="_img\0ade1c45dc2d8574b86633ff817b7afb_md5.jpeg" target="_self" rel="noopener nofollow">0ade1c45dc2d8574b86633ff817b7afb_MD5</a>
+<br><a class="internal-link" data-href="_img/0c4214dc22b9e615a1ad482572cf7320.jpg" href="_img\0c4214dc22b9e615a1ad482572cf7320.jpg" target="_self" rel="noopener nofollow">0c4214dc22b9e615a1ad482572cf7320</a>
+<br><a class="internal-link" data-href="_img/0d379887bdb349ceb87f9735e07be435.jpg" href="_img\0d379887bdb349ceb87f9735e07be435.jpg" target="_self" rel="noopener nofollow">0d379887bdb349ceb87f9735e07be435</a>
+<br><a class="internal-link" data-href="_img/16a918015c41965da767ec2dc21f0e07_MD5.jpeg" href="_img\16a918015c41965da767ec2dc21f0e07_md5.jpeg" target="_self" rel="noopener nofollow">16a918015c41965da767ec2dc21f0e07_MD5</a>
+<br><a class="internal-link" data-href="_img/1736b098f6582af3bff668c543550664_MD5.jpeg" href="_img\1736b098f6582af3bff668c543550664_md5.jpeg" target="_self" rel="noopener nofollow">1736b098f6582af3bff668c543550664_MD5</a>
+<br><a class="internal-link" data-href="_img/1740cacecf6771d71ec96dd47ab72edb_MD5.jpeg" href="_img\1740cacecf6771d71ec96dd47ab72edb_md5.jpeg" target="_self" rel="noopener nofollow">1740cacecf6771d71ec96dd47ab72edb_MD5</a>
+<br><a class="internal-link" data-href="_img/18849bfdbb71a14e5964d3a6a373dfdd_MD5.jpeg" href="_img\18849bfdbb71a14e5964d3a6a373dfdd_md5.jpeg" target="_self" rel="noopener nofollow">18849bfdbb71a14e5964d3a6a373dfdd_MD5</a>
+<br><a class="internal-link" data-href="_img/19faffa95abae52134993a9c34f3b593.jpg" href="_img\19faffa95abae52134993a9c34f3b593.jpg" target="_self" rel="noopener nofollow">19faffa95abae52134993a9c34f3b593</a>
+<br><a class="internal-link" data-href="_img/1x1卷积核的作用.png" href="_img\1x1卷积核的作用.png" target="_self" rel="noopener nofollow">1x1卷积核的作用</a>
+<br><a class="internal-link" data-href="_img/2086a1af54bfe576d764ea3963364f0a_MD5.jpeg" href="_img\2086a1af54bfe576d764ea3963364f0a_md5.jpeg" target="_self" rel="noopener nofollow">2086a1af54bfe576d764ea3963364f0a_MD5</a>
+<br><a class="internal-link" data-href="_img/218486ffec135c212278628e0cfced64_MD5.jpeg" href="_img\218486ffec135c212278628e0cfced64_md5.jpeg" target="_self" rel="noopener nofollow">218486ffec135c212278628e0cfced64_MD5</a>
+<br><a class="internal-link" data-href="_img/24bf44ad47029e819f248baf5707558d_MD5.jpeg" href="_img\24bf44ad47029e819f248baf5707558d_md5.jpeg" target="_self" rel="noopener nofollow">24bf44ad47029e819f248baf5707558d_MD5</a>
+<br><a class="internal-link" data-href="_img/2698efac4c0bde7b9e5a86245a19f69b_MD5.jpeg" href="_img\2698efac4c0bde7b9e5a86245a19f69b_md5.jpeg" target="_self" rel="noopener nofollow">2698efac4c0bde7b9e5a86245a19f69b_MD5</a>
+<br><a class="internal-link" data-href="_img/2bc55dc17cbe7f1ccaec1b352ef0f4ed_MD5.mp4" href="_img\2bc55dc17cbe7f1ccaec1b352ef0f4ed_md5.mp4" target="_self" rel="noopener nofollow">2bc55dc17cbe7f1ccaec1b352ef0f4ed_MD5</a>
+<br><a class="internal-link" data-href="_img/2d35d0c404fabea0154d773dc84302b2.gif" href="_img\2d35d0c404fabea0154d773dc84302b2.gif" target="_self" rel="noopener nofollow">2d35d0c404fabea0154d773dc84302b2</a>
+<br><a class="internal-link" data-href="_img/2e66f970a909f5a84f89bace56e4a776_MD5.jpeg" href="_img\2e66f970a909f5a84f89bace56e4a776_md5.jpeg" target="_self" rel="noopener nofollow">2e66f970a909f5a84f89bace56e4a776_MD5</a>
+<br><a class="internal-link" data-href="_img/2f30dbc5588e83ccbafd04578b4b6a6d_MD5.jpeg" href="_img\2f30dbc5588e83ccbafd04578b4b6a6d_md5.jpeg" target="_self" rel="noopener nofollow">2f30dbc5588e83ccbafd04578b4b6a6d_MD5</a>
+<br><a class="internal-link" data-href="_img/33c0706acae7261b40ddf14274a8b13c_MD5.jpeg" href="_img\33c0706acae7261b40ddf14274a8b13c_md5.jpeg" target="_self" rel="noopener nofollow">33c0706acae7261b40ddf14274a8b13c_MD5</a>
+<br><a class="internal-link" data-href="_img/34aa2ab8f1766cb0c4d7a7f183a08379_MD5.jpeg" href="_img\34aa2ab8f1766cb0c4d7a7f183a08379_md5.jpeg" target="_self" rel="noopener nofollow">34aa2ab8f1766cb0c4d7a7f183a08379_MD5</a>
+<br><a class="internal-link" data-href="_img/38c7d3c19e37a832ec961d20cc579ec3_MD5.jpeg" href="_img\38c7d3c19e37a832ec961d20cc579ec3_md5.jpeg" target="_self" rel="noopener nofollow">38c7d3c19e37a832ec961d20cc579ec3_MD5</a>
+<br><a class="internal-link" data-href="_img/3dd5116ea1680349948bdcc6ee1128a7_MD5.jpeg" href="_img\3dd5116ea1680349948bdcc6ee1128a7_md5.jpeg" target="_self" rel="noopener nofollow">3dd5116ea1680349948bdcc6ee1128a7_MD5</a>
+<br><a class="internal-link" data-href="_img/479d649c65c9742fc781009f94c2907d.jpg" href="_img\479d649c65c9742fc781009f94c2907d.jpg" target="_self" rel="noopener nofollow">479d649c65c9742fc781009f94c2907d</a>
+<br><a class="internal-link" data-href="_img/4d441ed7819c569d47dc7d9336eae810_MD5.jpeg" href="_img\4d441ed7819c569d47dc7d9336eae810_md5.jpeg" target="_self" rel="noopener nofollow">4d441ed7819c569d47dc7d9336eae810_MD5</a>
+<br><a class="internal-link" data-href="_img/4ea2f3b5cd76b77d747256c2d2683f20_MD5.jpeg" href="_img\4ea2f3b5cd76b77d747256c2d2683f20_md5.jpeg" target="_self" rel="noopener nofollow">4ea2f3b5cd76b77d747256c2d2683f20_MD5</a>
+<br><a class="internal-link" data-href="_img/4f7d88f2fe6f1951ddd0ced6c2abd29c_MD5.jpeg" href="_img\4f7d88f2fe6f1951ddd0ced6c2abd29c_md5.jpeg" target="_self" rel="noopener nofollow">4f7d88f2fe6f1951ddd0ced6c2abd29c_MD5</a>
+<br><a class="internal-link" data-href="_img/51a5aec5f4e78beb6ed7594a02bdf9b0_MD5.jpeg" href="_img\51a5aec5f4e78beb6ed7594a02bdf9b0_md5.jpeg" target="_self" rel="noopener nofollow">51a5aec5f4e78beb6ed7594a02bdf9b0_MD5</a>
+<br><a class="internal-link" data-href="_img/54cfe61a3186db559903d54682e30815_MD5.jpeg" href="_img\54cfe61a3186db559903d54682e30815_md5.jpeg" target="_self" rel="noopener nofollow">54cfe61a3186db559903d54682e30815_MD5</a>
+<br><a class="internal-link" data-href="_img/56ef155cf67a5cb073541e01abd3b111_MD5.jpeg" href="_img\56ef155cf67a5cb073541e01abd3b111_md5.jpeg" target="_self" rel="noopener nofollow">56ef155cf67a5cb073541e01abd3b111_MD5</a>
+<br><a class="internal-link" data-href="_img/58f139db3a9cc555bf035c6781ef7fb6_MD5.jpeg" href="_img\58f139db3a9cc555bf035c6781ef7fb6_md5.jpeg" target="_self" rel="noopener nofollow">58f139db3a9cc555bf035c6781ef7fb6_MD5</a>
+<br><a class="internal-link" data-href="_img/5b6a20a63099ddf2b25762f2b60c3cdc_MD5.jpeg" href="_img\5b6a20a63099ddf2b25762f2b60c3cdc_md5.jpeg" target="_self" rel="noopener nofollow">5b6a20a63099ddf2b25762f2b60c3cdc_MD5</a>
+<br><a class="internal-link" data-href="_img/5e85c13690e100a3e55bc3e5cb4b5d1d_MD5.jpeg" href="_img\5e85c13690e100a3e55bc3e5cb4b5d1d_md5.jpeg" target="_self" rel="noopener nofollow">5e85c13690e100a3e55bc3e5cb4b5d1d_MD5</a>
+<br><a class="internal-link" data-href="_img/66dc908e5ba089c4803d745cfbfea4bb_MD5.jpeg" href="_img\66dc908e5ba089c4803d745cfbfea4bb_md5.jpeg" target="_self" rel="noopener nofollow">66dc908e5ba089c4803d745cfbfea4bb_MD5</a>
+<br><a class="internal-link" data-href="_img/68eda009c8a30f29257882cec5f96ea0_MD5.jpeg" href="_img\68eda009c8a30f29257882cec5f96ea0_md5.jpeg" target="_self" rel="noopener nofollow">68eda009c8a30f29257882cec5f96ea0_MD5</a>
+<br><a class="internal-link" data-href="_img/6a9bea11f7da08d3a9289567779566c8_MD5.jpeg" href="_img\6a9bea11f7da08d3a9289567779566c8_md5.jpeg" target="_self" rel="noopener nofollow">6a9bea11f7da08d3a9289567779566c8_MD5</a>
+<br><a class="internal-link" data-href="_img/6bc09e64d3ab1c8ffe51151c8c40cc29.jpg" href="_img\6bc09e64d3ab1c8ffe51151c8c40cc29.jpg" target="_self" rel="noopener nofollow">6bc09e64d3ab1c8ffe51151c8c40cc29</a>
+<br><a class="internal-link" data-href="_img/6fbc4dcadf3b5e5dc16a623fb4e51966.jpg" href="_img\6fbc4dcadf3b5e5dc16a623fb4e51966.jpg" target="_self" rel="noopener nofollow">6fbc4dcadf3b5e5dc16a623fb4e51966</a>
+<br><a class="internal-link" data-href="_img/7078abb33eb548f9bdfd082447533f75_MD5.jpeg" href="_img\7078abb33eb548f9bdfd082447533f75_md5.jpeg" target="_self" rel="noopener nofollow">7078abb33eb548f9bdfd082447533f75_MD5</a>
+<br><a class="internal-link" data-href="_img/72318cc8ec7e008477dd4a8de6bbc01a_MD5.jpeg" href="_img\72318cc8ec7e008477dd4a8de6bbc01a_md5.jpeg" target="_self" rel="noopener nofollow">72318cc8ec7e008477dd4a8de6bbc01a_MD5</a>
+<br><a class="internal-link" data-href="_img/75a99cccda1f7045cb15c1f00b8ca7e8_MD5.jpeg" href="_img\75a99cccda1f7045cb15c1f00b8ca7e8_md5.jpeg" target="_self" rel="noopener nofollow">75a99cccda1f7045cb15c1f00b8ca7e8_MD5</a>
+<br><a class="internal-link" data-href="_img/777509131324b4943c07a506600ad74b_MD5.jpeg" href="_img\777509131324b4943c07a506600ad74b_md5.jpeg" target="_self" rel="noopener nofollow">777509131324b4943c07a506600ad74b_MD5</a>
+<br><a class="internal-link" data-href="_img/7ab8b633fc08f7554e71a4b7bbde9614_MD5.jpeg" href="_img\7ab8b633fc08f7554e71a4b7bbde9614_md5.jpeg" target="_self" rel="noopener nofollow">7ab8b633fc08f7554e71a4b7bbde9614_MD5</a>
+<br><a class="internal-link" data-href="_img/7fe65e38a29ad180faa15baf6f557fac_MD5.jpeg" href="_img\7fe65e38a29ad180faa15baf6f557fac_md5.jpeg" target="_self" rel="noopener nofollow">7fe65e38a29ad180faa15baf6f557fac_MD5</a>
+<br><a class="internal-link" data-href="_img/81a943d3d4079b9762df632741385154_MD5.jpeg" href="_img\81a943d3d4079b9762df632741385154_md5.jpeg" target="_self" rel="noopener nofollow">81a943d3d4079b9762df632741385154_MD5</a>
+<br><a class="internal-link" data-href="_img/85767f6295cd8d878744592a8eae858d_MD5.jpeg" href="_img\85767f6295cd8d878744592a8eae858d_md5.jpeg" target="_self" rel="noopener nofollow">85767f6295cd8d878744592a8eae858d_MD5</a>
+<br><a class="internal-link" data-href="_img/89d6a45ad2f880f68bd64e61ccdaf057.png" href="_img\89d6a45ad2f880f68bd64e61ccdaf057.png" target="_self" rel="noopener nofollow">89d6a45ad2f880f68bd64e61ccdaf057</a>
+<br><a class="internal-link" data-href="_img/8c8af77629db4ad742cfcd33e77b78ce_MD5.jpeg" href="_img\8c8af77629db4ad742cfcd33e77b78ce_md5.jpeg" target="_self" rel="noopener nofollow">8c8af77629db4ad742cfcd33e77b78ce_MD5</a>
+<br><a class="internal-link" data-href="_img/8ef5ef02a978513d2e9cb8df931b4264_MD5.jpeg" href="_img\8ef5ef02a978513d2e9cb8df931b4264_md5.jpeg" target="_self" rel="noopener nofollow">8ef5ef02a978513d2e9cb8df931b4264_MD5</a>
+<br><a class="internal-link" data-href="_img/8fb3445a89d12c8f83b395c325612e34_MD5.jpeg" href="_img\8fb3445a89d12c8f83b395c325612e34_md5.jpeg" target="_self" rel="noopener nofollow">8fb3445a89d12c8f83b395c325612e34_MD5</a>
+<br><a class="internal-link" data-href="_img/9d8ef2230ba53a0d17e955d29c906ecb.jpg" href="_img\9d8ef2230ba53a0d17e955d29c906ecb.jpg" target="_self" rel="noopener nofollow">9d8ef2230ba53a0d17e955d29c906ecb</a>
+<br><a class="internal-link" data-href="_img/传送门.gif" href="_img\传送门.gif" target="_self" rel="noopener nofollow">传送门</a>
+<br><a class="internal-link" data-href="_img/从GAN到WGAN(-GP)的改进.png" href="_img\从gan到wgan(-gp)的改进.png" target="_self" rel="noopener nofollow">从GAN到WGAN(-GP)的改进</a>
+<br><a class="internal-link" data-href="_img/单层感知器代码.png" href="_img\单层感知器代码.png" target="_self" rel="noopener nofollow">单层感知器代码</a>
+<br><a class="internal-link" data-href="_img/单层感知器求导.png" href="_img\单层感知器求导.png" target="_self" rel="noopener nofollow">单层感知器求导</a>
+<br><a class="internal-link" data-href="_img/单个卷积层的结构和维度关系.png" href="_img\单个卷积层的结构和维度关系.png" target="_self" rel="noopener nofollow">单个卷积层的结构和维度关系</a>
+<br><a class="internal-link" data-href="_img/地平线西之绝境——植被交互.mp4" href="_img\地平线西之绝境——植被交互.mp4" target="_self" rel="noopener nofollow">地平线西之绝境——植被交互</a>
+<br><a class="internal-link" data-href="_img/多层感知器代码.png" href="_img\多层感知器代码.png" target="_self" rel="noopener nofollow">多层感知器代码</a>
+<br><a class="internal-link" data-href="_img/多层感知器求导.png" href="_img\多层感知器求导.png" target="_self" rel="noopener nofollow">多层感知器求导</a>
+<br><a class="internal-link" data-href="_img/多层梯度反向传播.png" href="_img\多层梯度反向传播.png" target="_self" rel="noopener nofollow">多层梯度反向传播</a>
+<br><a class="internal-link" data-href="_img/反向传播中δ的意义.png" href="_img\反向传播中δ的意义.png" target="_self" rel="noopener nofollow">反向传播中δ的意义</a>
+<br><a class="internal-link" data-href="_img/各种网络的性能比较.png" href="_img\各种网络的性能比较.png" target="_self" rel="noopener nofollow">各种网络的性能比较</a>
+<br><a class="internal-link" data-href="_img/各种divergence对应于GAN的形式.png" href="_img\各种divergence对应于gan的形式.png" target="_self" rel="noopener nofollow">各种divergence对应于GAN的形式</a>
+<br><a class="internal-link" data-href="_img/集线器.gif" href="_img\集线器.gif" target="_self" rel="noopener nofollow">集线器</a>
+<br><a class="internal-link" data-href="_img/加上对code进行判别的VAEGAN.png" href="_img\加上对code进行判别的vaegan.png" target="_self" rel="noopener nofollow">加上对code进行判别的VAEGAN</a>
+<br><a class="internal-link" data-href="_img/节点.png" href="_img\节点.png" target="_self" rel="noopener nofollow">节点</a>
+<br><a class="internal-link" data-href="_img/节点一览.png" href="_img\节点一览.png" target="_self" rel="noopener nofollow">节点一览</a>
+<br><a class="internal-link" data-href="_img/快捷控制台.gif" href="_img\快捷控制台.gif" target="_self" rel="noopener nofollow">快捷控制台</a>
+<br><a class="internal-link" data-href="_img/连接交换器.gif" href="_img\连接交换器.gif" target="_self" rel="noopener nofollow">连接交换器</a>
+<br><a class="internal-link" data-href="_img/两种CGAN的模型.png" href="_img\两种cgan的模型.png" target="_self" rel="noopener nofollow">两种CGAN的模型</a>
+<br><a class="internal-link" data-href="_img/模型类的另一种实现sequential.png" href="_img\模型类的另一种实现sequential.png" target="_self" rel="noopener nofollow">模型类的另一种实现sequential</a>
+<br><a class="internal-link" data-href="_img/判别模型作为生成器.png" href="_img\判别模型作为生成器.png" target="_self" rel="noopener nofollow">判别模型作为生成器</a>
+<br><a class="internal-link" data-href="_img/切换到GPU上.png" href="_img\切换到gpu上.png" target="_self" rel="noopener nofollow">切换到GPU上</a>
+<br><a class="internal-link" data-href="_img/申请模板.txt" href="_img\申请模板.txt" target="_self" rel="noopener nofollow">申请模板</a>
+<br><a class="internal-link" data-href="_img/四元数乘法公式.png" href="_img\四元数乘法公式.png" target="_self" rel="noopener nofollow">四元数乘法公式</a>
+<br><a class="internal-link" data-href="_img/四元数旋转的理解.png" href="_img\四元数旋转的理解.png" target="_self" rel="noopener nofollow">四元数旋转的理解</a>
+<br><a class="internal-link" data-href="_img/四元数运算法则.png" href="_img\四元数运算法则.png" target="_self" rel="noopener nofollow">四元数运算法则</a>
+<br><a class="internal-link" data-href="_img/坍塌效果.png" href="_img\坍塌效果.png" target="_self" rel="noopener nofollow">坍塌效果</a>
+<br><a class="internal-link" data-href="_img/提取图片特征codes的三种方法.png" href="_img\提取图片特征codes的三种方法.png" target="_self" rel="noopener nofollow">提取图片特征codes的三种方法</a>
+<br><a class="internal-link" data-href="_img/听说WGAN-GP配合Adam优化器有奇效.png" href="_img\听说wgan-gp配合adam优化器有奇效.png" target="_self" rel="noopener nofollow">听说WGAN-GP配合Adam优化器有奇效</a>
+<br><a class="internal-link" data-href="_img/通过transform生成更多训练样本.png" href="_img\通过transform生成更多训练样本.png" target="_self" rel="noopener nofollow">通过transform生成更多训练样本</a>
+<br><a class="internal-link" data-href="_img/统计得到的rgb均值和方差，进行image normalization‘.png" href="_img\统计得到的rgb均值和方差，进行image-normalization‘.png" target="_self" rel="noopener nofollow">统计得到的rgb均值和方差，进行image normalization‘</a>
+<br><a class="internal-link" data-href="_img/效果一览.png" href="_img\效果一览.png" target="_self" rel="noopener nofollow">效果一览</a>
+<br><a class="internal-link" data-href="_img/训练数据的保存和加载.png" href="_img\训练数据的保存和加载.png" target="_self" rel="noopener nofollow">训练数据的保存和加载</a>
+<br><a class="internal-link" data-href="_img/一张图理解字体渲染中的大小及其转换 - 哔哩哔哩.jpg" href="_img\一张图理解字体渲染中的大小及其转换-哔哩哔哩.jpg" target="_self" rel="noopener nofollow">一张图理解字体渲染中的大小及其转换 - 哔哩哔哩</a>
+<br><a class="internal-link" data-href="_img/游戏中的空间转换.png" href="_img\游戏中的空间转换.png" target="_self" rel="noopener nofollow">游戏中的空间转换</a>
+<br><a class="internal-link" data-href="_img/自编码网络Decoder可视为一个Gennerator.png" href="_img\自编码网络decoder可视为一个gennerator.png" target="_self" rel="noopener nofollow">自编码网络Decoder可视为一个Gennerator</a>
+<br><a class="internal-link" data-href="_img/自定义linear层.png" href="_img\自定义linear层.png" target="_self" rel="noopener nofollow">自定义linear层</a>
+<br><a class="internal-link" data-href="_img/自动排列0.gif" href="_img\自动排列0.gif" target="_self" rel="noopener nofollow">自动排列0</a>
+<br><a class="internal-link" data-href="_img/自动排列1.gif" href="_img\自动排列1.gif" target="_self" rel="noopener nofollow">自动排列1</a>
+<br><a class="internal-link" data-href="_img/a33a491ff5bf92837f5206bbdd1bbd86_MD5.jpeg" href="_img\a33a491ff5bf92837f5206bbdd1bbd86_md5.jpeg" target="_self" rel="noopener nofollow">a33a491ff5bf92837f5206bbdd1bbd86_MD5</a>
+<br><a class="internal-link" data-href="_img/a4c96f7e904746c1bcb8bb8a43c5995e_MD5.jpeg" href="_img\a4c96f7e904746c1bcb8bb8a43c5995e_md5.jpeg" target="_self" rel="noopener nofollow">a4c96f7e904746c1bcb8bb8a43c5995e_MD5</a>
+<br><a class="internal-link" data-href="_img/a6424505ee1bc0a86f486bca594467ce_MD5.jpeg" href="_img\a6424505ee1bc0a86f486bca594467ce_md5.jpeg" target="_self" rel="noopener nofollow">a6424505ee1bc0a86f486bca594467ce_MD5</a>
+<br><a class="internal-link" data-href="_img/a649a892d7bc3250527b8e49814bcc6e_MD5.jpeg" href="_img\a649a892d7bc3250527b8e49814bcc6e_md5.jpeg" target="_self" rel="noopener nofollow">a649a892d7bc3250527b8e49814bcc6e_MD5</a>
+<br><a class="internal-link" data-href="_img/a776fcd61376d00bb0e462d09f26c7a8_MD5.jpeg" href="_img\a776fcd61376d00bb0e462d09f26c7a8_md5.jpeg" target="_self" rel="noopener nofollow">a776fcd61376d00bb0e462d09f26c7a8_MD5</a>
+<br><a class="internal-link" data-href="_img/ACES流程.png" href="_img\aces流程.png" target="_self" rel="noopener nofollow">ACES流程</a>
+<br><a class="internal-link" data-href="_img/ACES流程2013.png" href="_img\aces流程2013.png" target="_self" rel="noopener nofollow">ACES流程2013</a>
+<br><a class="internal-link" data-href="_img/ACES流程实例.png" href="_img\aces流程实例.png" target="_self" rel="noopener nofollow">ACES流程实例</a>
+<br><a class="internal-link" data-href="_img/b1edd4a0c76582437bcc0110f289620f_MD5.jpeg" href="_img\b1edd4a0c76582437bcc0110f289620f_md5.jpeg" target="_self" rel="noopener nofollow">b1edd4a0c76582437bcc0110f289620f_MD5</a>
+<br><a class="internal-link" data-href="_img/b261403d16f5bdab059c549b0fc70956_MD5.jpeg" href="_img\b261403d16f5bdab059c549b0fc70956_md5.jpeg" target="_self" rel="noopener nofollow">b261403d16f5bdab059c549b0fc70956_MD5</a>
+<br><a class="internal-link" data-href="_img/b3f8d0f55f1a13e7a6e8edc5a4b981d8.jpg" href="_img\b3f8d0f55f1a13e7a6e8edc5a4b981d8.jpg" target="_self" rel="noopener nofollow">b3f8d0f55f1a13e7a6e8edc5a4b981d8</a>
+<br><a class="internal-link" data-href="_img/b524a8efcf9a5340602a3d52bb530ea8_MD5.jpeg" href="_img\b524a8efcf9a5340602a3d52bb530ea8_md5.jpeg" target="_self" rel="noopener nofollow">b524a8efcf9a5340602a3d52bb530ea8_MD5</a>
+<br><a class="internal-link" data-href="_img/b73c5e18f421086bacf870f7a0522827_MD5.jpeg" href="_img\b73c5e18f421086bacf870f7a0522827_md5.jpeg" target="_self" rel="noopener nofollow">b73c5e18f421086bacf870f7a0522827_MD5</a>
+<br><a class="internal-link" data-href="_img/bandicam 2024-11-30 11-35-23-523 1.mp4" href="_img\bandicam-2024-11-30-11-35-23-523-1.mp4" target="_self" rel="noopener nofollow">bandicam 2024-11-30 11-35-23-523 1</a>
+<br><a class="internal-link" data-href="_img/bandicam 2024-11-30 11-35-23-523.mp4" href="_img\bandicam-2024-11-30-11-35-23-523.mp4" target="_self" rel="noopener nofollow">bandicam 2024-11-30 11-35-23-523</a>
+<br><a class="internal-link" data-href="_img/BatchNormalization.png" href="_img\batchnormalization.png" target="_self" rel="noopener nofollow">BatchNormalization</a>
+<br><a class="internal-link" data-href="_img/bc9c24a9bf9e0d405ea9a5d5f3a8583e_MD5.jpeg" href="_img\bc9c24a9bf9e0d405ea9a5d5f3a8583e_md5.jpeg" target="_self" rel="noopener nofollow">bc9c24a9bf9e0d405ea9a5d5f3a8583e_MD5</a>
+<br><a class="internal-link" data-href="_img/be97bc91ad108a45024a7b8975741a6a_MD5.jpeg" href="_img\be97bc91ad108a45024a7b8975741a6a_md5.jpeg" target="_self" rel="noopener nofollow">be97bc91ad108a45024a7b8975741a6a_MD5</a>
+<br><a class="internal-link" data-href="_img/bee1fe86eef62b3aace9afafddd89efb_MD5.jpeg" href="_img\bee1fe86eef62b3aace9afafddd89efb_md5.jpeg" target="_self" rel="noopener nofollow">bee1fe86eef62b3aace9afafddd89efb_MD5</a>
+<br><a class="internal-link" data-href="_img/BiGAN的思路.png" href="_img\bigan的思路.png" target="_self" rel="noopener nofollow">BiGAN的思路</a>
+<br><a class="internal-link" data-href="_img/c06e1c5265898d8ff53506bb147d4093_MD5.jpeg" href="_img\c06e1c5265898d8ff53506bb147d4093_md5.jpeg" target="_self" rel="noopener nofollow">c06e1c5265898d8ff53506bb147d4093_MD5</a>
+<br><a class="internal-link" data-href="_img/c318e40fe27995eb424d47fe43456c37_MD5.jpeg" href="_img\c318e40fe27995eb424d47fe43456c37_md5.jpeg" target="_self" rel="noopener nofollow">c318e40fe27995eb424d47fe43456c37_MD5</a>
+<br><a class="internal-link" data-href="_img/c32ccd9b290dc85052b2962d413341a5_MD5.jpeg" href="_img\c32ccd9b290dc85052b2962d413341a5_md5.jpeg" target="_self" rel="noopener nofollow">c32ccd9b290dc85052b2962d413341a5_MD5</a>
+<br><a class="internal-link" data-href="_img/c51e67fcb98d1595bad38973ea155be4_MD5.mp4" href="_img\c51e67fcb98d1595bad38973ea155be4_md5.mp4" target="_self" rel="noopener nofollow">c51e67fcb98d1595bad38973ea155be4_MD5</a>
+<br><a class="internal-link" data-href="_img/c6807ef2ebd12cd53bdca3fbc71fb145.jpg" href="_img\c6807ef2ebd12cd53bdca3fbc71fb145.jpg" target="_self" rel="noopener nofollow">c6807ef2ebd12cd53bdca3fbc71fb145</a>
+<br><a class="internal-link" data-href="_img/c9d573b8dcabc6f1ca471eceaceadf3b_MD5.jpeg" href="_img\c9d573b8dcabc6f1ca471eceaceadf3b_md5.jpeg" target="_self" rel="noopener nofollow">c9d573b8dcabc6f1ca471eceaceadf3b_MD5</a>
+<br><a class="internal-link" data-href="_img/cc701ff6980d7b6a88230972c34ef130_MD5.jpeg" href="_img\cc701ff6980d7b6a88230972c34ef130_md5.jpeg" target="_self" rel="noopener nofollow">cc701ff6980d7b6a88230972c34ef130_MD5</a>
+<br><a class="internal-link" data-href="_img/CGAN的生成判别模型的基本思路和公式.png" href="_img\cgan的生成判别模型的基本思路和公式.png" target="_self" rel="noopener nofollow">CGAN的生成判别模型的基本思路和公式</a>
+<br><a class="internal-link" data-href="_img/CycleGAN的简单原理.png" href="_img\cyclegan的简单原理.png" target="_self" rel="noopener nofollow">CycleGAN的简单原理</a>
+<br><a class="internal-link" data-href="_img/CycleGAN与隐写术与有效性.png" href="_img\cyclegan与隐写术与有效性.png" target="_self" rel="noopener nofollow">CycleGAN与隐写术与有效性</a>
+<br><a class="internal-link" data-href="_img/CycleVAEGAN(搁这叠buff呢).png" href="_img\cyclevaegan(搁这叠buff呢).png" target="_self" rel="noopener nofollow">CycleVAEGAN(搁这叠buff呢)</a>
+<br><a class="internal-link" data-href="_img/d7e6a1aee8713ab5f714ee5bdf5a6936.jpg" href="_img\d7e6a1aee8713ab5f714ee5bdf5a6936.jpg" target="_self" rel="noopener nofollow">d7e6a1aee8713ab5f714ee5bdf5a6936</a>
+<br><a class="internal-link" data-href="_img/d8002470e1670b6299b79132cfd4ad69_MD5.jpeg" href="_img\d8002470e1670b6299b79132cfd4ad69_md5.jpeg" target="_self" rel="noopener nofollow">d8002470e1670b6299b79132cfd4ad69_MD5</a>
+<br><a class="internal-link" data-href="_img/d8d77b1cfc51f85d82ea065edc07ac76_MD5.jpeg" href="_img\d8d77b1cfc51f85d82ea065edc07ac76_md5.jpeg" target="_self" rel="noopener nofollow">d8d77b1cfc51f85d82ea065edc07ac76_MD5</a>
+<br><a class="internal-link" data-href="_img/de3d1b7fa55f3c82d16d5a4f5562b457_MD5.jpeg" href="_img\de3d1b7fa55f3c82d16d5a4f5562b457_md5.jpeg" target="_self" rel="noopener nofollow">de3d1b7fa55f3c82d16d5a4f5562b457_MD5</a>
+<br><a class="internal-link" data-href="_img/e0adebdf3010b7fd440d9f46350bbaa2_MD5.jpeg" href="_img\e0adebdf3010b7fd440d9f46350bbaa2_md5.jpeg" target="_self" rel="noopener nofollow">e0adebdf3010b7fd440d9f46350bbaa2_MD5</a>
+<br><a class="internal-link" data-href="_img/e6529354197e3c306eb5803d783c883b_MD5.jpeg" href="_img\e6529354197e3c306eb5803d783c883b_md5.jpeg" target="_self" rel="noopener nofollow">e6529354197e3c306eb5803d783c883b_MD5</a>
+<br><a class="internal-link" data-href="_img/eb86ba98db6e9c2fdb492d968852c371_MD5.jpeg" href="_img\eb86ba98db6e9c2fdb492d968852c371_md5.jpeg" target="_self" rel="noopener nofollow">eb86ba98db6e9c2fdb492d968852c371_MD5</a>
+<br><a class="internal-link" data-href="_img/ee2ba653c92efd194e2a0870063925ed_MD5.jpeg" href="_img\ee2ba653c92efd194e2a0870063925ed_md5.jpeg" target="_self" rel="noopener nofollow">ee2ba653c92efd194e2a0870063925ed_MD5</a>
+<br><a class="internal-link" data-href="_img/EMD的优势.png" href="_img\emd的优势.png" target="_self" rel="noopener nofollow">EMD的优势</a>
+<br><a class="internal-link" data-href="_img/EMD的约束条件.jpg" href="_img\emd的约束条件.jpg" target="_self" rel="noopener nofollow">EMD的约束条件</a>
+<br><a class="internal-link" data-href="_img/EMD之外的两种距离度量CD&amp;HD.png" href="_img\emd之外的两种距离度量cd&amp;hd.png" target="_self" rel="noopener nofollow">EMD之外的两种距离度量CD&amp;HD</a>
+<br><a class="internal-link" data-href="_img/f-divergence的定义和一些性质.png" href="_img\f-divergence的定义和一些性质.png" target="_self" rel="noopener nofollow">f-divergence的定义和一些性质</a>
+<br><a class="internal-link" data-href="_img/f2f668affa5c41c48a0317fb2f4e1ee5_MD5.jpeg" href="_img\f2f668affa5c41c48a0317fb2f4e1ee5_md5.jpeg" target="_self" rel="noopener nofollow">f2f668affa5c41c48a0317fb2f4e1ee5_MD5</a>
+<br><a class="internal-link" data-href="_img/f3bb741be955b30a107149068a4320a2.jpg" href="_img\f3bb741be955b30a107149068a4320a2.jpg" target="_self" rel="noopener nofollow">f3bb741be955b30a107149068a4320a2</a>
+<br><a class="internal-link" data-href="_img/f4449c557f6e9fecc2580f692384b7b9_MD5.jpeg" href="_img\f4449c557f6e9fecc2580f692384b7b9_md5.jpeg" target="_self" rel="noopener nofollow">f4449c557f6e9fecc2580f692384b7b9_MD5</a>
+<br><a class="internal-link" data-href="_img/f803b2fcac60e94f8e2047c14bd48bce_MD5.jpeg" href="_img\f803b2fcac60e94f8e2047c14bd48bce_md5.jpeg" target="_self" rel="noopener nofollow">f803b2fcac60e94f8e2047c14bd48bce_MD5</a>
+<br><a class="internal-link" data-href="_img/f86be44618b7ed4e800b6ff9de85bb9d_MD5.jpeg" href="_img\f86be44618b7ed4e800b6ff9de85bb9d_md5.jpeg" target="_self" rel="noopener nofollow">f86be44618b7ed4e800b6ff9de85bb9d_MD5</a>
+<br><a class="internal-link" data-href="_img/ffbf39c1d41e704f4854c37b4553b2a9_MD5.jpeg" href="_img\ffbf39c1d41e704f4854c37b4553b2a9_md5.jpeg" target="_self" rel="noopener nofollow">ffbf39c1d41e704f4854c37b4553b2a9_MD5</a>
+<br><a class="internal-link" data-href="_img/flatten类.png" href="_img\flatten类.png" target="_self" rel="noopener nofollow">flatten类</a>
+<br><a class="internal-link" data-href="_img/GAN的目标函和f-divergence任意替换的公式(原理在李宏毅第5课 意义不大 懒得贴出).png" href="_img\gan的目标函和f-divergence任意替换的公式(原理在李宏毅第5课-意义不大-懒得贴出).png" target="_self" rel="noopener nofollow">GAN的目标函和f-divergence任意替换的公式(原理在李宏毅第5课 意义不大 懒得贴出)</a>
+<br><a class="internal-link" data-href="_img/GAN的特点1.png" href="_img\gan的特点1.png" target="_self" rel="noopener nofollow">GAN的特点1</a>
+<br><a class="internal-link" data-href="_img/GAN模型原始paper的对于生成和判别器的思路和公式.png" href="_img\gan模型原始paper的对于生成和判别器的思路和公式.png" target="_self" rel="noopener nofollow">GAN模型原始paper的对于生成和判别器的思路和公式</a>
+<br><a class="internal-link" data-href="_img/GAN目标函数.png" href="_img\gan目标函数.png" target="_self" rel="noopener nofollow">GAN目标函数</a>
+<br><a class="internal-link" data-href="_img/GAN判别模型输出标量只是相对概念.png" href="_img\gan判别模型输出标量只是相对概念.png" target="_self" rel="noopener nofollow">GAN判别模型输出标量只是相对概念</a>
+<br><a class="internal-link" data-href="_img/GAN清晰而VAE模糊的原因.png" href="_img\gan清晰而vae模糊的原因.png" target="_self" rel="noopener nofollow">GAN清晰而VAE模糊的原因</a>
+<br><a class="internal-link" data-href="_img/GAN求解公式的意义.png" href="_img\gan求解公式的意义.png" target="_self" rel="noopener nofollow">GAN求解公式的意义</a>
+<br><a class="internal-link" data-href="_img/GAN全流程.png" href="_img\gan全流程.png" target="_self" rel="noopener nofollow">GAN全流程</a>
+<br><a class="internal-link" data-href="_img/GAN生成模型的最大似然求解.png" href="_img\gan生成模型的最大似然求解.png" target="_self" rel="noopener nofollow">GAN生成模型的最大似然求解</a>
+<br><a class="internal-link" data-href="_img/GAN生成模型和判别模型的优势互补.png" href="_img\gan生成模型和判别模型的优势互补.png" target="_self" rel="noopener nofollow">GAN生成模型和判别模型的优势互补</a>
+<br><a class="internal-link" data-href="_img/GAN实际操作时G的loss.png" href="_img\gan实际操作时g的loss.png" target="_self" rel="noopener nofollow">GAN实际操作时G的loss</a>
+<br><a class="internal-link" data-href="_img/GAN为什么G不宜更新过快.png" href="_img\gan为什么g不宜更新过快.png" target="_self" rel="noopener nofollow">GAN为什么G不宜更新过快</a>
+<br><a class="internal-link" data-href="_img/GAN先训练生成器的原因.png" href="_img\gan先训练生成器的原因.png" target="_self" rel="noopener nofollow">GAN先训练生成器的原因</a>
+<br><a class="internal-link" data-href="_img/GAN一个解释和疑问.png" href="_img\gan一个解释和疑问.png" target="_self" rel="noopener nofollow">GAN一个解释和疑问</a>
+<br><a class="internal-link" data-href="_img/GAN中对G目标函数进行化简的推导和证明.jpg" href="_img\gan中对g目标函数进行化简的推导和证明.jpg" target="_self" rel="noopener nofollow">GAN中对G目标函数进行化简的推导和证明</a>
+<br><a class="internal-link" data-href="_img/GAN中每次迭代Discriminator的进化.png" href="_img\gan中每次迭代discriminator的进化.png" target="_self" rel="noopener nofollow">GAN中每次迭代Discriminator的进化</a>
+<br><a class="internal-link" data-href="_img/GAN中判别器的loss为什么是BinaryCrossEntropy.png" href="_img\gan中判别器的loss为什么是binarycrossentropy.png" target="_self" rel="noopener nofollow">GAN中判别器的loss为什么是BinaryCrossEntropy</a>
+<br><a class="internal-link" data-href="_img/GAN中求得D参数后G参数的求解以及JS散度和目标函数的关系.png" href="_img\gan中求得d参数后g参数的求解以及js散度和目标函数的关系.png" target="_self" rel="noopener nofollow">GAN中求得D参数后G参数的求解以及JS散度和目标函数的关系</a>
+<br><a class="internal-link" data-href="_img/GAN中虚假样本对于判别模型的重要性.png" href="_img\gan中虚假样本对于判别模型的重要性.png" target="_self" rel="noopener nofollow">GAN中虚假样本对于判别模型的重要性</a>
+<br><a class="internal-link" data-href="_img/GAN中D的最值求解.png" href="_img\gan中d的最值求解.png" target="_self" rel="noopener nofollow">GAN中D的最值求解</a>
+<br><a class="internal-link" data-href="_img/GAN中JS散度很有可能退化为常数值.png" href="_img\gan中js散度很有可能退化为常数值.png" target="_self" rel="noopener nofollow">GAN中JS散度很有可能退化为常数值</a>
+<br><a class="internal-link" data-href="_img/GAN中JS散度为什么不合适.png" href="_img\gan中js散度为什么不合适.png" target="_self" rel="noopener nofollow">GAN中JS散度为什么不合适</a>
+<br><a class="internal-link" data-href="_img/grad中inplace的问题.png" href="_img\grad中inplace的问题.png" target="_self" rel="noopener nofollow">grad中inplace的问题</a>
+<br><a class="internal-link" data-href="_img/Houdini Master Settings.png" href="_img\houdini-master-settings.png" target="_self" rel="noopener nofollow">Houdini Master Settings</a>
+<br><a class="internal-link" data-href="_img/Houdini Master.gif" href="_img\houdini-master.gif" target="_self" rel="noopener nofollow">Houdini Master</a>
+<br><a class="internal-link" data-href="_img/image (1).png" href="_img\image-(1).png" target="_self" rel="noopener nofollow">image (1)</a>
+<br><a class="internal-link" data-href="_img/image (10) 1.png" href="_img\image-(10)-1.png" target="_self" rel="noopener nofollow">image (10) 1</a>
+<br><a class="internal-link" data-href="_img/image (10).png" href="_img\image-(10).png" target="_self" rel="noopener nofollow">image (10)</a>
+<br><a class="internal-link" data-href="_img/image (11).png" href="_img\image-(11).png" target="_self" rel="noopener nofollow">image (11)</a>
+<br><a class="internal-link" data-href="_img/image (12).png" href="_img\image-(12).png" target="_self" rel="noopener nofollow">image (12)</a>
+<br><a class="internal-link" data-href="_img/image (13).png" href="_img\image-(13).png" target="_self" rel="noopener nofollow">image (13)</a>
+<br><a class="internal-link" data-href="_img/image (14).png" href="_img\image-(14).png" target="_self" rel="noopener nofollow">image (14)</a>
+<br><a class="internal-link" data-href="_img/image (15).png" href="_img\image-(15).png" target="_self" rel="noopener nofollow">image (15)</a>
+<br><a class="internal-link" data-href="_img/image (16).png" href="_img\image-(16).png" target="_self" rel="noopener nofollow">image (16)</a>
+<br><a class="internal-link" data-href="_img/image (17).png" href="_img\image-(17).png" target="_self" rel="noopener nofollow">image (17)</a>
+<br><a class="internal-link" data-href="_img/image (18).png" href="_img\image-(18).png" target="_self" rel="noopener nofollow">image (18)</a>
+<br><a class="internal-link" data-href="_img/image (21).png" href="_img\image-(21).png" target="_self" rel="noopener nofollow">image (21)</a>
+<br><a class="internal-link" data-href="_img/image (22).png" href="_img\image-(22).png" target="_self" rel="noopener nofollow">image (22)</a>
+<br><a class="internal-link" data-href="_img/image (23).png" href="_img\image-(23).png" target="_self" rel="noopener nofollow">image (23)</a>
+<br><a class="internal-link" data-href="_img/image (24).png" href="_img\image-(24).png" target="_self" rel="noopener nofollow">image (24)</a>
+<br><a class="internal-link" data-href="_img/image (25).png" href="_img\image-(25).png" target="_self" rel="noopener nofollow">image (25)</a>
+<br><a class="internal-link" data-href="_img/image (26).png" href="_img\image-(26).png" target="_self" rel="noopener nofollow">image (26)</a>
+<br><a class="internal-link" data-href="_img/image (30).png" href="_img\image-(30).png" target="_self" rel="noopener nofollow">image (30)</a>
+<br><a class="internal-link" data-href="_img/image (37).png" href="_img\image-(37).png" target="_self" rel="noopener nofollow">image (37)</a>
+<br><a class="internal-link" data-href="_img/image (38).png" href="_img\image-(38).png" target="_self" rel="noopener nofollow">image (38)</a>
+<br><a class="internal-link" data-href="_img/image (39).png" href="_img\image-(39).png" target="_self" rel="noopener nofollow">image (39)</a>
+<br><a class="internal-link" data-href="_img/image (4).png" href="_img\image-(4).png" target="_self" rel="noopener nofollow">image (4)</a>
+<br><a class="internal-link" data-href="_img/image (40).png" href="_img\image-(40).png" target="_self" rel="noopener nofollow">image (40)</a>
+<br><a class="internal-link" data-href="_img/image (41).png" href="_img\image-(41).png" target="_self" rel="noopener nofollow">image (41)</a>
+<br><a class="internal-link" data-href="_img/image (42).png" href="_img\image-(42).png" target="_self" rel="noopener nofollow">image (42)</a>
+<br><a class="internal-link" data-href="_img/image (44).png" href="_img\image-(44).png" target="_self" rel="noopener nofollow">image (44)</a>
+<br><a class="internal-link" data-href="_img/image (45).png" href="_img\image-(45).png" target="_self" rel="noopener nofollow">image (45)</a>
+<br><a class="internal-link" data-href="_img/image (46).png" href="_img\image-(46).png" target="_self" rel="noopener nofollow">image (46)</a>
+<br><a class="internal-link" data-href="_img/image (7).png" href="_img\image-(7).png" target="_self" rel="noopener nofollow">image (7)</a>
+<br><a class="internal-link" data-href="_img/infoGAN的工作模式.png" href="_img\infogan的工作模式.png" target="_self" rel="noopener nofollow">infoGAN的工作模式</a>
+<br><a class="internal-link" data-href="_img/MG_80_change.gif" href="_img\mg_80_change.gif" target="_self" rel="noopener nofollow">MG_80_change</a>
+<br><a class="internal-link" data-href="_img/MG_80.gif" href="_img\mg_80.gif" target="_self" rel="noopener nofollow">MG_80</a>
+<br><a class="internal-link" data-href="_img/MG_Glass.png" href="_img\mg_glass.png" target="_self" rel="noopener nofollow">MG_Glass</a>
+<br><a class="internal-link" data-href="_img/MG_in_mid_out.gif" href="_img\mg_in_mid_out.gif" target="_self" rel="noopener nofollow">MG_in_mid_out</a>
+<br><a class="internal-link" data-href="_img/MG_in_mid.gif" href="_img\mg_in_mid.gif" target="_self" rel="noopener nofollow">MG_in_mid</a>
+<br><a class="internal-link" data-href="_img/module和data的.to().png" href="_img\module和data的.to().png" target="_self" rel="noopener nofollow">module和data的.to()</a>
+<br><a class="internal-link" data-href="_img/nn和F风格的层.png" href="_img\nn和f风格的层.png" target="_self" rel="noopener nofollow">nn和F风格的层</a>
+<br><a class="internal-link" data-href="_img/node exchanger.gif" href="_img\node-exchanger.gif" target="_self" rel="noopener nofollow">node exchanger</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20231031171407.png" href="_img\pasted-image-20231031171407.png" target="_self" rel="noopener nofollow">Pasted image 20231031171407</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20231106102059.png" href="_img\pasted-image-20231106102059.png" target="_self" rel="noopener nofollow">Pasted image 20231106102059</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218173917.png" href="_img\pasted-image-20240218173917.png" target="_self" rel="noopener nofollow">Pasted image 20240218173917</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218181116.png" href="_img\pasted-image-20240218181116.png" target="_self" rel="noopener nofollow">Pasted image 20240218181116</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218181826.png" href="_img\pasted-image-20240218181826.png" target="_self" rel="noopener nofollow">Pasted image 20240218181826</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182213.png" href="_img\pasted-image-20240218182213.png" target="_self" rel="noopener nofollow">Pasted image 20240218182213</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182252.png" href="_img\pasted-image-20240218182252.png" target="_self" rel="noopener nofollow">Pasted image 20240218182252</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218182355.png" href="_img\pasted-image-20240218182355.png" target="_self" rel="noopener nofollow">Pasted image 20240218182355</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192527.png" href="_img\pasted-image-20240218192527.png" target="_self" rel="noopener nofollow">Pasted image 20240218192527</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192706.png" href="_img\pasted-image-20240218192706.png" target="_self" rel="noopener nofollow">Pasted image 20240218192706</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218192808.png" href="_img\pasted-image-20240218192808.png" target="_self" rel="noopener nofollow">Pasted image 20240218192808</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218195619.png" href="_img\pasted-image-20240218195619.png" target="_self" rel="noopener nofollow">Pasted image 20240218195619</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218195958.png" href="_img\pasted-image-20240218195958.png" target="_self" rel="noopener nofollow">Pasted image 20240218195958</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218200258.png" href="_img\pasted-image-20240218200258.png" target="_self" rel="noopener nofollow">Pasted image 20240218200258</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218201614.png" href="_img\pasted-image-20240218201614.png" target="_self" rel="noopener nofollow">Pasted image 20240218201614</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218202423.png" href="_img\pasted-image-20240218202423.png" target="_self" rel="noopener nofollow">Pasted image 20240218202423</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218203439.png" href="_img\pasted-image-20240218203439.png" target="_self" rel="noopener nofollow">Pasted image 20240218203439</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218204944.png" href="_img\pasted-image-20240218204944.png" target="_self" rel="noopener nofollow">Pasted image 20240218204944</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218205532.png" href="_img\pasted-image-20240218205532.png" target="_self" rel="noopener nofollow">Pasted image 20240218205532</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240218215425.png" href="_img\pasted-image-20240218215425.png" target="_self" rel="noopener nofollow">Pasted image 20240218215425</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240220215756.png" href="_img\pasted-image-20240220215756.png" target="_self" rel="noopener nofollow">Pasted image 20240220215756</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240220224727.png" href="_img\pasted-image-20240220224727.png" target="_self" rel="noopener nofollow">Pasted image 20240220224727</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240301001737.png" href="_img\pasted-image-20240301001737.png" target="_self" rel="noopener nofollow">Pasted image 20240301001737</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240303232531.png" href="_img\pasted-image-20240303232531.png" target="_self" rel="noopener nofollow">Pasted image 20240303232531</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304005554.png" href="_img\pasted-image-20240304005554.png" target="_self" rel="noopener nofollow">Pasted image 20240304005554</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304005822.png" href="_img\pasted-image-20240304005822.png" target="_self" rel="noopener nofollow">Pasted image 20240304005822</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304012928.png" href="_img\pasted-image-20240304012928.png" target="_self" rel="noopener nofollow">Pasted image 20240304012928</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014122.png" href="_img\pasted-image-20240304014122.png" target="_self" rel="noopener nofollow">Pasted image 20240304014122</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014213.png" href="_img\pasted-image-20240304014213.png" target="_self" rel="noopener nofollow">Pasted image 20240304014213</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304014818.png" href="_img\pasted-image-20240304014818.png" target="_self" rel="noopener nofollow">Pasted image 20240304014818</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304015119.png" href="_img\pasted-image-20240304015119.png" target="_self" rel="noopener nofollow">Pasted image 20240304015119</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304015142.png" href="_img\pasted-image-20240304015142.png" target="_self" rel="noopener nofollow">Pasted image 20240304015142</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304020156.png" href="_img\pasted-image-20240304020156.png" target="_self" rel="noopener nofollow">Pasted image 20240304020156</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240304222359.png" href="_img\pasted-image-20240304222359.png" target="_self" rel="noopener nofollow">Pasted image 20240304222359</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312002014.png" href="_img\pasted-image-20240312002014.png" target="_self" rel="noopener nofollow">Pasted image 20240312002014</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312003501.png" href="_img\pasted-image-20240312003501.png" target="_self" rel="noopener nofollow">Pasted image 20240312003501</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312003921.png" href="_img\pasted-image-20240312003921.png" target="_self" rel="noopener nofollow">Pasted image 20240312003921</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312004125.png" href="_img\pasted-image-20240312004125.png" target="_self" rel="noopener nofollow">Pasted image 20240312004125</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312233759.png" href="_img\pasted-image-20240312233759.png" target="_self" rel="noopener nofollow">Pasted image 20240312233759</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312234139.png" href="_img\pasted-image-20240312234139.png" target="_self" rel="noopener nofollow">Pasted image 20240312234139</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312234622.png" href="_img\pasted-image-20240312234622.png" target="_self" rel="noopener nofollow">Pasted image 20240312234622</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312235125.png" href="_img\pasted-image-20240312235125.png" target="_self" rel="noopener nofollow">Pasted image 20240312235125</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240312235302.png" href="_img\pasted-image-20240312235302.png" target="_self" rel="noopener nofollow">Pasted image 20240312235302</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313004848.png" href="_img\pasted-image-20240313004848.png" target="_self" rel="noopener nofollow">Pasted image 20240313004848</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011352.png" href="_img\pasted-image-20240313011352.png" target="_self" rel="noopener nofollow">Pasted image 20240313011352</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011604.png" href="_img\pasted-image-20240313011604.png" target="_self" rel="noopener nofollow">Pasted image 20240313011604</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011657.png" href="_img\pasted-image-20240313011657.png" target="_self" rel="noopener nofollow">Pasted image 20240313011657</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011734.png" href="_img\pasted-image-20240313011734.png" target="_self" rel="noopener nofollow">Pasted image 20240313011734</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313011844.png" href="_img\pasted-image-20240313011844.png" target="_self" rel="noopener nofollow">Pasted image 20240313011844</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313013455.png" href="_img\pasted-image-20240313013455.png" target="_self" rel="noopener nofollow">Pasted image 20240313013455</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240313223807.png" href="_img\pasted-image-20240313223807.png" target="_self" rel="noopener nofollow">Pasted image 20240313223807</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240314003704.png" href="_img\pasted-image-20240314003704.png" target="_self" rel="noopener nofollow">Pasted image 20240314003704</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240314003904.png" href="_img\pasted-image-20240314003904.png" target="_self" rel="noopener nofollow">Pasted image 20240314003904</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240324170023.png" href="_img\pasted-image-20240324170023.png" target="_self" rel="noopener nofollow">Pasted image 20240324170023</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240324172813.png" href="_img\pasted-image-20240324172813.png" target="_self" rel="noopener nofollow">Pasted image 20240324172813</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20240330213343.png" href="_img\pasted-image-20240330213343.png" target="_self" rel="noopener nofollow">Pasted image 20240330213343</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217011505.png" href="_img\pasted-image-20241217011505.png" target="_self" rel="noopener nofollow">Pasted image 20241217011505</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217014749.png" href="_img\pasted-image-20241217014749.png" target="_self" rel="noopener nofollow">Pasted image 20241217014749</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20241217020127.png" href="_img\pasted-image-20241217020127.png" target="_self" rel="noopener nofollow">Pasted image 20241217020127</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250427224627.png" href="_img\pasted-image-20250427224627.png" target="_self" rel="noopener nofollow">Pasted image 20250427224627</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250427233844.png" href="_img\pasted-image-20250427233844.png" target="_self" rel="noopener nofollow">Pasted image 20250427233844</a>
+<br><a class="internal-link" data-href="_img/Pasted image 20250504161204.png" href="_img\pasted-image-20250504161204.png" target="_self" rel="noopener nofollow">Pasted image 20250504161204</a>
+<br><a class="internal-link" data-href="_img/PatchGAN与凉宫春日.png" href="_img\patchgan与凉宫春日.png" target="_self" rel="noopener nofollow">PatchGAN与凉宫春日</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-115859.png" href="_img\popo-screenshot-20230423-115859.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-115859</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-120137.png" href="_img\popo-screenshot-20230423-120137.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-120137</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-120146.png" href="_img\popo-screenshot-20230423-120146.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-120146</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230423-164826.png" href="_img\popo-screenshot-20230423-164826.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230423-164826</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-095023.png" href="_img\popo-screenshot-20230424-095023.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-095023</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-102935.png" href="_img\popo-screenshot-20230424-102935.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-102935</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-103133.png" href="_img\popo-screenshot-20230424-103133.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-103133</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230424-103344.png" href="_img\popo-screenshot-20230424-103344.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230424-103344</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230515-101940.png" href="_img\popo-screenshot-20230515-101940.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230515-101940</a>
+<br><a class="internal-link" data-href="_img/POPO-screenshot-20230516-165227.png" href="_img\popo-screenshot-20230516-165227.png" target="_self" rel="noopener nofollow">POPO-screenshot-20230516-165227</a>
+<br><a class="internal-link" data-href="_img/POPO20231009-153520.jpg" href="_img\popo20231009-153520.jpg" target="_self" rel="noopener nofollow">POPO20231009-153520</a>
+<br><a class="internal-link" data-href="_img/python修饰器.png" href="_img\python修饰器.png" target="_self" rel="noopener nofollow">python修饰器</a>
+<br><a class="internal-link" data-href="_img/pytorch里面的cross_entropy和nll-loss.png" href="_img\pytorch里面的cross_entropy和nll-loss.png" target="_self" rel="noopener nofollow">pytorch里面的cross_entropy和nll-loss</a>
+<br><a class="internal-link" data-href="_img/QQ截图20210222220446.png" href="_img\qq截图20210222220446.png" target="_self" rel="noopener nofollow">QQ截图20210222220446</a>
+<br><a class="internal-link" data-href="_img/QQ截图20230306142455.png" href="_img\qq截图20230306142455.png" target="_self" rel="noopener nofollow">QQ截图20230306142455</a>
+<br><a class="internal-link" data-href="_img/quick console.gif" href="_img\quick-console.gif" target="_self" rel="noopener nofollow">quick console</a>
+<br><a class="internal-link" data-href="_img/ResNet实现以及shortcut的改进形式.png" href="_img\resnet实现以及shortcut的改进形式.png" target="_self" rel="noopener nofollow">ResNet实现以及shortcut的改进形式</a>
+<br><a class="internal-link" data-href="_img/Screenshot 2023-04-21 174029.png" href="_img\screenshot-2023-04-21-174029.png" target="_self" rel="noopener nofollow">Screenshot 2023-04-21 174029</a>
+<br><a class="internal-link" data-href="_img/Screenshot 2023-04-23 115724.png" href="_img\screenshot-2023-04-23-115724.png" target="_self" rel="noopener nofollow">Screenshot 2023-04-23 115724</a>
+<br><a class="internal-link" data-href="_img/SemanticConsistencyGAN或者XGAN.png" href="_img\semanticconsistencygan或者xgan.png" target="_self" rel="noopener nofollow">SemanticConsistencyGAN或者XGAN</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_15-56-27.png" href="_img\snipaste_2024-01-12_15-56-27.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_15-56-27</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_15-56-44.png" href="_img\snipaste_2024-01-12_15-56-44.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_15-56-44</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-04-07.png" href="_img\snipaste_2024-01-12_16-04-07.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-04-07</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-04-27.png" href="_img\snipaste_2024-01-12_16-04-27.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-04-27</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-28-38.png" href="_img\snipaste_2024-01-12_16-28-38.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-28-38</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-28-48.png" href="_img\snipaste_2024-01-12_16-28-48.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-28-48</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-01-12_16-53-28.png" href="_img\snipaste_2024-01-12_16-53-28.png" target="_self" rel="noopener nofollow">Snipaste_2024-01-12_16-53-28</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-43-00.png" href="_img\snipaste_2024-07-13_15-43-00.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-43-00</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-47-20.png" href="_img\snipaste_2024-07-13_15-47-20.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-47-20</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_15-50-24.png" href="_img\snipaste_2024-07-13_15-50-24.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_15-50-24</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-00-40.png" href="_img\snipaste_2024-07-13_16-00-40.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-00-40</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-03-58.png" href="_img\snipaste_2024-07-13_16-03-58.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-03-58</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-04-45.png" href="_img\snipaste_2024-07-13_16-04-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-04-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-18-14 1.png" href="_img\snipaste_2024-07-13_16-18-14-1.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-18-14 1</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-18-14.png" href="_img\snipaste_2024-07-13_16-18-14.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-18-14</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-55-16.png" href="_img\snipaste_2024-07-13_16-55-16.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-55-16</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_16-55-32.png" href="_img\snipaste_2024-07-13_16-55-32.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_16-55-32</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_17-56-08.png" href="_img\snipaste_2024-07-13_17-56-08.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_17-56-08</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-17-15.png" href="_img\snipaste_2024-07-13_19-17-15.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-17-15</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-17-31.png" href="_img\snipaste_2024-07-13_19-17-31.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-17-31</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-28-13.png" href="_img\snipaste_2024-07-13_19-28-13.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-28-13</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-32-45.png" href="_img\snipaste_2024-07-13_19-32-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-32-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-40.png" href="_img\snipaste_2024-07-13_19-34-40.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-40</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-49.png" href="_img\snipaste_2024-07-13_19-34-49.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-49</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_19-34-59.png" href="_img\snipaste_2024-07-13_19-34-59.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_19-34-59</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-32-34.png" href="_img\snipaste_2024-07-13_20-32-34.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-32-34</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-34-31.png" href="_img\snipaste_2024-07-13_20-34-31.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-34-31</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-41-13.png" href="_img\snipaste_2024-07-13_20-41-13.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-41-13</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_20-57-05.png" href="_img\snipaste_2024-07-13_20-57-05.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_20-57-05</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-36.png" href="_img\snipaste_2024-07-13_21-04-36.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-36</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-45.png" href="_img\snipaste_2024-07-13_21-04-45.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-45</a>
+<br><a class="internal-link" data-href="_img/Snipaste_2024-07-13_21-04-57.png" href="_img\snipaste_2024-07-13_21-04-57.png" target="_self" rel="noopener nofollow">Snipaste_2024-07-13_21-04-57</a>
+<br><a class="internal-link" data-href="_img/softplus激活函数.png" href="_img\softplus激活函数.png" target="_self" rel="noopener nofollow">softplus激活函数</a>
+<br><a class="internal-link" data-href="_img/StackGan的简要原理.png" href="_img\stackgan的简要原理.png" target="_self" rel="noopener nofollow">StackGan的简要原理</a>
+<br><a class="internal-link" data-href="_img/tb_image_share_1720852998412 (1).jpg" href="_img\tb_image_share_1720852998412-(1).jpg" target="_self" rel="noopener nofollow">tb_image_share_1720852998412 (1)</a>
+<br>[TQ9}83]FX780DWJGZ6B2S<a class="internal-link" data-href="_img/TQ9}83]FX780DWJGZ6B2S[N.png" href="_img\tq9}83]fx780dwjgz6b2s[n.png" target="_self" rel="noopener nofollow">N</a>
+<br><a class="internal-link" data-href="_img/Unsupervised_CGAN的两种实现方法.png" href="_img\unsupervised_cgan的两种实现方法.png" target="_self" rel="noopener nofollow">Unsupervised_CGAN的两种实现方法</a>
+<br><a class="internal-link" data-href="_img/v2-54f8896c40de85525c7e9c59a8082734_720w.jpg" href="_img\v2-54f8896c40de85525c7e9c59a8082734_720w.jpg" target="_self" rel="noopener nofollow">v2-54f8896c40de85525c7e9c59a8082734_720w</a>
+<br><a class="internal-link" data-href="_img/v2-a6b1cf458d512ca7c337499344ce902a_720w.jpg" href="_img\v2-a6b1cf458d512ca7c337499344ce902a_720w.jpg" target="_self" rel="noopener nofollow">v2-a6b1cf458d512ca7c337499344ce902a_720w</a>
+<br><a class="internal-link" data-href="_img/VAE-GAN的简单流程.png" href="_img\vae-gan的简单流程.png" target="_self" rel="noopener nofollow">VAE-GAN的简单流程</a>
+<br><a class="internal-link" data-href="_img/VAE-GAN的具体步骤.png" href="_img\vae-gan的具体步骤.png" target="_self" rel="noopener nofollow">VAE-GAN的具体步骤</a>
+<br><a class="internal-link" data-href="_img/VAE与GAN相比的缺陷.png" href="_img\vae与gan相比的缺陷.png" target="_self" rel="noopener nofollow">VAE与GAN相比的缺陷</a>
+<br><a class="internal-link" data-href="_img/Variational Auto-Encoder网络的简要模型.png" href="_img\variational-auto-encoder网络的简要模型.png" target="_self" rel="noopener nofollow">Variational Auto-Encoder网络的简要模型</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP的导数趋于1.png" href="_img\wgan-gp的导数趋于1.png" target="_self" rel="noopener nofollow">WGAN-GP的导数趋于1</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP的提出.png" href="_img\wgan-gp的提出.png" target="_self" rel="noopener nofollow">WGAN-GP的提出</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP对data和G简单插值得到Ppenalty的问题和改进.png" href="_img\wgan-gp对data和g简单插值得到ppenalty的问题和改进.png" target="_self" rel="noopener nofollow">WGAN-GP对data和G简单插值得到Ppenalty的问题和改进</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP损失函数.png" href="_img\wgan-gp损失函数.png" target="_self" rel="noopener nofollow">WGAN-GP损失函数</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP新加项理解.png" href="_img\wgan-gp新加项理解.png" target="_self" rel="noopener nofollow">WGAN-GP新加项理解</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP有论文指出用谱范数可以满足Lipschitz约束.png" href="_img\wgan-gp有论文指出用谱范数可以满足lipschitz约束.png" target="_self" rel="noopener nofollow">WGAN-GP有论文指出用谱范数可以满足Lipschitz约束</a>
+<br><a class="internal-link" data-href="_img/WGAN-GP最终loss函数以及一些intuitional的解释.png" href="_img\wgan-gp最终loss函数以及一些intuitional的解释.png" target="_self" rel="noopener nofollow">WGAN-GP最终loss函数以及一些intuitional的解释</a>
+<br><a class="internal-link" data-href="_img/WGAN原始论文对1-Lipschitz约束的解决方法.png" href="_img\wgan原始论文对1-lipschitz约束的解决方法.png" target="_self" rel="noopener nofollow">WGAN原始论文对1-Lipschitz约束的解决方法</a>
+<br><a class="internal-link" data-href="_img/WGAN中Lipschitz的具体实现.png" href="_img\wgan中lipschitz的具体实现.png" target="_self" rel="noopener nofollow">WGAN中Lipschitz的具体实现</a>
+<br><a class="internal-link" data-href="_img/WGAN中wasserstein距离的最终化简式子以及Lipschitz约束及其缺点.png" href="_img\wgan中wasserstein距离的最终化简式子以及lipschitz约束及其缺点.png" target="_self" rel="noopener nofollow">WGAN中wasserstein距离的最终化简式子以及Lipschitz约束及其缺点</a>
+<br><a class="internal-link" data-href="_img/white1_00000.png" href="_img\white1_00000.png" target="_self" rel="noopener nofollow">white1_00000</a>
+<br><a class="internal-link" data-href="_img/xetmcci_LOD0.png" href="_img\xetmcci_lod0.png" target="_self" rel="noopener nofollow">xetmcci_LOD0</a>
+]]></description><link>_img\index.html</link><guid isPermaLink="false">_img/Index.md</guid><pubDate>Fri, 12 Jan 2024 13:44:21 GMT</pubDate></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
