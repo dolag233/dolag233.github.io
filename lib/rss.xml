@@ -1,4 +1,438 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 20 Jul 2025 06:15:39 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 20 Jul 2025 06:15:20 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 20 Jul 2025 07:10:22 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 20 Jul 2025 07:10:20 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[Flowmap Canvas | 流向图画布]]></title><description><![CDATA[ 
+ <br><br>
+  <a id="en-btn" href="about:blank#english" target="_blank" rel="noopener nofollow">English</a> | 
+  <a id="zh-btn" href="about:blank#中文" target="_blank" rel="noopener nofollow">中文</a>
+<br><br><br><br>Flowmap Canvas is a powerful and easy-to-use tool for creating and editing flowmaps, designed for game developers, 3D artists, and technical artists.<br><br>Compared to other flowmap editing tools on the market, Flowmap Canvas offers these advantages:<br>
+<br>Open Source &amp; Extensible: Built with Python, making it highly customizable and extensible
+<br>Seamless Texture Support: Create perfectly tileable flowmaps with built-in seamless texture editing
+<br>High-Precision Export: Export flowmaps in high-resolution TGA format for professional use
+<br>Non-Destructive Editing: Unlike FlowmapPainter, our brush system adds to existing flowmaps instead of overwriting them, making it perfect for creating complex flow patterns like river branches
+<br>Real-time Preview: Adjust flow speed and distortion in real-time to achieve the perfect effect
+<br>User-friendly interface: Designed for artists, no programming knowledge required
+<br>Performance optimization: Maintains smooth operation even with high-resolution textures
+<br>Flowmap Canvas makes creating flowmaps simple and efficient for both beginners and professional artists.<br><br>A flowmap is a special texture used in game development to control the directional flow of materials, commonly used in:<br>
+<br>Controlling water, lava, and other liquid material directions
+<br>Guiding fabric and hair material directions
+<br>Simulating wind effects
+<br>UV distortion and dynamic texture deformation
+<br>Flowmaps typically encode direction vectors in the red and green channels:<br>
+<br>Red channel (R) represents flow in the X direction
+<br>Green channel (G) represents flow in the Y direction
+<br><br><br>
+<br>Simple and effective flowmap brush tools
+<br>Real-time flow effect preview
+<br>Seamless texture editing support
+<br>High-precision and standard precision modes
+<br><br>
+<br>Draw and erase tools for precise control
+<br>Canvas navigation with pan and zoom
+<br>Brush size and strength adjustment
+<br>Flow fill functionality
+<br><br>
+<br>Adjustable preview window position
+<br>Tile preview mode support
+<br>Real-time flow animation preview
+<br>Adjustable flow speed and distortion
+<br><br>
+<br>Load and save flowmaps
+<br>Export to TGA format
+<br>High-resolution export support
+<br><br>
+<br>High-performance real-time rendering based on OpenGL
+<br>Modular design with clear code structure
+<br>High-resolution texture processing
+<br>Optimized brush engine for smooth drawing experience
+<br>Support for both DirectX and OpenGL coordinate systems
+<br><br>If you want to run from source code rather than using the packaged executable, follow these steps:<br><br>You must install Python in the env/Python directory structure:<br>
+<br>Create the environment structure:
+mkdir -p env/Python
+
+
+<br>Install Python 3.9+ into this directory
+<br>Ensure Python executable is at env/Python/python.exe
+<br><br>
+<br>Run start.bat to start the program using the pre-configured environment
+<br>Or manually run: env\Python\python.exe main.py
+<br><br>
+<br>Run start.bat to start the program
+<br>Use left-click to draw flow, right-click to erase
+<br>Use middle-click to drag canvas, scroll wheel to zoom
+<br>Adjust brush properties through the settings panel
+<br>Export as TGA format for use
+<br><br>
+<br>Windows 7/8/10/11
+<br>OpenGL 3.2+ support
+<br>Python 3.9+ (if running from source)
+<br>4GB RAM recommended
+<br>GPU with OpenGL 3.2 support
+<br><br>GPL v3 License - See the LICENSE file in the project for details.<br><br><br><br><br>流向图画布是一个功能强大、易于使用的流向图(Flowmap)创建和编辑工具，专为游戏开发者、3D艺术家和技术美术工作者设计。<br><br>相比市面上其他流向图编辑工具，流向图画布具有以下优势：<br>
+<br>开源可扩展：使用Python开发，高度可定制和扩展
+<br>四方连续支持：内置四方连续贴图编辑功能，轻松创建无缝贴图
+<br>高精度导出：支持导出高分辨率TGA格式，满足专业需求
+<br>非破坏性编辑：与FlowmapPainter不同，我们的笔刷系统采用叠加模式而不是覆盖模式，特别适合创建复杂的流向图案，如河流支流
+<br>实时预览：支持实时调整流动速度和扭曲程度，直观预览效果
+<br>用户友好界面：专为艺术家设计，无需编程知识
+<br>性能优化：即使处理高分辨率纹理也能保持流畅
+<br>流向图画布让流向图的创建变得简单而高效，无论是初学者还是专业艺术家，都能轻松掌握并创建出精美的流向效果。<br><br>流向图是游戏开发中使用的一种特殊纹理贴图，用于控制材质的流动方向，常用于以下场景：<br>
+<br>水流、岩浆等液体材质的方向控制
+<br>布料、毛发等材质的方向引导
+<br>风场效果模拟
+<br>UV扰动和动态纹理变形
+<br>流向图通常将方向向量编码在红绿通道中：<br>
+<br>红色通道(R)代表X方向的流动
+<br>绿色通道(G)代表Y方向的流动
+<br><br><br>
+<br>简单高效的流向笔刷工具
+<br>实时预览流动效果，直观了解绘制结果
+<br>支持四方连续(Seamless)贴图编辑
+<br>支持高精度和标准精度模式
+<br><br>
+<br>绘制和擦除工具提供精确控制
+<br>画布导航支持平移和缩放
+<br>可调整笔刷大小和强度
+<br>支持流向填充功能
+<br><br>
+<br>可调整预览窗口显示位置
+<br>支持预览重复(Tile)模式
+<br>实时流动动画预览
+<br>可调整流动速度和扭曲程度
+<br><br>
+<br>支持加载和保存流向图
+<br>支持导出为TGA格式
+<br>支持高分辨率导出
+<br><br>
+<br>基于OpenGL的高性能实时渲染
+<br>模块化设计，代码结构清晰
+<br>支持高分辨率纹理处理
+<br>优化的笔刷引擎，支持流畅的绘制体验
+<br>支持DirectX和OpenGL坐标系统切换
+<br><br>如果您想从源代码运行而不是使用打包好的可执行文件，请按照以下步骤操作：<br><br>您必须将Python安装到env/Python目录结构中：<br>
+<br>创建环境结构：
+mkdir -p env/Python
+
+
+<br>在此目录中安装Python 3.9+
+<br>确保Python可执行文件位于env/Python/python.exe
+<br><br>
+<br>运行start.bat以使用预配置环境启动程序
+<br>或手动运行：env\Python\python.exe main.py
+<br><br>
+<br>运行start.bat启动程序
+<br>使用左键绘制流向，右键擦除
+<br>使用中键拖动画布，滚轮缩放
+<br>通过设置面板调整各种参数
+<br>导出为TGA格式使用
+<br><br>
+<br>Windows 7/8/10/11
+<br>OpenGL 3.2+支持
+<br>Python 3.9+（如果从源代码运行）
+<br>建议4GB RAM
+<br>支持OpenGL 3.2的GPU
+<br><br>GPL v3许可证 - 请查看项目中的LICENSE文件了解详情。<br><img src="lib\media\flowmap-canvas.gif"><br>]]></description><link>我的项目\flowmap-canvas.html</link><guid isPermaLink="false">我的项目/Flowmap Canvas.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:06:13 GMT</pubDate><enclosure url="lib\media\flowmap-canvas.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\flowmap-canvas.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[色彩空间、HDR和ACES]]></title><description><![CDATA[ 
+ <br><br><br>色彩模型规定了颜色能够被哪些分量(也就是原色)进行表示。举例来说RGB色彩模型下的颜色就可以用RGB三原色的数值来进行表示，比如存在一个颜色可以表示为[Red = 0.2, Green = 0.75, Blue = 0.13]。<br>常见的色彩模型有RGB、CMYK、HSV、HSL等。<br><br>色彩空间如其名，是颜色的空间。由于我们是进行设计、创作、游戏等，最终都会使用显示器、屏幕等进行显示，而这些设备一般都是使用RGB色彩模型，因此此文章只讨论RGB色彩模型相关的问题。<br><br>CIE XYZ颜色空间之前有一个CIE RGB颜色空间，CIE XYZ颜色空间中的XYZ是对之前CIE RGB颜色空间的一个修改，因为之前CIE RGB颜色空间不能表达出人眼可见的所有颜色(因为此时的三原色刺激值中的红色部分有负值)。XYZ近似对应红绿蓝。<a data-href="1" href="1" class="internal-link" target="_self" rel="noopener nofollow">1</a>(<a rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/137639368" target="_blank">https://zhuanlan.zhihu.com/p/137639368</a>)<br>下图为CIE xy 色度图(Chromaticity Diagram)，之所以只用xy是因为，任何可见光颜色都可以通过XYZ三个分量进行一定比例混合，且x + y + z = 1，因此z = 1 - x - y。下图三角形区域表示原来的CIE RGB颜色空间。<br><img style="zoom:50%;" alt="img" src="https://pic3.zhimg.com/80/v2-21b121ab49d3ffae0c09483f9cddaf5a_720w.webp" referrerpolicy="no-referrer"><br>CIE XYZ颜色空间可以表达所有的可见颜色(上图的奇怪蹄状三角区域就是人眼可见光区域，但是XYZ能够表达式的范围显然不至于此)，是绝对颜色空间，因此常常用这个CIE xy色度图来度量其他颜色空间的色域(Gamut)，这种表示方法也叫三色刺激值(Tristimulus Value)表示，也称为色度(Chromaticity)表示。<br>然后这个CIE XYZ颜色空间和CIE xy色度图很哈人的一点就是，色度图上两点之间的中间位置，完全符合人眼感知的，两颜色的中间值。毕竟是根据人眼感知特性来创造的颜色空间。<br><br>RGB色彩模型下有很多色彩空间，常见的有sRGB、Adobe RGB、ProPhoto RGB、DCI-P3、Rec.2020、Rec.709、ACES2065-1、ACEScc/ACEScct、ACEScg。<br><br>白点是一个色彩空间里设定为白色的点，用开尔文或者色度来表示。原色就是一个色彩空间的基本颜色，其他颜色都可以通过这些基本颜色进行表示，也用色度表示。每个色彩空间有不同的原色、白点。<a data-href="2" href="2" class="internal-link" target="_self" rel="noopener nofollow">2</a>(<a rel="noopener nofollow" class="external-link" href="https://www.pcmag.com/encyclopedia/term/white-point" target="_blank">https://www.pcmag.com/encyclopedia/term/white-point</a>)<br>以DCI-P3 D65色彩空间为例(D65表示其白点为6500开尔文色温的颜色)，其白点为(0.3127, 0.3290)，原色为R = (0.68, 0.32)，G = (0.265, 0.650)，B = (0.15, 0.06)。<br>另外，RGB色彩模式下的色彩空间，在CIE xy色度图上的表示显然都是三角形区域，每一个顶点表示了一个原色，因此其能够表达的颜色区域自然只能是三原色围起来的三角形区域。<br><br>以sRGB为例，由于sRGB色彩空间提出的时代，流行的CRT显示器显示图片时，实际发出的亮度和电信号(也就是颜色数据)表示的亮度不是线性的，而是有一个2.2次幂的非线性关系，因此需要提前对图像数据进行一个1 / 2.2 = 0.4545的一个幂次变换，此过程称为伽马校正，校正过后的图像数据处在伽马空间中。但是其实sRGB并不只是一个单纯的伽马校正，是个接近1 / 2.2的分段函数。<br>现代的显示器其电压亮度响应函数其实是可调的，但是现代显示器一般都支持这个2.2次幂的传统，因此现在sRGB还是非常的常用。<br>然后Rec.709色彩空间也是一个伽马空间，通常认为它的伽马值为2.4，但实际上也是个分段函数。Rec.709和sRGB其实色域差不多。<br>显而易见的，对一个颜色空间应用伽马校正，会变成另一个颜色空间，但是这两个颜色空间的色域是不变的，因为应用幂次变换后显然原色和白点都不会变。<br><br><br>sRGB(Standard RGB)是目前最常用的色彩空间，它是一个带有伽马的色彩空间。sRGB在色度图上的面积现在来看其实是比较小的。<br>
+sRGB最初设计的目的是作为生成在<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/%E5%9B%A0%E7%89%B9%E7%BD%91" rel="noopener nofollow" class="external-link" href="https://zh.wikipedia.org/wiki/%E5%9B%A0%E7%89%B9%E7%BD%91" target="_blank">因特网</a>以及<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91" rel="noopener nofollow" class="external-link" href="https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91" target="_blank">万维网</a>上浏览的图像的通用色彩空间，最后选择的是使用<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3" rel="noopener nofollow" class="external-link" href="https://zh.wikipedia.org/wiki/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3" target="_blank">Gamma校准</a>系数为2.2的色彩空间，即<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/CRT" rel="noopener nofollow" class="external-link" href="https://zh.wikipedia.org/wiki/CRT" target="_blank">CRT</a>显示器在这种情况下的平均线性电压响应。<a data-href="3" href="3" class="internal-link" target="_self" rel="noopener nofollow">3</a>(<a rel="noopener nofollow" class="external-link" href="https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4" target="_blank">https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4</a>)
+<br>我们现在，一般的贴图、图片、照片等一般都是处在sRGB空间下。<br><br>DCI-P3蛮怪的，它的色温是6300开尔文，但不是在CIE Standard Illuminant下的，所以不能称为63D，而且白点稍微有点发绿，好怪。然后它是一个系数为2.6的伽马空间，这是为了能适当兼容sRGB。但是DCI-P3色域比sRGB大了有30%，因此许多HDR设备都用这个色彩空间，比如你的手机。<br><br>Display-P3是苹果创造的色彩空间，要正常一点。它使用65D的白点，系数为2.2的伽马空间，非常兼容sRGB，感觉还不错。<br><br>Rec.2020又比上面两个P3的色域大上一圈，色域相当不错，但是显然造价更高，在激光影院可能会使用。<br>实际上几个HDR格式HDR10、HDR10+、Dolby Vision、HLG的技术极限都是Rec.2020，普遍的色彩空间都是P3-D65(一个和DCI-P3与Display-P3都不同的P3色域)。<br>Adobe RGB和DCI-P3的色域面积是差不多的，然而是两个差别不小的色彩空间，所以说在选购显示器的时候不要只关注色域的面积，主要看它的色度图以及和你想要的色彩空间的覆盖率。<br><br>sRGB和Rec. 709色域蛮窄，覆盖了色度图35.9%左右区域<a data-href="4" href="4" class="internal-link" target="_self" rel="noopener nofollow">4</a>(<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/138295496)%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BD%9C%E4%B8%BA%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4%E7%9A%84OO%E7%A7%B0%E4%B8%BASDR(Standard" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/138295496)%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BD%9C%E4%B8%BA%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4%E7%9A%84OO%E7%A7%B0%E4%B8%BASDR(Standard" target="_blank">https://zhuanlan.zhihu.com/p/138295496)，使用它作为色彩空间的OO称为SDR(Standard</a> Dynamic Range)。相对的HDR的色域就蛮高。下面是一些HDR格式的参数<a data-href="5" href="5" class="internal-link" target="_self" rel="noopener nofollow">5</a>(<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/High-dynamic-range_television)%E3%80%82" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/High-dynamic-range_television)%E3%80%82" target="_blank">https://en.wikipedia.org/wiki/High-dynamic-range_television)。</a><br><br><br><br>HDR10、HDR10+、Dolby Vision都是使用PQ传输函数(Transfer Function)。<br>这些HDR格式，由于色域比sRGB提高了不少，因此也需要用更多的比特来精确地表示颜色(说实话，Rec.2020的色域覆盖了75.8%<a data-href="5" href="5" class="internal-link" target="_self" rel="noopener nofollow">5</a>(<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Rec._2020)%E7%9A%84CIE" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/Rec._2020)%E7%9A%84CIE" target="_blank">https://en.wikipedia.org/wiki/Rec._2020)的CIE</a> 1931色彩空间，感觉用16bit的bpc才勉强能行)，因此HDR都是10比特起步的。<br><br>也有人翻译为转换函数，实际上就是起到一个转换的作用。<br>传输函数分为OETF(opto-electronic transfer function，光电传输函数)、EOTF(electro-optical transfer function，电光传输函数)、OOTF(opto-optical transfer function，光光传输函数)<br>OOTF说是OETF除以EOTF的结果，可能是用来衡量看到的和拍摄的之间失真度的东西。<br>OETF是从摄像机等输入设备到图像数据的转换函数，在摄像机内完成，我不太想研究这部分。<br>EOTF是从图像数据到光信号的转换函数，这是在显示器内完成的，例如前面说到的sRGB和Rec.709，就需要先进行一次伽马校正，这样在经过EOTF之后才是显示的正常的光。大家都喜欢的HDR10、HDR10+、Dolby Vision在设备上会进行PQ转换，所以应该要在此之前进行反PQ编码，HLG同理，不过是HLG转换和反HLG编码。
+SDR的色彩范围始终是0到1的，这样在不同亮度峰值的显示器上的亮度是不同的<a data-href="7" href="7" class="internal-link" target="_self" rel="noopener nofollow">7</a>(<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/144775352)%E3%80%82%E8%80%8CHDR%E7%9A%84%E8%BF%99%E4%BA%9BEOTF%EF%BC%8C%E4%BB%A5PQ%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BA%860%E5%88%B010000%E5%B0%BC%E7%89%B9%E7%9A%84%E8%BD%AC%E6%8D%A2%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E4%BA%AE%E5%BA%A6%E4%B9%9F%E5%BA%94%E8%AF%A5%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84%E5%A6%82%E6%9E%9C%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84%E8%AF%9D%E3%80%82" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/144775352)%E3%80%82%E8%80%8CHDR%E7%9A%84%E8%BF%99%E4%BA%9BEOTF%EF%BC%8C%E4%BB%A5PQ%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BA%860%E5%88%B010000%E5%B0%BC%E7%89%B9%E7%9A%84%E8%BD%AC%E6%8D%A2%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E4%BA%AE%E5%BA%A6%E4%B9%9F%E5%BA%94%E8%AF%A5%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84%E5%A6%82%E6%9E%9C%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84%E8%AF%9D%E3%80%82" target="_blank">https://zhuanlan.zhihu.com/p/144775352)。而HDR的这些EOTF，以PQ为例，实现了0到10000尼特的转换，因此在不同显示器上的亮度也应该是一样的如果显示器支持的话。</a><br><br>微软有在文档里写普通的颜色变换管线和Windows实现任意两个色彩空间转换的过程<a data-href="6" href="6" class="internal-link" target="_self" rel="noopener nofollow">6</a>(<a data-tooltip-position="top" aria-label="https://learn.microsoft.com/en-us/windows/win32/wcs/display-calibration-mhc)%E3%80%82" rel="noopener nofollow" class="external-link" href="https://learn.microsoft.com/en-us/windows/win32/wcs/display-calibration-mhc)%E3%80%82" target="_blank">https://learn.microsoft.com/en-us/windows/win32/wcs/display-calibration-mhc)。</a><br><br>首先0是原本的色彩空间，首先如果这个色彩空间不是线性空间，则需要先进行反伽马变换1，变换完后就到了线性空间，线性空间的颜色就可以通过颜色矩阵2这种线性变换来变换到其他颜色空间，如果目标颜色空间也是一个伽马空间，则要施加一个对应的伽马校正3，然后就得到了转换后的颜色空间。<br><img alt="block diagram: source degamma, color matrix, target regamma" src="https://learn.microsoft.com/en-us/windows/win32/wcs/images/calibration-conceptual-block.png" referrerpolicy="no-referrer"><br><br>Windows使用单独的管线。其实这个例子都不太像是颜色变换管线而是图像显示管线了<br><img alt="block diagram: source degamma; color matrix decomposed into source RGB to XYZ, XYZ to XYZ, and XYZ to target RGB; target regamma decomposed into wire transfer function, 1DLUT adjustment" src="https://learn.microsoft.com/en-us/windows/win32/wcs/images/calibration-full-block.png" referrerpolicy="no-referrer"><br>介绍一下各个步骤：<br>
+<br>
+其实还有第0步，那就是Framebuffer里面渲染得到的颜色数据，它们都是RGB伽马空间的，可以是sRGB, sYCC, HDR10, 或者scRGB颜色空间。
+
+<br>
+反伽马，转换到线性空间。
+
+<br>
+2a、2b、2c是颜色空间转换的三个变换，它们乘在一起就是颜色空间的转换矩阵。
+2a：从线性空间转换到CIE XYZ的绝对颜色空间。
+2b：做一些例如校准的调整，可编程。
+2c：从CIE XYZ转换到目标的线性的RGB色彩空间上。
+2a和Framebuffer相关，2c和显示器相关，普通应用可以控制2b这个矩阵。
+然后上面的1、2都是在显示器驱动控制下完成的。
+
+<br>
+也分两步。
+3a：使用EOTF来伽马校正，由显示器驱动完成。
+3b：做一些例如校准的调整，又是可编程的那种。
+3a的转换由wire format color space(实在搜不到)来指定，但应该就是显示器的颜色空间，例如SDR显示器就需要做一次伽马校正，HDR10显示器就需要做一次逆PQ(或称ST.2084)电光传输函数的变换。
+
+<br>完成上述步骤后，Framebuffer(没错，还是在Framebuffer里)里的数据就会扫描到你GPU连接显示器的那条线里，然后显示。<br><br>上面其实还不是完整的显示过程，第0步显然也是需要输入的，这部分说明了上文第0步是怎么来的<a data-href="8" href="8" class="internal-link" target="_self" rel="noopener nofollow">8</a>(<a data-tooltip-position="top" aria-label="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range)%E3%80%82" rel="noopener nofollow" class="external-link" href="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range)%E3%80%82" target="_blank">https://learn.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range)。</a><br><br>先说说Windows的HDR显示，首先HDR是在Windows10 1703才支持的，其步骤如下：<br><img alt="block diagram of HDR display stack: FP16, scRGB, with auto color management" src="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/images/ac-hdr-block.png" referrerpolicy="no-referrer"><br>
+<br>APP就是每个窗体应用的Framebuffer，可以是任何色彩空间，最高支持32位浮点精度。
+<br>DWM(Desktop Window Manager)是用来混合窗体的，简单来说就是把各个应用的窗体给合成成一个Framebuffer，这一步会将各种窗体不管什么颜色空间都给转换到scRGB颜色空间下——scRGB是一个色域宽到离谱的线性颜色空间，其色域感觉是就是把sRGB放大了一倍，所以精度也使用了16位浮点。
+16位浮点精度的scRGB也称为CCCS(canonical composition color space)，是为了把各种窗体各种不同的色彩空间都统一转换到CCCS方便管理。
+<img style="zoom: 50%;" alt="ScRGB.svg" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/ScRGB.svg/800px-ScRGB.svg.png" referrerpolicy="no-referrer">
+<br>Display Kernel是将CCCS转换到 wire format color space的(例如BT.2100 ST.2084)，然后可选的，Windows会使用前文所述的Windows的颜色变换管线进行处理。
+<br>System Color Management还没研究。
+<br><br>SDR显示就是一坨，不管应用渲染得多精细，SDR显示都会Clip到8bpc。<br>
+Apps using graphics APIs such as DirectX could perform internal rendering using high bit-depths and extended color spaces; however, the OS supported only 8-bit integer with implicit sRGB and no system color management
+<img alt="block diagram of SDR display stack: limited to sRGB, 8-bit, with no color management" src="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/images/ac-sdr-block.png" referrerpolicy="no-referrer">
+<br>然而......<br><br>喜大普奔，Windows 11 22H2及之后，SDR的显示流程也和HDR的类似了，至少来说支持超过8bpc的应用的数据了，超过8bpc的颜转换到CCCS之后会得到正确的结果，这样在10bpc的SDR显示器上能够显示更加丰富的颜色了。<br><img alt="block diagram of SDR AC display stack: FP16, scRGB, with auto color management" src="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/images/ac-sdr_ac-block.png" referrerpolicy="no-referrer"><br>泪目。<br><br>如果把游戏引擎的渲染流程纳入考虑，那么Windows的，线性工作流下的游戏引擎渲染流程就是：<br><img alt="游戏中的空间转换" src="https://i0.hdslb.com/bfs/article/b17b426065fd6b424d8570c17f7d9574a7dc51d3.png@942w_437h_progressive.webp" referrerpolicy="no-referrer"><br>色调映射发生在渲染这个过程。<br><br>帧缓冲就是用来存需要显示在显示器上数据的显存。在Vulkan API下<a data-href="9" href="9" class="internal-link" target="_self" rel="noopener nofollow">9</a>(<a data-tooltip-position="top" aria-label="https://github.com/liangz0707/whoimi/blob/master/blogs/GPUAartch/HDR%E7%A1%AC%E4%BB%B6%E5%B1%82Framebuffer%E6%A0%BC%E5%BC%8F%E6%A0%87%E5%87%86%E4%B8%8E%E6%B8%B2%E6%9F%93%E9%98%B6%E6%AE%B5%E7%9A%84%E5%85%B3%E7%B3%BB.md)%EF%BC%9A" rel="noopener nofollow" class="external-link" href="https://github.com/liangz0707/whoimi/blob/master/blogs/GPUAartch/HDR%E7%A1%AC%E4%BB%B6%E5%B1%82Framebuffer%E6%A0%BC%E5%BC%8F%E6%A0%87%E5%87%86%E4%B8%8E%E6%B8%B2%E6%9F%93%E9%98%B6%E6%AE%B5%E7%9A%84%E5%85%B3%E7%B3%BB.md)%EF%BC%9A" target="_blank">https://github.com/liangz0707/whoimi/blob/master/blogs/GPUAartch/HDR%E7%A1%AC%E4%BB%B6%E5%B1%82Framebuffer%E6%A0%BC%E5%BC%8F%E6%A0%87%E5%87%86%E4%B8%8E%E6%B8%B2%E6%9F%93%E9%98%B6%E6%AE%B5%E7%9A%84%E5%85%B3%E7%B3%BB.md)：</a><br>
+对于SDR屏幕，Buffer主要有：
+R8G8B8A8_UNORM：首先屏幕的EOTF曲线是始终存在的，这种格式输入的颜色，图像接口不会进行任何处理，需要我们自己在shader中进行sRGB编码。
+R8G8B8A8_SNORM：这种格式输入的颜色在显示之前会自动编码到SRGB空间（自动Gamma矫正），所以我们不需要进行处理，也就是说shader当中直接写出线性颜色即可。A通道是线性的。
+对于HDR屏幕，Buffer主要有：
+R16G16B16_Float:这种格式输出的是线性浮点数颜色，数据可以超过1，1对应的是80nits。使用的是scRGB。
+DX的参考：
+<a rel="noopener nofollow" class="external-link" href="https://docs.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range" target="_blank">https://docs.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range</a>
+R10G10B10A2_UNORM：这种格式不会进行任何处理，直接结合EOFT曲线进行显示， 所以需要我们自己在Shader中进行PQ编码。（在我的显示器上Vulkan不支持，暂时没有测试过，但是GL和DX是支持这个格式的）
+VK_COLOR_SPACE_HDR10_ST2084_EXT：说明colorSpace，表示使用BT2020颜色空间，使用ST2048的EOTF。
+<br>这些图形API输出的帧缓冲应该都是上文Windows的色彩显示流程中APP的输入，由于Windows的色彩显示流程阶段会将图形API输出的帧缓冲根据其色彩空间转换到scRGB或说CCCS，因此我们只需要保证在渲染时，渲染出的图像数据和色彩空间匹配即可，按Vulkan来说就是要让Color Attachment是正确的。<br>此外，感觉和我一样搞游戏技术的，都会觉得图像API输出的帧缓冲就是天，实际上其他所有窗口都会输出帧缓冲数据，然后交由DWM来合成，合成后的内容也是储存在帧缓冲里，甚至由显示器驱动进行的处理也是存在帧缓冲的——帧缓冲不是什么特别的东西。<br><br>上文其实已经解释过了如何从HDR的颜色空间(如P3-D65)转换到SDR的颜色空间(如sRGB)，但是简单地从色域较大的空间转换到色域较小的空间，一定会产生SDR中无法表现的颜色，如果直接将超出范围的颜色进行截断，就会出现如大片相同颜色，因此需要在转换之前先进行色调映射。此外HDR图像是浮点表示的，可能会产生值超过1的部分，但SDR是归一化的色彩空间，所以数据上来说，其归一化后的数值只能从0到1，要将HDR图像转换到SDR，就需要色调映射。(个人理解，不知道对不对)<br>色调映射的算法蛮多，比较常用的有CE Tone Mapping、Filmic Tone Mapping，但现在基本都被ACES色调映射统一了<a data-href="10" href="10" class="internal-link" target="_self" rel="noopener nofollow">10</a>(<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/21983679)%E3%80%82%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E8%AF%B4ACES%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E6%98%AFACES%E6%8F%90%E5%87%BA%E7%9A%84%EF%BC%8C%E4%BD%86%E6%98%AF%E6%88%91%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%BB%E4%BD%95%E8%AF%81%E6%8D%AE(%E6%AF%94%E5%A6%82ACES%E5%AE%98%E7%BD%91%E4%B8%8A%E6%9F%A5%E4%B8%8D%E5%88%B0%E4%BB%BB%E4%BD%95%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%87%E5%AD%97)%E8%AF%B4%E6%98%8E%E8%BF%99%E6%98%AFACES%E6%8F%90%E5%87%BA%EF%BC%8C%E8%80%8C%E5%BA%94%E8%AF%A5%E6%98%AFEpic" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/21983679)%E3%80%82%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E8%AF%B4ACES%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E6%98%AFACES%E6%8F%90%E5%87%BA%E7%9A%84%EF%BC%8C%E4%BD%86%E6%98%AF%E6%88%91%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%BB%E4%BD%95%E8%AF%81%E6%8D%AE(%E6%AF%94%E5%A6%82ACES%E5%AE%98%E7%BD%91%E4%B8%8A%E6%9F%A5%E4%B8%8D%E5%88%B0%E4%BB%BB%E4%BD%95%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%87%E5%AD%97)%E8%AF%B4%E6%98%8E%E8%BF%99%E6%98%AFACES%E6%8F%90%E5%87%BA%EF%BC%8C%E8%80%8C%E5%BA%94%E8%AF%A5%E6%98%AFEpic" target="_blank">https://zhuanlan.zhihu.com/p/21983679)。这篇文章说ACES色调映射是ACES提出的，但是我找不到任何证据(比如ACES官网上查不到任何色调映射相关的文字)说明这是ACES提出，而应该是Epic</a> Games的图程Krzysztof Narkowicz基于ACES的ODT提出的，他在他的博客中有提到<a data-href="11" href="11" class="internal-link" target="_self" rel="noopener nofollow">11</a>(<a data-tooltip-position="top" aria-label="https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/)%EF%BC%8C%E5%9C%A8%E7%A0%94%E7%A9%B6%E5%87%BA%E6%9D%A5%E4%B9%8B%E5%90%8E%E7%A7%B0%E4%B8%BA%E4%BA%86UE%E7%9A%84%E9%BB%98%E8%AE%A4%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E5%87%BD%E6%95%B0%EF%BC%8CUE%E7%9A%84%E6%96%87%E6%A1%A3%5B%5B12%5D%5D(https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/PostProcessEffects/ColorGrading/)%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E3%80%82" rel="noopener nofollow" class="external-link" href="https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/)%EF%BC%8C%E5%9C%A8%E7%A0%94%E7%A9%B6%E5%87%BA%E6%9D%A5%E4%B9%8B%E5%90%8E%E7%A7%B0%E4%B8%BA%E4%BA%86UE%E7%9A%84%E9%BB%98%E8%AE%A4%E8%89%B2%E8%B0%83%E6%98%A0%E5%B0%84%E5%87%BD%E6%95%B0%EF%BC%8CUE%E7%9A%84%E6%96%87%E6%A1%A3%5B%5B12%5D%5D(https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/PostProcessEffects/ColorGrading/)%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E3%80%82" target="_blank">https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/)，在研究出来之后称为了UE的默认色调映射函数，UE的文档[[12]](https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/PostProcessEffects/ColorGrading/)可以看到。</a><br><img style="zoom:67%;" alt="img" src="https://pic1.zhimg.com/80/0149709ceeb67532d4202a1a450f3584_720w.webp" referrerpolicy="no-referrer"><br>ACES色调映射不仅比较符合感知，细节损失较少，而且代码很简单，开销蛮小，很适合用在游戏里，比如UE4.8及之后就全面支持了ACES色调映射。下面是Krzysztof Narkowicz写的最初版的HLSL代码。<br>float3 ACESToneMapping(float3 color, float adapted_lum)
+{
+	const float A = 2.51f;
+	const float B = 0.03f;
+	const float C = 2.43f;
+	const float D = 0.59f;
+	const float E = 0.14f;
+
+	color *= adapted_lum;
+	return (color * (A * color + B)) / (color * (C * color + D) + E);
+}
+<br>据称，ACES色调映射不仅可以用于HDR到SDR的转换，在你的HDR显示器峰值亮度不够时，还可以进行HDR到HDR的转换。<br>建议称其为ACES色调映射或者ACES Filmic Tone Mapping，而不是简单的ACES，不然很容易和真正的ACES(学院颜色编码系统)弄混。<br><br>中文是学院颜色编码系统，大家都简称为ACES。它的优势在于，给影片制作的全部流程，都提供了一个统一的色彩管理，且由于其较大的色域，并参与了影片从拍摄到放映的全过程，相比传统流程来说质量更好<a data-href="13" href="13" class="internal-link" target="_self" rel="noopener nofollow">13</a>(<a data-tooltip-position="top" aria-label="https://blog.frame.io/2019/09/09/guide-to-aces/)%E3%80%82" rel="noopener nofollow" class="external-link" href="https://blog.frame.io/2019/09/09/guide-to-aces/)%E3%80%82" target="_blank">https://blog.frame.io/2019/09/09/guide-to-aces/)。</a><br><img alt="ACES system and color spaces - image quality preservation" src="https://blog.frame.io/wp-content/uploads/2019/09/aces_image_quality_preservation.png" referrerpolicy="no-referrer"><br>ACES其实是包含了很多部分的<a data-href="14" href="14" class="internal-link" target="_self" rel="noopener nofollow">14</a>(<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/102701796#ACES%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%EF%BC%9F)%EF%BC%9A" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/102701796#ACES%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%EF%BC%9F)%EF%BC%9A" target="_blank">https://zhuanlan.zhihu.com/p/102701796#ACES%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%EF%BC%9F)：</a><br>
+
+<br>ACES Input Transform（IDT或输入设备转换）：它将摄影机独有的拍摄参考数据转换为线性场景的ACES色彩空间。目前，摄影机厂商会为自己的摄影机系统来开发IDT转换算法，然后ACES学院对其进行测试和验证，未来ACES学院会拥有更多的控制权。IDT转换和其它ACES转换一样也是用CTL（色彩转换语言）编程语言来编写的。IDT并不是完全与摄影机系统一对一的关系，有时也会将不同的IDT应用于同一个摄影机系统来补偿一些摄影机系统中因不同设置所带来的差别。
+<br>ACES Look Transform（LMT或外观修改转换）：它是ACES观看转换（它由LMT、RRT和ODT系统组成）的一部分，它提供一种类似于将LUT应用于镜头的方法。不同的是，LMT位于ACES色彩的调色流程之后，且并非所有工作都支持它。
+<br>Reference Rendering Transform（RRT或参考渲染转换）：你可以将其理解为ACES的渲染引擎组件，RRT将场景参考的线性数据转换为超宽的显示参考数据集。RRT与ODT一起为显示创建可视化的数据。
+<br>ACES Output Transform（ODT或输出设备转换）：这是ACES流程的最后一步，它从RRT获得超宽和高动态范围的数据后，转换为不同显示设备所对应的色彩空间，比如P3、Rec.709、Rec.2020等。
+
+<br>ACES的野心不小，它囊括了拍摄、调色、特效、显示、归档各个阶段，流程可以归纳为如下图<a data-href="15" href="15" class="internal-link" target="_self" rel="noopener nofollow">15</a>(<a data-tooltip-position="top" aria-label="https://www.dropbox.com/s/0xhva7vniipx3zk/TB-2014-004.pdf?dl=0)%EF%BC%9A" rel="noopener nofollow" class="external-link" href="https://www.dropbox.com/s/0xhva7vniipx3zk/TB-2014-004.pdf?dl=0)%EF%BC%9A" target="_blank">https://www.dropbox.com/s/0xhva7vniipx3zk/TB-2014-004.pdf?dl=0)：</a><br><img alt="ACES流程" src="https://i0.hdslb.com/bfs/article/7f8a104b37fbd310002672ba7762946c324bb655.png@828w_303h_progressive.webp" referrerpolicy="no-referrer"><br>其中摄像机部分的流程应当如下图，不管是真实的摄像机还是各种渲染器/渲染引擎的摄像机，都会经过IDT变换变换到ACES2065-1色彩空间：<br> <img style="zoom: 50%;" alt="The ACES Input Device Transform section with the Reference Input Capture Device" src="https://www.researchgate.net/profile/Eberhard-Hasche/publication/326779225/figure/fig1/AS:713800890195968@1547194802226/The-ACES-Input-Device-Transform-section-with-the-Reference-Input-Capture-Device.png" referrerpolicy="no-referrer"><br>ACES Central举的一个ACES流程的例子[16]为下图：<br><img alt="img" src="https://i0.hdslb.com/bfs/article/f3e3c622d2bf6c2af64c2bc9fd090e9addcd24a8.png@942w_726h_progressive.webp" referrerpolicy="no-referrer"><br>可以看到，在摄像期间，摄像机捕获到的自然界的光线会经过OETF先转换成电信号(现在是在摄像机自己的log颜色空间下)，然后再经过IDT(Input Device Transform)后转换到ACES2065-1色彩空间。<br>其实IDT是ACES第一版的称呼，现在改名为Input Transform了<a data-href="17" href="17" class="internal-link" target="_self" rel="noopener nofollow">17</a>(<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Academy_Color_Encoding_System)%EF%BC%8C%E4%BD%86%E5%A5%BD%E5%83%8F%E8%BF%98%E6%98%AF%E7%AE%80%E7%A7%B0IDT%E3%80%82" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/Academy_Color_Encoding_System)%EF%BC%8C%E4%BD%86%E5%A5%BD%E5%83%8F%E8%BF%98%E6%98%AF%E7%AE%80%E7%A7%B0IDT%E3%80%82" target="_blank">https://en.wikipedia.org/wiki/Academy_Color_Encoding_System)，但好像还是简称IDT。</a><br><br>ACES中规定和使用了几个色彩空间：<br>
+<br>AP0(ACES Color Primaries 0)规定了一组原色，这组原色的色域包含了整个CIE色度图，好牛。然后AP1(ACES Color Primaries 1)也规定了一组原色，这组原色的色域就要小不少。
+AP0和AP1的色域<a data-href="16" href="16" class="internal-link" target="_self" rel="noopener nofollow">16</a>(<a data-tooltip-position="top" aria-label="https://commons.wikimedia.org/wiki/File:CIE_xy_Chromaticity_Diagram_of_ACES_and_other_colorspaces.svg?uselang=zh-cn)%E5%A6%82%E4%B8%8B%EF%BC%9A" rel="noopener nofollow" class="external-link" href="https://commons.wikimedia.org/wiki/File:CIE_xy_Chromaticity_Diagram_of_ACES_and_other_colorspaces.svg?uselang=zh-cn)%E5%A6%82%E4%B8%8B%EF%BC%9A" target="_blank">https://commons.wikimedia.org/wiki/File:CIE_xy_Chromaticity_Diagram_of_ACES_and_other_colorspaces.svg?uselang=zh-cn)如下：</a>
+<br><img style="zoom:67%;" alt="File:CIE xy Chromaticity Diagram of ACES and other colorspaces.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/CIE_xy_Chromaticity_Diagram_of_ACES_and_other_colorspaces.svg/600px-CIE_xy_Chromaticity_Diagram_of_ACES_and_other_colorspaces.svg.png?20180626202546" referrerpolicy="no-referrer"><br>
+<br>
+ACES2065-1使用AP0的原色，是一个线性空间，主要是为了存储、归档素材<a data-href="18" href="18" class="internal-link" target="_self" rel="noopener nofollow">18</a>(<a data-tooltip-position="top" aria-label="https://acescentral.com/knowledge-base-2/aces-working-spaces/)%E8%80%8C%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%8C" rel="noopener nofollow" class="external-link" href="https://acescentral.com/knowledge-base-2/aces-working-spaces/)%E8%80%8C%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%8C" target="_blank">https://acescentral.com/knowledge-base-2/aces-working-spaces/)而设计的，</a>
+
+<br>
+也是在ACES中用于进行色彩交换的中间空间，例如说在进行ACEScc转换到P3-D65的过程中，就要先转换到ACES2065-1再转到P3-D65，就类似Windows上使用的scRGB。
+
+<br>
+ACEScc使用AP1原色，是一个log空间，这个空间可以用于分级调色(Color Grading)中，说是因为有些调色师喜欢在log空间下调色。
+
+<br>
+ACEScct和ACEScc差不多，只是在趾(Toe)部会有一些抬升。
+
+A variant of ACEScc color space, except that it adds a “toe” to make it more akin to traditional “log” curves to generate a distinct “milking” or “fogging” of shadows under lift operations, which is typical of some film looks. This comes from requests to provide colorists with a grading environment more similar to that of traditional legacy log film scan encodings when grading using a working space from the “ACES” family of color spaces.
+
+
+<br>ACEScg也是使用AP1原色，是一个线性空间，一般在这个空间里进行合成、特效、绘画和其他CG相关的工作。
+
+
+<br>可能读者会有些疑惑，这个ACEScg是一个线性空间，那岂不是说我们在进行合成时看到的色彩竟然是处在线性空间的，置显示器EOTF于何处！<br>其实ACES这些色彩空间，都是需要先转换到sRGB、VP-D65等显示器的色彩空间之后再显示的——目前还没有ACES的显示器——上面流程图中的RRT&amp;ODT就是进行了这些处理，以我们用sRGB屏幕来显示ACEScg的内容来说，会有一个ACEScg-&gt;ACES2065-&gt;sRGB的过程，第一步称为RRT(Reference Rendering Transform)，第二步称为ODT(Out Device Transform)，这两个过程合称为Output Transform(wikipedia说的，感觉有点怪)。<br>LMT(Look Modification Transform)是用在ACES色彩空间之间进行转换的步骤，例如在分级调色之前就需要将ACES的某种色彩空间转换到ACEScc或者ACEScct色彩空间中去。<br>wikipedia上说LMT + RRT + ODT才组成Academy Viewing Transform，但我还不太懂LMT在这里的作用是什么。<br>注意，读者如果要去阅读ACES的文档，需要理解文档中提到的scene-referred或者说scene-linear是指ACES2065-1，猜测因为它的色彩空间足够大所以称之为“referred”。<br><br>伽马、色彩空间、位深度在ACES的每个过程中如下图<a data-href="17" href="17" class="internal-link" target="_self" rel="noopener nofollow">17</a>(<a data-tooltip-position="top" aria-label="https://community.acescentral.com/t/acescc-vs-acescct/485/21)%E6%89%80%E7%A4%BA%EF%BC%9A" rel="noopener nofollow" class="external-link" href="https://community.acescentral.com/t/acescc-vs-acescct/485/21)%E6%89%80%E7%A4%BA%EF%BC%9A" target="_blank">https://community.acescentral.com/t/acescc-vs-acescct/485/21)所示：</a><br><img alt="img" src="https://community.acescentral.com/uploads/default/original/2X/4/414beecabac1c201cd7e06da93aa60ecc8d8f3e1.jpeg" referrerpolicy="no-referrer"><br>
+<br>摄像机。在摄像机拍摄的流程中，摄像机拍摄后的图像应该是在摄像机自身的log空间下的，然后现在摄像机厂商一般会提供IDT转换的方法，将图像转换为ACES2065-1色彩空间的，16位浮点精度的图像。例如索尼的Raw Viewer<a data-href="19" href="19" class="internal-link" target="_self" rel="noopener nofollow">19</a>(<a data-tooltip-position="top" aria-label="https://www.sonycreativesoftware.com/zh/rawviewer)%E5%B0%B1%E8%83%BD%E6%A0%B9%E6%8D%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E7%9B%B8%E6%9C%BA%E5%9E%8B%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%88%B0ACES2065-1%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4%E3%80%82" rel="noopener nofollow" class="external-link" href="https://www.sonycreativesoftware.com/zh/rawviewer)%E5%B0%B1%E8%83%BD%E6%A0%B9%E6%8D%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E7%9B%B8%E6%9C%BA%E5%9E%8B%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%88%B0ACES2065-1%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4%E3%80%82" target="_blank">https://www.sonycreativesoftware.com/zh/rawviewer)就能根据不同的相机型号转换到ACES2065-1色彩空间。</a>
+<br>视觉特效。视觉特效不需要输入，直接就在ACEScg色彩空间下工作。各种VFX软件应当要或将要支持ACEScg色彩空间，因为在VFX Reference Platform<a data-href="19" href="19" class="internal-link" target="_self" rel="noopener nofollow">19</a>(<a data-tooltip-position="top" aria-label="https://vfxplatform.com/)%E8%BF%99%E9%87%8C%E8%A7%84%E5%AE%9A%E4%BA%86OpenColorIO%E5%92%8CACES%E7%9A%84%E6%94%AF%E6%8C%81%E4%BB%A5%E5%8F%8A%E7%89%88%E6%9C%AC%E3%80%82OpenColorIO(%E7%AE%80%E7%A7%B0OPIO)%E5%B0%B1%E6%98%AF%E9%82%A3%E4%B8%AA%E5%B8%AE%E5%8A%A9%E6%88%91%E4%BB%AC%E5%9C%A8%E5%90%84%E7%A7%8D%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%94%9A%E8%87%B3%E4%BA%8E%E4%B8%8D%E5%90%8C%E5%9E%8B%E5%8F%B7%E7%9A%84%E7%9B%B8%E6%9C%BA%E7%9A%84%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82" rel="noopener nofollow" class="external-link" href="https://vfxplatform.com/)%E8%BF%99%E9%87%8C%E8%A7%84%E5%AE%9A%E4%BA%86OpenColorIO%E5%92%8CACES%E7%9A%84%E6%94%AF%E6%8C%81%E4%BB%A5%E5%8F%8A%E7%89%88%E6%9C%AC%E3%80%82OpenColorIO(%E7%AE%80%E7%A7%B0OPIO)%E5%B0%B1%E6%98%AF%E9%82%A3%E4%B8%AA%E5%B8%AE%E5%8A%A9%E6%88%91%E4%BB%AC%E5%9C%A8%E5%90%84%E7%A7%8D%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%94%9A%E8%87%B3%E4%BA%8E%E4%B8%8D%E5%90%8C%E5%9E%8B%E5%8F%B7%E7%9A%84%E7%9B%B8%E6%9C%BA%E7%9A%84%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82" target="_blank">https://vfxplatform.com/)这里规定了OpenColorIO和ACES的支持以及版本。OpenColorIO(简称OPIO)就是那个帮助我们在各种颜色空间，甚至于不同型号的相机的颜色空间进行转换的工具。</a>
+对于VFX工作者需要注意的是：
+
+<br>反照率/基本色、发光之类的表示颜色的贴图需要转换到ACEScg空间再赋予到材质上。一般的贴图都是在sRGB色彩空间下的，因此需要先进行一个sRGB到ACEScg的变换。可以使用OPIO从 "Utility - sRGB - Texture"转换到“ACES - ACEScg”，我想一般在渲染引擎/渲染器里都会有集成。
+<br>其他的法线、置换、金属度/高光度、粗糙度/光滑度等贴图，还是需要处在线性空间。
+<br>渲染的影片仍然在ACEScg色彩空间中。
+
+
+<br>剪辑、合成等都是在ACEScg下进行的。
+<br>调色是在ACEScc下进行的，需要先从ACEScg或者ACES2065-1经过LMT转换。
+<br>Output Transform，也就是RRT和ODT会将最后的成片进行输出，输出到显示器或者银幕。我没有查到是在什么阶段进行的交付，我猜测是看你流程最后一步是在ACEScc/ACEScct还是ACEScg，然后就在这个颜色空间交付，因为显然经过RRT转换会有精度损失(虽然迟早都会发生)，还有一个猜测是在RRT之后转换到ACES2065-1交付，这样比较统一。我倾向于认为是后者。
+<br><br>本来想再写一点线性工作流和伽马工作流的，不过这个前人应该都叙述比较详细了，就偷懒了，可以参考这篇文章<a data-href="20" href="20" class="internal-link" target="_self" rel="noopener nofollow">20</a>(<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/100131251)%E3%80%82" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/100131251)%E3%80%82" target="_blank">https://zhuanlan.zhihu.com/p/100131251)。</a><br>本文作者为<a data-tooltip-position="top" aria-label="https://space.bilibili.com/19552499" rel="noopener nofollow" class="external-link" href="https://space.bilibili.com/19552499" target="_blank">朵格Dolag</a>，本文使用[CC BY 4.0知识分享协议](<a data-tooltip-position="top" aria-label="https://choosealicense.com/licenses/cc-by-4.0/" rel="noopener nofollow" class="external-link" href="https://choosealicense.com/licenses/cc-by-4.0/" target="_blank">Creative Commons Attribution 4.0 International | Choose a License</a>)，转载引用需署名。]]></description><link>渲染相关\色度学\色彩空间、hdr和aces.html</link><guid isPermaLink="false">渲染相关/色度学/色彩空间、HDR和ACES.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:09:31 GMT</pubDate><enclosure url="https://pic3.zhimg.com/80/v2-21b121ab49d3ffae0c09483f9cddaf5a_720w.webp" length="0" type="image/webp"/><content:encoded>&lt;figure&gt;&lt;img src="https://pic3.zhimg.com/80/v2-21b121ab49d3ffae0c09483f9cddaf5a_720w.webp"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[色度学]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="渲染相关/色度学/色彩空间、HDR和ACES.md" href="渲染相关\色度学\色彩空间、hdr和aces.html" target="_self" rel="noopener nofollow">色彩空间、HDR和ACES</a>
+]]></description><link>渲染相关\色度学\色度学.html</link><guid isPermaLink="false">渲染相关/色度学/色度学.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:08:37 GMT</pubDate></item><item><title><![CDATA[快速命令]]></title><description><![CDATA[ 
+ <br><br>快速命令工具让使用者能快速地搜索特定命令并执行。一些典型的命令如下：<br>
+<br>创建节点
+<br>显示选中节点的几何属性
+<br>打开cookbook
+<br>在VSCode中编辑代码
+<br><br>用户在Network Editor，也就是节点编辑器面板，按下Ctrl+空格键即可唤出快速命令搜索框，按照关键词搜索对应的命令，搜索后按下回车即可执行命令，按下Esc即可退出搜索窗口。<br><br>快速命令工具中的命令是可高度自定义的。用户目前可通过两种形式扩展命令。<br><br>Houdini的Tab菜单可搜索并创建节点，而自定义节点创建命令的意义在于——快速命令工具中的每一个命令都可以包含一个别名，例如可以给“Point Wrangle”节点设置“pw”的别名，因此直接输入pw即可搜索到“Point Wrangle”命令。 对于节点的创建命令，我们提供了一个方便快捷的自定义方式——用户可以在HOUDINI_USER_PREF_DIR/DolagPlugin/scripts/console/console_items.json文件中添加自己的节点创建命令。 如果我们要创建一个节点命令，可以在此json文件的列表尾部添加键值对，其中“node_name”表示此节点的名称(在houdini中显示节点信息窗口的右上角会显示节点名称)，“item_name”表示在快速命令列表中显示和搜索的名称，“alias”表示此命令的别名，而“important”决定了此命令是否重要，重要节点会优先显示。 下列代码展示了如何添加一个subdivide节点的快捷命令。<br>[
+  {
+    ...
+  },
+  {
+    ...
+  },
+  {
+    "item_name": "Subdivide",
+    "alias": "sd",
+    "important": true,
+    "node_name": "subdivide"
+  }
+]
+<br><br><br>快速命令工具提供了一个能完全自定义任何命令的框架。在此之前先谈一下原理。 快速命令工具中的每一个命令都是ConsoleItem类的实例，快速命令工具会读取每一个ConsoleItem实例的命令名称、别名、重要与否，在执行命令时调用实例的run函数，其中ConsoleItem类的定义在DolagPlugin/scripts/console/ConsoleItem.py中。 因此想要添加自定义命令就需要先创建一个ConsoleItem实例。 ConsoleItem类初始化函数签名如下：<br>ConsoleItem(item_name, callback, alias=tuple(), important=False)
+<br>item_name为此命令在快速命令中显示和搜索的名称，“alias”表示此命令的别名，而“important”决定了此命令是否重要，重要节点会优先显示。最重要的是回调函数参数callback，此函数的签名如下：<br>callback(context)
+<br><br>context参数是快速命令框架传入的ConsoleContext类型的参数，可以视为一个字典来访问其值。其键和值如下：<br>
+<br>selected_nodes: 选中节点的元组，如果没有选中则返回空元组
+<br>hit_item: 在鼠标下方的节点，如果没用则返回None
+<br>screen_pos: 鼠标在屏幕上的绝对位置，元组类型
+<br>editor_pos: 鼠标在Network Editor上的绝对位置，采用Network Editor的坐标系和单位，元组类型
+<br>editor: 当前Network Editor对象
+<br>qt_keys: 按下了哪些键，其值为PySide2中的key值
+<br>network_node: 当前Network Editor面板所显示的Network节点 快速命令工具会在合适的时候执行用户传入的callback回调函数。
+在完成了ConsoleItem的实例化后，将其插入到HOUDINI_USER_PREF_DIR/DolagPlugin/scripts/console/ConsoleItemCustom.py中的CUSTOM_ITEMS全局变量中——快速命令工具会读取此变量将其中的每一项都加入到快速命令列表中。 例如，在DolagPlugin/scripts/console/ConsoleItemCustom.py尾部插入如下语句，即可添加自定义命令。
+<br>from Dolag import utils as du
+...
+
+def copy_node_path_cb(context):  
+    nodes = context["selected_nodes"]  
+    if nodes:  
+        du.writeClipboard(nodes[0].path())  
+
+create_python_shell = ConsoleItem(item_name="Copy Node Path", alias="np", callback=copy_node_path_cb)  
+CUSTOM_ITEMS.append(create_python_shell)
+<br><br>Houdini中的UI线程表现是很奇怪的，在某些时候一些命令(比如subprocess.call, os.system等)会导致UI线程被阻塞，因此需要使用threading模块新开线程(进程)来避免阻塞。
+例如快速命令中有Edit Code in VSC命令，打开VSC来编辑节点中的Vex和Python。其调用的函数使用了threading.thread来开启新线程(进程)，以避免阻塞。调用的函数代码如下：<br>def openVexInVSC(vex_str):  
+	if not isinstance(vex_str, str):  
+		return  
+	  
+	# escape quotes  
+	vex_str = vex_str.replace("\"", "`")  
+	  
+	# to avoid blocking houdini, we have to use threading  
+	def __tmp_vex_vsc_func():  
+		import subprocess
+		subprocess.call(["powershell", "-WindowStyle", "hidden", "-Command", r'''"{0}" | code -  
+		exit'''.format(vex_str)], shell=False)  
+	  
+	  
+	import threading  
+	t = threading.Thread(target=__tmp_vex_vsc_func)  
+	t.start()
+]]></description><link>houdini-toolset\功能\快速命令.html</link><guid isPermaLink="false">Houdini-Toolset/功能/快速命令.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:10:20 GMT</pubDate></item><item><title><![CDATA[移动&复制节点连接]]></title><description><![CDATA[ 
+ <br><br>类似UE引擎中按住Ctrl然后转移连接的操作，本插件在Houdini中扩展了此功能，能够自由地移动或复制连接。<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif"><br><br>
+<br>转移连接。示意动图中的红色方式，能够将一个节点的所有连接转移到另一个节点上。只需要按住Ctrl+Alt后拖动节点连接到目标节点后松手即可。
+<br>复制连接。示意动图中的绿色方式，能够将一个节点的所有连接复制到另一个节点上，不会删除原有连接。只需要按住Shift+Ctrl后拖动节点连接到目标节点后松手即可。
+]]></description><link>houdini-toolset\功能\移动&amp;复制节点连接.html</link><guid isPermaLink="false">Houdini-Toolset/功能/移动&amp;复制节点连接.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:10:20 GMT</pubDate><enclosure url="lib\media\node-exchanger.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\node-exchanger.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
+ <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
+<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
+
+<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
+<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
+<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
+<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
+<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
+<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
+<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
+<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
+<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
+<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
+
+
+<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
+
+<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
+<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
+
+<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
+<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
+
+
+<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
+<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
+
+
+<br><br><br>所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
+<br>Node Count: 节点计数
+<br>Open SpreadSheet: 打开几何体表格
+<br>Open Python Shell: 打开 Python 命令行
+<br>... 以及更多其他指令
+<br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br>
+<br>常用操作
+
+<br>Duplicate Node as Reference: 以引用形式复制节点。
+<br>Copy Node Parms Reference: 拷贝节点参数的引用。
+<br>Delete Expression and Keys: 删除节点所有表达式和关键帧。
+<br>Copy Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板。
+
+
+<br>整理节点
+
+<br>Vertical Compress Node Space Upward: 向上收缩节点垂直间距。
+<br>Vertical Compress Node Space: 收缩节点垂直间距。
+<br>Vertical Space Nodes: 垂直均分选中节点的间距。
+<br>Vertical Space Nodes Upward: 向上垂直均分选中节点的间距。
+<br>Wire Hub(s): 通过自动添加 dot 节点来整理节点连线。
+
+
+<br>节点样式
+
+<br>Copy Node Shape: 拷贝节点形状。
+<br>Copy Node Color: 拷贝节点颜色。
+<br>Copy Node Style: 拷贝节点颜色和形状。
+<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
+
+
+<br><br>
+<br>Ramp 参数
+
+<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
+<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
+<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
+<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
+<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
+<br>Mirror Ramp: 镜像 Ramp。
+
+
+<br>代码参数 (VEX/Python)
+
+<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
+<br>Save Snippet: 保存 VEX/Python 代码片段。
+<br>Import Snippet: 导入已保存的代码片段。
+
+
+<br>按钮参数
+
+<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
+
+
+<br>全局随机种子
+
+<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。
+
+
+<br><br>
+<br>Visit Github: 在浏览器中打开项目 Github 页面。
+<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
+<br>Open Plugin Folder: 打开插件所在的目录。
+<br>Open Doc: 在 Houdini 中打开此文档。
+<br>Open Doc Online: 在浏览器中打开在线文档。
+<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
+<br>Python 相关 (不推荐直接使用)
+
+<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
+<br>Pip Install: 使用 pip 安装 Python 模块。
+<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
+<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
+
+
+<br><br>
+<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
+<br>Emoji Sticker: (功能待补充)
+]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:10:20 GMT</pubDate></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
+ <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="安装" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
+<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。
+&nbsp; &nbsp; 所有节点均可在Tab菜单的 Dolag 分类下找到。
+<img alt="节点一览.png" src="lib\media\节点一览.png"><img alt="效果一览.png" src="lib\media\效果一览.png">
+<br>
+<br><a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。<img alt="quick console.gif" src="lib\media\quick-console.gif">
+<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
+
+<br>扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
+
+<br>一键整理节点布局。
+<br>保存与加载节点参数。
+<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
+<br>复制与粘贴节点样式。
+<br>递归解锁当前节点内的所有子节点。
+
+
+<br>主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+
+
+<br>
+<br>扩展节点编辑器功能。
+
+<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif">
+
+
+<br>更详细的功能预览请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。<br><br>
+<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
+<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
+<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
+<br>
+<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
+]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:10:20 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
@@ -3767,22 +4201,7 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br><a class="internal-link" data-href="DCC/AE插件/坑.md" href="dcc\ae插件\坑.html" target="_self" rel="noopener nofollow">坑</a>
 
 
-]]></description><link>dcc\dcc.html</link><guid isPermaLink="false">DCC/DCC.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:21:19 GMT</pubDate></item><item><title><![CDATA[安装]]></title><description><![CDATA[ 
- <br>在使用前，请按照以下步骤进行安装配置：<br>
-<br>
-安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
-
-<br>
-在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
-git clone <a rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Dolag-Houdini-Toolset.git" target="_blank">https://github.com/dolag233/Dolag-Houdini-Toolset.git</a> DolagPlugin
-
-<br>
-将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
-
-]]></description><link>houdini-toolset\安装配置\安装.html</link><guid isPermaLink="false">Houdini-Toolset/安装配置/安装.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 19 Jul 2025 15:55:48 GMT</pubDate></item><item><title><![CDATA[安装配置]]></title><description><![CDATA[ 
- <br>
-<br><a class="internal-link" data-href="Houdini-Toolset/安装配置/安装.md" href="houdini-toolset\安装配置\安装.html" target="_self" rel="noopener nofollow">安装</a>
-]]></description><link>houdini-toolset\安装配置\安装配置.html</link><guid isPermaLink="false">Houdini-Toolset/安装配置/安装配置.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:22:26 GMT</pubDate></item><item><title><![CDATA[变量右键菜单]]></title><description><![CDATA[ 
+]]></description><link>dcc\dcc.html</link><guid isPermaLink="false">DCC/DCC.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:21:19 GMT</pubDate></item><item><title><![CDATA[变量右键菜单]]></title><description><![CDATA[ 
  <br><br>当鼠标在变量上右键时会唤出右键菜单，此工具集的所有变量菜单扩展功能都在此右键菜单的Dolag分类中，只有在变量类型和该功能的类型相符时才会显示该功能。<br><br><br>对按钮类型的变量进行复制和粘贴。 在复制了一个按钮变量后，在其他的按钮变量上复制，则在点击原按钮后，其他复制到的按钮都会产生一个点击事件。<br><br>能够将Ramp变量的所有位置都设置为同一个插值类型。<br><br>将Ramp左右镜像 有两种模式：<br>
 <br>From Left To Right：从Ramp的中间分开，将中间左边的所有值复制给右边的值。
 <br>From Right To Left：从Ramp的中间分开，将中间右边的所有值复制给左边的值。
@@ -3917,70 +4336,7 @@ class foo(__meta_class__ = Singleton)
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/移动&amp;复制节点连接.md" href="houdini-toolset\功能\移动&amp;复制节点连接.html" target="_self" rel="noopener nofollow">移动&amp;复制节点连接</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini AI助手.md" href="houdini-toolset\功能\houdini-ai助手.html" target="_self" rel="noopener nofollow">Houdini AI助手</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini节点.md" href="houdini-toolset\功能\houdini节点.html" target="_self" rel="noopener nofollow">Houdini节点</a>
-]]></description><link>houdini-toolset\功能\功能.html</link><guid isPermaLink="false">Houdini-Toolset/功能/功能.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:22:19 GMT</pubDate></item><item><title><![CDATA[快速命令]]></title><description><![CDATA[ 
- <br><br>快速命令工具让使用者能快速地搜索特定命令并执行。一些典型的命令如下：<br>
-<br>创建节点
-<br>显示选中节点的几何属性
-<br>打开cookbook
-<br>在VSCode中编辑代码
-<br><br>用户在Network Editor，也就是节点编辑器面板，按下Ctrl+空格键即可唤出快速命令搜索框，按照关键词搜索对应的命令，搜索后按下回车即可执行命令，按下Esc即可退出搜索窗口。<br><br>快速命令工具中的命令是可高度自定义的。用户目前可通过两种形式扩展命令。<br><br>Houdini的Tab菜单可搜索并创建节点，而自定义节点创建命令的意义在于——快速命令工具中的每一个命令都可以包含一个别名，例如可以给“Point Wrangle”节点设置“pw”的别名，因此直接输入pw即可搜索到“Point Wrangle”命令。 对于节点的创建命令，我们提供了一个方便快捷的自定义方式——用户可以在HOUDINI_USER_PREF_DIR/DolagPlugin/scripts/console/console_items.json文件中添加自己的节点创建命令。 如果我们要创建一个节点命令，可以在此json文件的列表尾部添加键值对，其中“node_name”表示此节点的名称(在houdini中显示节点信息窗口的右上角会显示节点名称)，“item_name”表示在快速命令列表中显示和搜索的名称，“alias”表示此命令的别名，而“important”决定了此命令是否重要，重要节点会优先显示。 下列代码展示了如何添加一个subdivide节点的快捷命令。<br>[
-  {
-    ...
-  },
-  {
-    ...
-  },
-  {
-    "item_name": "Subdivide",
-    "alias": "sd",
-    "important": true,
-    "node_name": "subdivide"
-  }
-]
-<br><br><br>快速命令工具提供了一个能完全自定义任何命令的框架。在此之前先谈一下原理。 快速命令工具中的每一个命令都是ConsoleItem类的实例，快速命令工具会读取每一个ConsoleItem实例的命令名称、别名、重要与否，在执行命令时调用实例的run函数，其中ConsoleItem类的定义在DolagPlugin/scripts/console/ConsoleItem.py中。 因此想要添加自定义命令就需要先创建一个ConsoleItem实例。 ConsoleItem类初始化函数签名如下：<br>ConsoleItem(item_name, callback, alias=tuple(), important=False)
-<br>item_name为此命令在快速命令中显示和搜索的名称，“alias”表示此命令的别名，而“important”决定了此命令是否重要，重要节点会优先显示。最重要的是回调函数参数callback，此函数的签名如下：<br>callback(context)
-<br><br>context参数是快速命令框架传入的ConsoleContext类型的参数，可以视为一个字典来访问其值。其键和值如下：<br>
-<br>selected_nodes: 选中节点的元组，如果没有选中则返回空元组
-<br>hit_item: 在鼠标下方的节点，如果没用则返回None
-<br>screen_pos: 鼠标在屏幕上的绝对位置，元组类型
-<br>editor_pos: 鼠标在Network Editor上的绝对位置，采用Network Editor的坐标系和单位，元组类型
-<br>editor: 当前Network Editor对象
-<br>qt_keys: 按下了哪些键，其值为PySide2中的key值
-<br>network_node: 当前Network Editor面板所显示的Network节点 快速命令工具会在合适的时候执行用户传入的callback回调函数。
-在完成了ConsoleItem的实例化后，将其插入到HOUDINI_USER_PREF_DIR/DolagPlugin/scripts/console/ConsoleItemCustom.py中的CUSTOM_ITEMS全局变量中——快速命令工具会读取此变量将其中的每一项都加入到快速命令列表中。 例如，在DolagPlugin/scripts/console/ConsoleItemCustom.py尾部插入如下语句，即可添加自定义命令。
-<br>from Dolag import utils as du
-...
-
-def copy_node_path_cb(context):  
-    nodes = context["selected_nodes"]  
-    if nodes:  
-        du.writeClipboard(nodes[0].path())  
-
-create_python_shell = ConsoleItem(item_name="Copy Node Path", alias="np", callback=copy_node_path_cb)  
-CUSTOM_ITEMS.append(create_python_shell)
-<br><br>Houdini中的UI线程表现是很奇怪的，在某些时候一些命令(比如subprocess.call, os.system等)会导致UI线程被阻塞，因此需要使用threading模块新开线程(进程)来避免阻塞。
-例如快速命令中有Edit Code in VSC命令，打开VSC来编辑节点中的Vex和Python。其调用的函数使用了threading.thread来开启新线程(进程)，以避免阻塞。调用的函数代码如下：<br>def openVexInVSC(vex_str):  
-	if not isinstance(vex_str, str):  
-		return  
-	  
-	# escape quotes  
-	vex_str = vex_str.replace("\"", "`")  
-	  
-	# to avoid blocking houdini, we have to use threading  
-	def __tmp_vex_vsc_func():  
-		import subprocess
-		subprocess.call(["powershell", "-WindowStyle", "hidden", "-Command", r'''"{0}" | code -  
-		exit'''.format(vex_str)], shell=False)  
-	  
-	  
-	import threading  
-	t = threading.Thread(target=__tmp_vex_vsc_func)  
-	t.start()
-]]></description><link>houdini-toolset\功能\快速命令.html</link><guid isPermaLink="false">Houdini-Toolset/功能/快速命令.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 03 Jul 2023 03:18:46 GMT</pubDate></item><item><title><![CDATA[移动&复制节点连接]]></title><description><![CDATA[ 
- <br><br>类似UE引擎中按住Ctrl然后转移连接的操作，本插件在Houdini中扩展了此功能，能够自由地移动或复制连接。<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif"><br><br>
-<br>转移连接。示意动图中的红色方式，能够将一个节点的所有连接转移到另一个节点上。只需要按住Ctrl+Alt后拖动节点连接到目标节点后松手即可。
-<br>复制连接。示意动图中的绿色方式，能够将一个节点的所有连接复制到另一个节点上，不会删除原有连接。只需要按住Shift+Ctrl后拖动节点连接到目标节点后松手即可。
-]]></description><link>houdini-toolset\功能\移动&amp;复制节点连接.html</link><guid isPermaLink="false">Houdini-Toolset/功能/移动&amp;复制节点连接.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 07:45:42 GMT</pubDate><enclosure url="lib\media\node-exchanger.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\node-exchanger.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini AI助手]]></title><description><![CDATA[ 
+]]></description><link>houdini-toolset\功能\功能.html</link><guid isPermaLink="false">Houdini-Toolset/功能/功能.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:22:19 GMT</pubDate></item><item><title><![CDATA[Houdini AI助手]]></title><description><![CDATA[ 
  <br><br>使用openai的接口实现的AI助手，能够帮你找到你想要的节点、帮你解决代码问题、其他Houdini相关问题。注意需要用户自己提供OpenAI API Key。<br><br>
 <br>如果没有安装pip，那么在<a data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>里使用install pip安装pip。
 <br>在<a data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>离使用pip install安装openai即可，无需填写版本号。
@@ -4093,113 +4449,7 @@ CUSTOM_ITEMS.append(create_python_shell)
 <br>Unreal Project Path: 资产所在的unreal项目的项目文件。例如 F:\unreal_project\ProcedrualWorld.uproject
 <br>Asset Path: 静态网格资产在unreal项目中的路径，可以通过右键资产，选择“复制引用”来获取引用，获取引用后还需要删除两个单引号以及资产的类型。例如/Game/Quixel/Mesh/Rock_01.Rock_01;/Game/Quixel/Mesh/Rock_02.Rock_02
 <br>Output Path: FBX的导出路径。FBX文件会维持其在Unreal项目中的路径。例如，如果Output Path是 C:/tmp而Asset Path为/Game/Mesh/obj1.obj1，那么模型会导出为C:/tmp/Game/Mesh/obj1.FBX&nbsp;注意，Unreal Project Path和Asset Path都不能包含空格和汉字
-<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 19 Jul 2025 15:41:56 GMT</pubDate></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
- <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
-<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
-
-<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
-<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
-<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
-<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
-<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
-<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
-<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
-<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
-<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
-<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
-
-
-<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
-
-<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
-<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
-
-<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
-<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
-
-
-<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
-<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
-
-
-<br><br><br>所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
-<br>Node Count: 节点计数
-<br>Open SpreadSheet: 打开几何体表格
-<br>Open Python Shell: 打开 Python 命令行
-<br>... 以及更多其他指令
-<br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br>
-<br>常用操作
-
-<br>Duplicate Node as Reference: 以引用形式复制节点。
-<br>Copy Node Parms Reference: 拷贝节点参数的引用。
-<br>Delete Expression and Keys: 删除节点所有表达式和关键帧。
-<br>Copy Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板。
-
-
-<br>整理节点
-
-<br>Vertical Compress Node Space Upward: 向上收缩节点垂直间距。
-<br>Vertical Compress Node Space: 收缩节点垂直间距。
-<br>Vertical Space Nodes: 垂直均分选中节点的间距。
-<br>Vertical Space Nodes Upward: 向上垂直均分选中节点的间距。
-<br>Wire Hub(s): 通过自动添加 dot 节点来整理节点连线。
-
-
-<br>节点样式
-
-<br>Copy Node Shape: 拷贝节点形状。
-<br>Copy Node Color: 拷贝节点颜色。
-<br>Copy Node Style: 拷贝节点颜色和形状。
-<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
-
-
-<br><br>
-<br>Ramp 参数
-
-<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
-<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
-<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
-<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
-<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
-<br>Mirror Ramp: 镜像 Ramp。
-
-
-<br>代码参数 (VEX/Python)
-
-<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
-<br>Save Snippet: 保存 VEX/Python 代码片段。
-<br>Import Snippet: 导入已保存的代码片段。
-
-
-<br>按钮参数
-
-<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
-
-
-<br>全局随机种子
-
-<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。
-
-
-<br><br>
-<br>Visit Github: 在浏览器中打开项目 Github 页面。
-<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
-<br>Open Plugin Folder: 打开插件所在的目录。
-<br>Open Doc: 在 Houdini 中打开此文档。
-<br>Open Doc Online: 在浏览器中打开在线文档。
-<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
-<br>Python 相关 (不推荐直接使用)
-
-<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
-<br>Pip Install: 使用 pip 安装 Python 模块。
-<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
-<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
-
-
-<br><br>
-<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
-<br>Emoji Sticker: (功能待补充)
-]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 19 Jul 2025 15:44:50 GMT</pubDate></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
+<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 19 Jul 2025 15:41:56 GMT</pubDate></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="Houdini-Toolset/安装配置/安装配置.md" href="houdini-toolset\安装配置\安装配置.html" target="_self" rel="noopener nofollow"><strong></strong></a>安装配置
 
@@ -4487,38 +4737,4 @@ CUSTOM_ITEMS.append(create_python_shell)
 <br><a class="internal-link" data-href="Houdini-Toolset/简介.md" href="houdini-toolset\简介.html" target="_self" rel="noopener nofollow">简介</a>
 
 
-]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 04 Mar 2024 15:58:34 GMT</pubDate></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
- <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="houdini-toolset\安装配置\安装.html" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
-<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。
-&nbsp; &nbsp; 所有节点均可在Tab菜单的 Dolag 分类下找到。
-<img alt="节点一览.png" src="lib\media\节点一览.png"><img alt="效果一览.png" src="lib\media\效果一览.png">
-<br>
-<br><a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow">快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。<img alt="quick console.gif" src="lib\media\quick-console.gif">
-<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
-
-<br>扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
-
-<br>一键整理节点布局。
-<br>保存与加载节点参数。
-<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
-<br>复制与粘贴节点样式。
-<br>递归解锁当前节点内的所有子节点。
-
-
-<br>主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-
-
-<br>
-<br>扩展节点编辑器功能。
-
-<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif">
-
-
-<br>更详细的功能预览请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow">功能一览</a>。<br><br>
-<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
-<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
-<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
-<br>
-<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
-]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 06:10:47 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
+]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 04 Mar 2024 15:58:34 GMT</pubDate></item></channel></rss>
