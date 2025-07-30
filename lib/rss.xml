@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 20 Jul 2025 08:05:03 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 20 Jul 2025 08:04:42 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 03 Aug 2025 06:42:22 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 03 Aug 2025 06:42:02 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
@@ -62,14 +62,90 @@ int main()
     (foo.*foo_bar.MP)();
     return 0;
 }
-]]></description><link>编程\c++\访问类的私有成员和方法.html</link><guid isPermaLink="false">编程/C++/访问类的私有成员和方法.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 14:04:11 GMT</pubDate><enclosure url="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[C++]]></title><description><![CDATA[ 
+]]></description><link>编程\c++\访问类的私有成员和方法.html</link><guid isPermaLink="false">编程/C++/访问类的私有成员和方法.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 14:04:11 GMT</pubDate><enclosure url="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[语法杂记]]></title><description><![CDATA[ 
+ <br><br><br>
+POD（Plain Old Data，简单旧数据）是C++中的一个概念，它指的是一种可以通过简单内存复制进行复制和传输的数据类型。POD类型的对象可以通过memcpy或其他等价的操作进行复制，而且它们的内存布局是完全透明和可预测的。
+<br>对我来说，POD类型有如下作用：<br>
+<br>可非常简单地进行序列化反序列化。
+<br>拷贝性能好。可以简单使用内存拷贝来复制对象。
+<br>支持作为原子变量。
+<br>
+<a data-tooltip-position="top" aria-label="https://developer.aliyun.com/article/1463110" rel="noopener nofollow" class="external-link" href="https://developer.aliyun.com/article/1463110" target="_blank">深度解析C++中的POD类型：从理论基础到项目实践</a>
+<br><br><br>关于原子变量的内存顺序非常非常之复杂，本文无意展开。六种内存顺序的解释及示例请参考下面的文章，写得非常生动详细且环环相扣：<br>
+<a data-tooltip-position="top" aria-label="https://luyuhuang.tech/2022/06/25/cpp-memory-order.html#memory_order_relaxed" rel="noopener nofollow" class="external-link" href="https://luyuhuang.tech/2022/06/25/cpp-memory-order.html#memory_order_relaxed" target="_blank">谈谈 C++ 中的内存顺序 (Memory Order) - Luyu Huang's Blog</a>
+<br>本文讨论一些重要的部分。<br><br>这种内存模式是最宽松的内存模式，他除了保证操作是原子操作之外什么都不会保证。
+举例来说，下面的线程1是设置了x和y的参数<br>std::atomic&lt;bool&gt; x{false}, y{false};  
+  
+void thread1() {  
+	x.store(true, std::memory_order_relaxed); // (1)  
+	y.store(true, std::memory_order_relaxed); // (2)  
+}
+
+void thread2() {  
+	while (!y.load(std::memory_order_relaxed)); // (3)  
+	assert(x.load()); // (4)  
+}
+<br>当我们谈论到除了原子操作之外什么都不会保证时，这意味着这两个操作是可被重排序的，也就是说x和y的CPU执行顺序无法被保证，也有可能先执行y.store再执行x.store。
+因此thread2中的断言有可能会失败。<br>Tip现代CPU为了让流水线的并行度增大，会支持指令乱序执行/重排序，以减少流水线气泡。相同代码在不同CPU核心的重排序后的执行顺序可能会不同，因此会造成上述问题。
+事实上除开CPU的重排序外，编译器也有可能对指令进行重排序。可参考此文章<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/413889872" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/413889872" target="_blank">乱序执行的那些事儿</a><br>注意，如果上述代码改成如下代码则不会出现断言失败问题：<br>std::atomic&lt;bool&gt; x{false}, y{false};  
+  
+void thread1() {  
+	x.store(true, std::memory_order_relaxed); // (1)  
+	y.store(true, std::memory_order_release); // (2)  
+}
+
+void thread2() {  
+	while (!y.load(std::memory_order_acquire)); // (3)  
+	assert(x.load()); // (4)  
+}
+<br>为什么会出现这种情况呢？因为memory_order_release会保证当前线程没有读写指令会被重排序到此条指令之后，因此x.store并不会在y.store之后执行；同样，memory_order_acquire会保证当前线程没有读写指令会被重排序到当前指令之前。<br><br>mutable是C++中的关键词，用于去掉const修饰符的作用。
+当写了一个数据的接口如下时，get()函数表现为const，但是实际上会使用到一个读锁，因此需要让读锁打破const限制符。<br>template&lt;typename T&gt;
+class Data{
+	mutable read_lock;
+	T data;
+	public:
+		Data() = default;
+		const T&amp; get() const;
+		void set(const T&amp;);
+}
+
+template&lt;typename T&gt;
+const T&amp; Data&lt;T&gt;::get() const{
+	read_lock.lock();
+	const T&amp; tmp_data = std::move(data);
+	read_lock.release();
+	return tmp_data;
+}
+<br>
+<a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/64969053" rel="noopener nofollow" class="external-link" href="https://www.zhihu.com/question/64969053" target="_blank">C++中mutable关键字存在的必要性是什么？</a>
+<br><br>对于一个分支，用于告诉CPU更倾向于走/不走这一分支。
+在C++20以前，这俩都是一个宏，用法如下：<br>if(likely(size==0)){
+	...
+}
+else{
+	...
+}
+<br>而C++20及之后，这俩提拔为了属性关键字。用法如下<br>if(size==0) [[likely]]{
+	...
+}
+else{
+	...
+}
+<br>从汇编来看，仅仅是把更可能的部分的跳转标签写到离跳转语句更近的地方而已。<br>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/357434227" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/357434227" target="_blank">C++关键字之likely和unlikely</a>
+<br><br><br><br>普通的new是一个内存申请+构造对象的过程，而申请内存是一个比较耗时的过程，而placement_new是在已申请的内存中构造对象的过程，非常常用在内存池中！<br>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/584841690" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/584841690" target="_blank">C++ placement new/delete 运算符</a>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/1902488771443799731" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/1902488771443799731" target="_blank">Q38. placement new使用场景？</a>
+]]></description><link>编程\c++\语法杂记.html</link><guid isPermaLink="false">编程/C++/语法杂记.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 02 Aug 2025 18:15:41 GMT</pubDate></item><item><title><![CDATA[C++]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="编程/C++/访问类的私有成员和方法.md" href="编程\c++\访问类的私有成员和方法.html" target="_self" rel="noopener nofollow">访问类的私有成员和方法</a>
+<br><a class="internal-link" data-href="编程/C++/语法杂记.md" href="编程\c++\语法杂记.html" target="_self" rel="noopener nofollow">语法杂记</a>
 ]]></description><link>编程\c++\c++.html</link><guid isPermaLink="false">编程/C++/C++.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:51:11 GMT</pubDate></item><item><title><![CDATA[编程]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="编程/C++/C++.md" href="编程\c++\c++.html" target="_self" rel="noopener nofollow"><strong></strong></a>C++
 
 <br><a class="internal-link" data-href="编程/C++/访问类的私有成员和方法.md" href="编程\c++\访问类的私有成员和方法.html" target="_self" rel="noopener nofollow">访问类的私有成员和方法</a>
+<br><a class="internal-link" data-href="编程/C++/语法杂记.md" href="编程\c++\语法杂记.html" target="_self" rel="noopener nofollow">语法杂记</a>
 
 
 ]]></description><link>编程\编程.html</link><guid isPermaLink="false">编程/编程.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:51:10 GMT</pubDate></item><item><title><![CDATA[动态设计]]></title><description><![CDATA[ 
@@ -105,15 +181,7 @@ int main()
 <br><a class="internal-link" data-href="设计/平面设计/复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析.md" href="设计\平面设计\复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析.html" target="_self" rel="noopener nofollow">复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析</a>
 
 
-<br><a class="internal-link" data-href="设计/replace_absolute_paths.md" href="设计\replace_absolute_paths.html" target="_self" rel="noopener nofollow">replace_absolute_paths</a>
-]]></description><link>设计\设计.html</link><guid isPermaLink="false">设计/设计.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Tue, 16 Jan 2024 14:06:42 GMT</pubDate></item><item><title><![CDATA[replace_absolute_paths]]></title><description><![CDATA[ 
- <br>&lt;%*
-const vaultPath = app.vault.adapter.basePath;
-const notePath = tp.file.path(true);
-const content = await tp.file.read(notePath);
-const relativeContent = content.replace(/file:///C:/Users/username/Documents/ObsidianVault/g, '..');
-await tp.file.write(relativeContent);
-%&gt;]]></description><link>设计\replace_absolute_paths.html</link><guid isPermaLink="false">设计/replace_absolute_paths.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 14 Jul 2024 17:07:20 GMT</pubDate></item><item><title><![CDATA[数学]]></title><description><![CDATA[ 
+]]></description><link>设计\设计.html</link><guid isPermaLink="false">设计/设计.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Tue, 16 Jan 2024 14:06:42 GMT</pubDate></item><item><title><![CDATA[数学]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="图形学/数学/雅各比矩阵.md" href="图形学\数学\雅各比矩阵.html" target="_self" rel="noopener nofollow">雅各比矩阵</a>
 ]]></description><link>图形学\数学\数学.html</link><guid isPermaLink="false">图形学/数学/数学.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 15 Jun 2025 10:09:38 GMT</pubDate></item><item><title><![CDATA[雅各比矩阵]]></title><description><![CDATA[ 
@@ -325,7 +393,7 @@ mkdir -p env/Python
 <br>建议4GB RAM
 <br>支持OpenGL 3.2的GPU
 <br><br>GPL v3许可证 - 请查看项目中的LICENSE文件了解详情。<br><img src="lib\media\flowmap-canvas.gif"><br>]]></description><link>我的项目\flowmap-canvas.html</link><guid isPermaLink="false">我的项目/Flowmap Canvas.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 20 Jul 2025 07:06:13 GMT</pubDate><enclosure url="lib\media\flowmap-canvas.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib\media\flowmap-canvas.gif&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Portable Houdini]]></title><description><![CDATA[ 
- <br>​<br><img src=".\app:\\4d761f4a35994c622dde14a2be681434552d\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501" referrerpolicy="no-referrer"><br>​<br><br><br>Portable Houdini是一个便携的独立的Houdini界面，能够在不开启Houdini的情况下加载HDA文件并调整参数，并支持配置批处理。适合在程序化生成过程中，将HDA与此工具交付给美术使用，无需任何前置知识和依赖安装，即插即用。<br>注意，虽然无需打开Houdini，但仍需安装和激活Houdini。<br><img alt="screenshot" src=".\app:\\4d761f4a35994c622dde14a2be681434552d\E:\\Repositories\PortableHoudini\img\screenshot_0.png?lastModify=1719737501" referrerpolicy="no-referrer"><br><br>
+ <br>​<br><img src=".\app:\\d8463022ce098806881ddb7cc161738a28d1\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501" referrerpolicy="no-referrer"><br>​<br><br><br>Portable Houdini是一个便携的独立的Houdini界面，能够在不开启Houdini的情况下加载HDA文件并调整参数，并支持配置批处理。适合在程序化生成过程中，将HDA与此工具交付给美术使用，无需任何前置知识和依赖安装，即插即用。<br>注意，虽然无需打开Houdini，但仍需安装和激活Houdini。<br><img alt="screenshot" src=".\app:\\d8463022ce098806881ddb7cc161738a28d1\E:\\Repositories\PortableHoudini\img\screenshot_0.png?lastModify=1719737501" referrerpolicy="no-referrer"><br><br>
 <br>
 安装对应版本的Python。根据需要安装的Houdini版本所使用的Python版本，安装对应版本的Python，例如Houdini19.0需要安装Python3.7，Houdini19.5需要安装Python3.9。 如需创建一个即插即用的Python环境，建议步骤如下(Windows)：
 
@@ -349,7 +417,7 @@ python main.py
 <br>初次使用时需要点击设置&gt;常规设置以设置Houdini的安装路径。默认安装路径是C:\Program Files\Side Effects Software\Houdini xx.xx。
 <br>点击文件&gt;打开HDA即可打开HDA文件。点击之后会自动读取并绘制HDA参数界面。
 <br>点击窗口&gt;模型预览窗口即可显示或隐藏模型预览窗口。
-<br><br>每个HDA参数右侧都有一个✚按钮，可以设置该参数的批处理值。点击之后会打开如下窗口。<br>​<br><img alt="screenshot" src=".\app:\\4d761f4a35994c622dde14a2be681434552d\E:\\Repositories\PortableHoudini\img\screenshot_1.png?lastModify=1719737501" referrerpolicy="no-referrer"><br>​<br>按下左下角的✚按钮可以增加一个批处理参数值，选中一个批处理参数后点击旁边的 - 按钮可以删掉该参数。<br>批处理参数的意义是——在进行批处理时，会按照批次顺序，将当前批次的HDA属性值设置为对应的属性值进行处理。如果属性在当前批次没有设置属性值，那么会使用HDA主参数界面的值作为当前批次属性值。<br>此外，在打开按钮类型的批处理面板时，属性值类型为复选框，若复选框在当前批次的属性值为真(即勾选复选框)，那么当前批次会触发点击该按钮的事件。<br>设置完批处理参数值后，点击左下角的应用即可保存批处理结果。<br>在HDA参数界面的左下角会显示批处理的批次总数，点击批处理按钮即可继续批处理。<br><br>
+<br><br>每个HDA参数右侧都有一个✚按钮，可以设置该参数的批处理值。点击之后会打开如下窗口。<br>​<br><img alt="screenshot" src=".\app:\\d8463022ce098806881ddb7cc161738a28d1\E:\\Repositories\PortableHoudini\img\screenshot_1.png?lastModify=1719737501" referrerpolicy="no-referrer"><br>​<br>按下左下角的✚按钮可以增加一个批处理参数值，选中一个批处理参数后点击旁边的 - 按钮可以删掉该参数。<br>批处理参数的意义是——在进行批处理时，会按照批次顺序，将当前批次的HDA属性值设置为对应的属性值进行处理。如果属性在当前批次没有设置属性值，那么会使用HDA主参数界面的值作为当前批次属性值。<br>此外，在打开按钮类型的批处理面板时，属性值类型为复选框，若复选框在当前批次的属性值为真(即勾选复选框)，那么当前批次会触发点击该按钮的事件。<br>设置完批处理参数值后，点击左下角的应用即可保存批处理结果。<br>在HDA参数界面的左下角会显示批处理的批次总数，点击批处理按钮即可继续批处理。<br><br>
 我写了!=我要做
 <br>
 <br> 支持文件批处理
@@ -364,7 +432,7 @@ python main.py
 <br> 支持前后端数据双向同步(支持表达式)
 <br> 支持模型预览
 <br> 客户端服务端分离
-]]></description><link>我的项目\portable-houdini.html</link><guid isPermaLink="false">我的项目/Portable Houdini.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 30 Jun 2024 14:46:53 GMT</pubDate><enclosure url=".\app:\\4d761f4a35994c622dde14a2be681434552d\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;.\app:\\4d761f4a35994c622dde14a2be681434552d\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[波动光学]]></title><description><![CDATA[ 
+]]></description><link>我的项目\portable-houdini.html</link><guid isPermaLink="false">我的项目/Portable Houdini.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 30 Jun 2024 14:46:53 GMT</pubDate><enclosure url=".\app:\\d8463022ce098806881ddb7cc161738a28d1\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;.\app:\\d8463022ce098806881ddb7cc161738a28d1\E:\\Repositories\PortableHoudini\icon.png?lastModify=1719737501&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[波动光学]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="渲染相关/光学/波动光学/波动光学讲义笔记.md" href="渲染相关\光学\波动光学\波动光学讲义笔记.html" target="_self" rel="noopener nofollow">波动光学讲义笔记</a>
 ]]></description><link>渲染相关\光学\波动光学\波动光学.html</link><guid isPermaLink="false">渲染相关/光学/波动光学/波动光学.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 16 Dec 2024 15:10:09 GMT</pubDate></item><item><title><![CDATA[波动光学讲义笔记]]></title><description><![CDATA[ 
@@ -3903,6 +3971,7 @@ CUSTOM_ITEMS.append(create_python_shell)
 <br><a class="internal-link" data-href="编程/C++/C++.md" href="编程\c++\c++.html" target="_self" rel="noopener nofollow"><strong></strong></a>C++
 
 <br><a class="internal-link" data-href="编程/C++/访问类的私有成员和方法.md" href="编程\c++\访问类的私有成员和方法.html" target="_self" rel="noopener nofollow">访问类的私有成员和方法</a>
+<br><a class="internal-link" data-href="编程/C++/语法杂记.md" href="编程\c++\语法杂记.html" target="_self" rel="noopener nofollow">语法杂记</a>
 
 
 
@@ -3919,7 +3988,6 @@ CUSTOM_ITEMS.append(create_python_shell)
 <br><a class="internal-link" data-href="设计/平面设计/复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析.md" href="设计\平面设计\复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析.html" target="_self" rel="noopener nofollow">复古与潮流的碰撞！绝区零设计元素&amp;风格完全分析</a>
 
 
-<br><a class="internal-link" data-href="设计/replace_absolute_paths.md" href="设计\replace_absolute_paths.html" target="_self" rel="noopener nofollow">replace_absolute_paths</a>
 
 
 <br><a class="internal-link" data-href="图形学/图形学.md" href="图形学\图形学.html" target="_self" rel="noopener nofollow"><strong></strong></a>图形学
