@@ -1,4 +1,182 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 10 Aug 2025 09:38:47 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 10 Aug 2025 09:38:24 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 10 Aug 2025 09:47:48 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 10 Aug 2025 09:47:47 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
+ <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
+<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
+
+<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
+<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
+<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
+<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
+<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
+<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
+<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
+<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
+<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
+<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
+
+
+<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
+
+<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
+<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
+
+<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
+
+<br><a data-href="#常用操作" href="about:blank#常用操作" class="internal-link" target="_self" rel="noopener nofollow">常用操作</a>
+<br><a data-href="#整理节点" href="about:blank#整理节点" class="internal-link" target="_self" rel="noopener nofollow">整理节点</a>
+<br><a data-href="#节点样式" href="about:blank#节点样式" class="internal-link" target="_self" rel="noopener nofollow">节点样式</a>
+
+
+<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
+
+<br><a data-href="#常规参数" href="about:blank#常规参数" class="internal-link" target="_self" rel="noopener nofollow">常规参数</a>
+<br><a data-href="#Ramp 参数" href="about:blank#Ramp_参数" class="internal-link" target="_self" rel="noopener nofollow">Ramp 参数</a>
+<br><a data-href="#代码参数 (VEX/Python)" href="about:blank#代码参数_(VEX\Python)" class="internal-link" target="_self" rel="noopener nofollow">代码参数 (VEX/Python)</a>
+<br><a data-href="#按钮参数" href="about:blank#按钮参数" class="internal-link" target="_self" rel="noopener nofollow">按钮参数</a>
+<br><a data-href="#全局随机种子" href="about:blank#全局随机种子" class="internal-link" target="_self" rel="noopener nofollow">全局随机种子</a>
+
+
+
+
+<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
+
+<br><a data-href="#Python 相关 (不推荐直接使用)" href="about:blank#Python_相关_(不推荐直接使用)" class="internal-link" target="_self" rel="noopener nofollow">Python 相关 (不推荐直接使用)</a>
+
+
+<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
+
+
+<br><br><br>插件包含海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。节点专为提高开发效率而生，不包括任何特定的程序化生成效果。
+所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
+<br>Node Count: 节点计数
+<br>Open Python Shell: 打开 Python 命令行
+<br>Open Performance Monitor: 打开性能监测窗口
+<br>Merge Selected: 将选中的节点进行merge
+<br>Switch Selected: 将选中的节点进行Switch
+<br>Layout Nodes: 整理节点
+<br>Compress Node Space: 垂直压缩节点空间
+<br>Organize Wires:  通过自动添加 dot 节点来整理节点连线。
+<br>Nodes Snap to Grid: 将节点对齐到网格
+<br>...
+<br>快捷命令支持用户自定义任意指令，参考此篇文章：<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a><br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br><br>
+<br>Copy Node Path: 拷贝节点路径，结合变量右键菜单的Paste (Relative) Node Path功能使用。
+<br>Dependency Viewer: 显示节点的引用与被引用关系，也可以选中节点后按Ctrl+R键快捷打开。
+<img alt="引用查看器.png" src="lib\media\引用查看器.png">
+<br>Find Unlocked Nodes: 查找所有解锁的节点。
+<img alt="解锁节点查看器.png" src="lib\media\解锁节点查看器.png">
+<br>Duplicate Node as Reference: 以引用形式复制节点。
+<br>Copy/Paste Node Parms Reference: 拷贝粘贴节点参数的引用。
+<br>Delete Expression and Keys: 删除节点所有变量的表达式和关键帧。
+<br>Unlock Nodes Recursively: 递归解锁当前节点内的所有非官方节点。用于解除节点依赖，便于将HDA或HIP资产进行分发交付。
+<br>Copy/Paste Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点上。
+<br>Copy/Paste Parameter Value as Json to Clipboard: 将节点所有参数以JSON格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点参数上。可将节点的参数拷贝到另一个节点上。
+<br><br>
+<br>Compress Node Space: 收缩节点垂直间距。
+<br>Compress Node Space Downward: 向下收缩节点垂直间距。
+<br>Layout Nodes: 整理节点。能够保证逻辑上的上游节点一定在下游节点之上。
+<br>Layout Nodes Downward: 向下整理节点。
+<br>Organize Wire: 通过自动添加 dot 节点来整理节点连线。
+<br><br>
+<br>Copy Node Shape: 拷贝节点形状。
+<br>Copy Node Color: 拷贝节点颜色。
+<br>Copy Node Style: 拷贝节点颜色和形状。
+<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
+<br><br>参数菜单会在不同类型的参数处显示不同的内容。<br><br>
+<br>Paste (Relative) Node Path: 拷贝绝对/相对节点路径。配合节点右键菜单的Copy Node Path使用。
+<br><br>
+<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
+<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
+<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
+<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
+<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
+<br>Mirror Ramp: 镜像 Ramp。
+<br><br>
+<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
+<br>Save Snippet: 保存 VEX/Python 代码片段。
+<br>Import Snippet: 导入已保存的代码片段。
+<br><br>
+<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
+<br><br>
+<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。(会破坏参数引用关系，不建议使用)
+<br><br>
+<br>Visit Github: 在浏览器中打开项目 Github 页面。
+<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
+<br>Open Plugin Folder: 打开插件所在的目录。
+<br>Open Doc: 在 Houdini 中打开此文档。
+<br>Open Doc Online: 在浏览器中打开在线文档。
+<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
+<br><br>
+<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
+<br>Pip Install: 使用 pip 安装 Python 模块。
+<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
+<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
+<br><br>
+<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
+<br>Dependency Viewer: 选中节点后按Ctrl+R键快捷打开引用查看面板。
+<br>Emoji Sticker: (功能待补充)
+]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 09:47:25 GMT</pubDate><enclosure url="lib\media\引用查看器.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\引用查看器.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
+ <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。适用于Houdini18.5及以上版本。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="安装" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
+<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。所有节点均无外部依赖，可直接通过unlock的方式嵌入。
+所有节点均可在Tab菜单的 Dolag 分类下找到。
+
+<img src="lib\media\节点一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
+<img src="lib\media\效果一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>
+<br>
+<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。
+
+<img src="lib\media\quick-console.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>
+<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
+
+<br>
+扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
+
+<br>一键整理节点布局。
+<br>保存与加载节点参数。
+<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
+<br>复制与粘贴节点样式。
+<br>递归解锁当前节点内的所有子节点。
+<br>显示已解锁节点。
+
+<img src="lib\media\解锁节点查看器.png" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>显示节点引用关系。
+
+<img src="lib\media\引用查看器.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+
+
+<br>
+主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+
+<br>
+<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+
+
+
+<br>
+<br>扩展节点编辑器功能。
+
+<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。
+
+<img src="lib\media\node-exchanger.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+
+
+<br>更详细的功能请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。<br><br>
+<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
+<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
+<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
+<br>
+<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
+]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 09:46:46 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
@@ -3908,185 +4086,7 @@ USER_CUSTOM_ITEMS.append(tmp_item)
 <br>Unreal Project Path: 资产所在的unreal项目的项目文件。例如 F:\unreal_project\ProcedrualWorld.uproject
 <br>Asset Path: 静态网格资产在unreal项目中的路径，可以通过右键资产，选择“复制引用”来获取引用，获取引用后还需要删除两个单引号以及资产的类型。例如/Game/Quixel/Mesh/Rock_01.Rock_01;/Game/Quixel/Mesh/Rock_02.Rock_02
 <br>Output Path: FBX的导出路径。FBX文件会维持其在Unreal项目中的路径。例如，如果Output Path是 C:/tmp而Asset Path为/Game/Mesh/obj1.obj1，那么模型会导出为C:/tmp/Game/Mesh/obj1.FBX&nbsp;注意，Unreal Project Path和Asset Path都不能包含空格和汉字
-<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:46:31 GMT</pubDate></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
- <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
-<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
-
-<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
-<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
-<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
-<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
-<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
-<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
-<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
-<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
-<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
-<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
-
-
-<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
-
-<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
-<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
-
-<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
-
-<br><a data-href="#常用操作" href="about:blank#常用操作" class="internal-link" target="_self" rel="noopener nofollow">常用操作</a>
-<br><a data-href="#整理节点" href="about:blank#整理节点" class="internal-link" target="_self" rel="noopener nofollow">整理节点</a>
-<br><a data-href="#节点样式" href="about:blank#节点样式" class="internal-link" target="_self" rel="noopener nofollow">节点样式</a>
-
-
-<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
-
-<br><a data-href="#常规参数" href="about:blank#常规参数" class="internal-link" target="_self" rel="noopener nofollow">常规参数</a>
-<br><a data-href="#Ramp 参数" href="about:blank#Ramp_参数" class="internal-link" target="_self" rel="noopener nofollow">Ramp 参数</a>
-<br><a data-href="#代码参数 (VEX/Python)" href="about:blank#代码参数_(VEX\Python)" class="internal-link" target="_self" rel="noopener nofollow">代码参数 (VEX/Python)</a>
-<br><a data-href="#按钮参数" href="about:blank#按钮参数" class="internal-link" target="_self" rel="noopener nofollow">按钮参数</a>
-<br><a data-href="#全局随机种子" href="about:blank#全局随机种子" class="internal-link" target="_self" rel="noopener nofollow">全局随机种子</a>
-
-
-
-
-<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
-
-<br><a data-href="#Python 相关 (不推荐直接使用)" href="about:blank#Python_相关_(不推荐直接使用)" class="internal-link" target="_self" rel="noopener nofollow">Python 相关 (不推荐直接使用)</a>
-
-
-<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
-
-
-<br><br><br>插件包含海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。节点专为提高开发效率而生，不包括任何特定的程序化生成效果。
-所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
-<br>Node Count: 节点计数
-<br>Open Python Shell: 打开 Python 命令行
-<br>Open Performance Monitor: 打开性能监测窗口
-<br>Merge Selected: 将选中的节点进行merge
-<br>Switch Selected: 将选中的节点进行Switch
-<br>Layout Nodes: 整理节点
-<br>Compress Node Space: 垂直压缩节点空间
-<br>Organize Wires:  通过自动添加 dot 节点来整理节点连线。
-<br>Nodes Snap to Grid: 将节点对齐到网格
-<br>...
-<br>快捷命令支持用户自定义任意指令，参考此篇文章：<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a><br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br><br>
-<br>Copy Node Path: 拷贝节点路径，结合变量右键菜单的Paste (Relative) Node Path功能使用。
-<br>Dependency Viewer: 显示节点的引用与被引用关系，也可以选中节点后按Ctrl+R键快捷打开。
-<img alt="23ad4bd07660fee658986b174a368847_MD5.jpeg" src="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg">
-<br>Find Unlocked Nodes: 查找所有解锁的节点。
-<img alt="480a9d052b756f90684beb08aa0b6ec3_MD5.jpeg" src="lib\media\480a9d052b756f90684beb08aa0b6ec3_md5.jpeg">
-<br>Duplicate Node as Reference: 以引用形式复制节点。
-<br>Copy/Paste Node Parms Reference: 拷贝粘贴节点参数的引用。
-<br>Delete Expression and Keys: 删除节点所有变量的表达式和关键帧。
-<br>Unlock Nodes Recursively: 递归解锁当前节点内的所有非官方节点。用于解除节点依赖，便于将HDA或HIP资产进行分发交付。
-<br>Copy/Paste Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点上。
-<br>Copy/Paste Parameter Value as Json to Clipboard: 将节点所有参数以JSON格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点参数上。可将节点的参数拷贝到另一个节点上。
-<br><br>
-<br>Compress Node Space: 收缩节点垂直间距。
-<br>Compress Node Space Downward: 向下收缩节点垂直间距。
-<br>Layout Nodes: 整理节点。能够保证逻辑上的上游节点一定在下游节点之上。
-<br>Layout Nodes Downward: 向下整理节点。
-<br>Organize Wire: 通过自动添加 dot 节点来整理节点连线。
-<br><br>
-<br>Copy Node Shape: 拷贝节点形状。
-<br>Copy Node Color: 拷贝节点颜色。
-<br>Copy Node Style: 拷贝节点颜色和形状。
-<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
-<br><br>参数菜单会在不同类型的参数处显示不同的内容。<br><br>
-<br>Paste (Relative) Node Path: 拷贝绝对/相对节点路径。配合节点右键菜单的Copy Node Path使用。
-<br><br>
-<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
-<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
-<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
-<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
-<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
-<br>Mirror Ramp: 镜像 Ramp。
-<br><br>
-<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
-<br>Save Snippet: 保存 VEX/Python 代码片段。
-<br>Import Snippet: 导入已保存的代码片段。
-<br><br>
-<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
-<br><br>
-<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。(会破坏参数引用关系，不建议使用)
-<br><br>
-<br>Visit Github: 在浏览器中打开项目 Github 页面。
-<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
-<br>Open Plugin Folder: 打开插件所在的目录。
-<br>Open Doc: 在 Houdini 中打开此文档。
-<br>Open Doc Online: 在浏览器中打开在线文档。
-<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
-<br><br>
-<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
-<br>Pip Install: 使用 pip 安装 Python 模块。
-<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
-<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
-<br><br>
-<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
-<br>Dependency Viewer: 选中节点后按Ctrl+R键快捷打开引用查看面板。
-<br>Emoji Sticker: (功能待补充)
-]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 09:30:22 GMT</pubDate><enclosure url="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
- <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。适用于Houdini18.5及以上版本。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="安装" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
-<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。所有节点均无外部依赖，可直接通过unlock的方式嵌入。
-所有节点均可在Tab菜单的 Dolag 分类下找到。
-
-<img src="lib\media\节点一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
-<img src="lib\media\效果一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
-
-
-<br>
-<br>
-<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。
-
-<img src="lib\media\quick-console.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
-
-
-<br>
-<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
-
-<br>
-扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
-
-<br>一键整理节点布局。
-<br>保存与加载节点参数。
-<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
-<br>复制与粘贴节点样式。
-<br>递归解锁当前节点内的所有子节点。
-<br>显示已解锁节点。
-
-<img src="lib\media\480a9d052b756f90684beb08aa0b6ec3_md5.jpeg" referrerpolicy="no-referrer" style="max-width: 100%;">
-
-
-<br>显示节点引用关系。
-
-<img src="lib\media\961e6710a868f8570ca94f7e8a1d2bfc_md5.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
-
-
-
-
-<br>
-主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-
-<br>
-<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-
-
-
-<br>
-<br>扩展节点编辑器功能。
-
-<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。
-
-<img src="lib\media\node-exchanger.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
-
-
-
-
-<br>更详细的功能请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。<br><br>
-<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
-<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
-<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
-<br>
-<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
-]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 05:52:20 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
+<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:46:31 GMT</pubDate></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/功能.md" href="houdini-toolset\功能\功能.html" target="_self" rel="noopener nofollow"><strong></strong></a>功能
 
