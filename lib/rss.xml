@@ -1,328 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 03 Aug 2025 17:43:27 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 03 Aug 2025 17:43:26 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[代码库]]></title><description><![CDATA[ 
- <br>
-<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/代码库 1.md" href="houdini-toolset\功能\代码库\代码库-1.html" target="_self" rel="noopener nofollow">代码库 1</a>
-]]></description><link>houdini-toolset\功能\代码库\代码库.html</link><guid isPermaLink="false">Houdini-Toolset/功能/代码库/代码库.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:42:24 GMT</pubDate></item><item><title><![CDATA[代码库 1]]></title><description><![CDATA[ 
- <br><br>vex和Python的代码库。vex暂时没有内容。<br><br>Python是以模块形式导入和调用，被放置在HOUDINI_USER_PREF_DIR/DolagPlugin/python/python2.7libs文件夹下。 所有能作为代码库导入的模块都在Dolag文件夹下，因此要使用这些功能就需要先导入Dolag模块。<br>import Dolag
-<br>当然也可以从Dolag导入模块.<br>from Dolag import path
-<br><br>Dolag为所有模块的主模块，后文每一个标题代表Dolag的子模块。以path为例，可以通过如下代码导入。<br>from Dolag import path
-<br><br>和路径相关的模块。<br><br>计算目标路径相对于原始路径的相对路径。<br>
-<br>src：原始路径，应当形如“/obj/geo/scatter”
-<br>dest：目标路径。 如果原始路径为/obj/geo/button1，而目标路径为/obj/geo/file/reload，则计算结果为../geo/file/reload。 如果输入路径名不合规则返回None。
-<br><br>输入hda名，返回hda的Library路径。<br>
-<br>hda_name：hda的名称，也就是hda保存的文件名。例如dolag.hda，dolag.otl。 返回hda的Library路径，如果找不到则返回None。
-<br><br>一些有用的功能。<br><br>单例模式的元类。使用时将元类设为此类即可。<br># python2
-class foo():
-    __meta_class__ = Singleton
-    ...
-
-# python3
-class foo(__meta_class__ = Singleton)
-    ...
-<br><br>实现观察者模式的被观察类。使用时直接继承。<br><br>计算字符串str1和str2的最长公共子串。返回值第一项为最长公共子串， 第二项为第一个匹配相对于str1的位置。<br><br>计算字符串str1和str2的最长公共子序列。返回值为最长公共子串。<br><br>将text写入系统剪切板。<br><br>返回系统剪切板内容。<br><br>变量相关函数。<br><br>根据输入获取变量对象。<br>
-<br>parm_desc：变量的描述。可以是变量的路径、变量对象本身。 返回变量描述所指的变量对象，如果不能根据变量描述找到变量，则返回None。
-<br><br><br>根据输入获取节点对象。<br>
-<br>node_desc：节点的描述。可以是节点的路径、节点对象本身。
-<br>node_type：节点的类型，只有在节点为此类型的节点时才会返回节点。在houdini中节点的类型是指hou.rampParmType、hou.stringParmType等。此变量还可以是元组等可迭代对象，表示节点可以为其中一种类型。 返回符合要求的节点，否则返回None。
-]]></description><link>houdini-toolset\功能\代码库\代码库-1.html</link><guid isPermaLink="false">Houdini-Toolset/功能/代码库/代码库 1.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 03 Jul 2023 05:51:59 GMT</pubDate></item><item><title><![CDATA[快速命令]]></title><description><![CDATA[ 
- <br><br>快速命令工具让使用者能快速地搜索特定命令并执行。一些典型的命令如下：<br>
-<br>merge选中的节点
-<br>整理选中节点
-<br>打开python shell界面
-<br>整理节点
-<img alt="quick console.gif" src="lib\media\quick-console.gif">
-<br><br>用户在Network Editor，也就是节点编辑器面板，按下Ctrl+Space即可唤出快速命令搜索框，按照关键词搜索对应的命令，搜索后按下回车即可执行命令，按下Esc即可退出搜索窗口。<br><br>快速命令工具中的命令是可高度自定义的。用户目前可通过两种形式扩展命令。<br><br><br>快速命令工具提供了一个能完全自定义任何命令的框架。<br>
-<br>打开$HOUDINI_USER_PREF_DIR/DolagPlugin/user_data/UserCustomConsoleItems.py文件。
-<br>创建自定义指令的回调函数，回调函数会接受一个上下文参数。后文会详细介绍上下文参数的作用。
-<br>创建快捷指令对象。您需要配置快捷指令的名称、回调函数、别名及其是否优先显示。
-ConsoleItem(item_name, callback, alias=tuple(), important=False)
-<br>将创建的快捷指令对象插入列表USER_CUSTOM_ITEMS中，插件会自动读取加载此列表。
-<br># 1. 创建该指令的回调函数
-def switch_selected_cb(context):
-    if len(context["selected_nodes"]) &gt; 0:
-        network = context["network_node"]
-        switch_node = network.createNode("switch")
-        index = 0
-        for node in context["selected_nodes"]:
-            for i in range(len(node.outputNames())):
-                switch_node.setInput(index, node, i)
-                index += 1
-
-        switch_node.setPosition(context["editor_pos"])
-
-# 2. 创建快捷指令项
-tmp_item = ConsoleItem(item_name="Switch Selected", alias="switch", callback=switch_selected_cb)
-
-# 3. 将创建的快捷指令添加到指令列表中
-USER_CUSTOM_ITEMS.append(tmp_item)
-<br><br>回调函数会传入一个表示上下文的context参数，context参数记录了快速命令所需的一些属性，可作为字典访问对应属性。其键和值如下：<br>
-<br>selected_nodes: 选中节点的元组，如果没有选中则返回空元组
-<br>hit_item: 在鼠标下方的节点，如果没用则返回None
-<br>screen_pos: 鼠标在屏幕上的绝对位置，元组类型
-<br>editor_pos: 鼠标在Network Editor上的绝对位置，采用Network Editor的坐标系和单位，元组类型
-<br>editor: 当前Network Editor对象
-<br>qt_keys: 按下了哪些键，其值为PySide2中的key值
-<br>network_node: 当前Network Editor面板所显示的Network节点 快速命令工具会在合适的时候执行用户传入的callback回调函数。
-<br><br>Houdini中的UI线程表现比较奇怪，在某些时候一些命令(比如subprocess.call, os.system等)会导致UI线程被阻塞，因此需要使用threading模块新开线程(进程)来避免阻塞。
-例如快速命令中有Edit Code in VSC命令，打开VSC来编辑节点中的Vex和Python。其调用的函数使用了threading.thread来开启新线程(进程)，以避免阻塞。调用的函数代码如下：<br>def openVexInVSC(vex_str):  
-	if not isinstance(vex_str, str):  
-		return  
-	  
-	# escape quotes  
-	vex_str = vex_str.replace("\"", "`")  
-	  
-	# to avoid blocking houdini, we have to use threading  
-	def __tmp_vex_vsc_func():  
-		import subprocess
-		subprocess.call(["powershell", "-WindowStyle", "hidden", "-Command", r'''"{0}" | code -  
-		exit'''.format(vex_str)], shell=False)  
-	  
-	  
-	import threading  
-	t = threading.Thread(target=__tmp_vex_vsc_func)  
-	t.start()
-<br><br>用户可以在$HOUDINI_USER_PREF_DIR/DolagPlugin/user_data/user_console_items.json文件中添加自己的节点创建命令。 <br>[
-  ...
-  {
-    "item_name": "Subdivide",
-    "alias": "sd",
-    "important": true,
-    "type": "node"
-    "node_name": "subdivide"
-  }
-]
-]]></description><link>houdini-toolset\功能\快速命令.html</link><guid isPermaLink="false">Houdini-Toolset/功能/快速命令.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 12:43:08 GMT</pubDate><enclosure url="lib\media\quick-console.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\quick-console.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini节点]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="#简介" href="about:blank#简介" class="internal-link" target="_self" rel="noopener nofollow">简介</a>
-<br><a data-href="#节点说明" href="about:blank#节点说明" class="internal-link" target="_self" rel="noopener nofollow">节点说明</a>
-
-<br><a data-href="#Dolag Portal" href="about:blank#Dolag_Portal" class="internal-link" target="_self" rel="noopener nofollow">Dolag Portal</a>
-<br><a data-href="#Dolag Parse Json Data To Gemotry" href="about:blank#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>
-<br><a data-href="#Dolag Divide Points By Weight" href="about:blank#Dolag_Divide_Points_By_Weight" class="internal-link" target="_self" rel="noopener nofollow">Dolag Divide Points By Weight</a>
-<br><a data-href="#Dolag Unreal Mesh Importer" href="about:blank#Dolag_Unreal_Mesh_Importer" class="internal-link" target="_self" rel="noopener nofollow">Dolag Unreal Mesh Importer</a>
-<br><a data-href="#Dolag Variant Attribute" href="about:blank#Dolag_Variant_Attribute" class="internal-link" target="_self" rel="noopener nofollow">Dolag Variant Attribute</a>
-
-
-<br><br>本工具集提供了分门别类的Houdini资产，默认全局安装，可以以节点的形式直接调用。<br>
-<br>这些资产都放置在HOUDINI_USER_PREF_DIR/DolagPlugin/otls内。
-<br>资产名称以Dolag开头。
-<br>这些资产在Tab菜单中的Dolag分类内，并分为了如下七类：
-1. Attribute：和属性相关的节点
-2. Heightfield：和地形相关节点
-3. Polygon：对Polygon进行处理的节点
-4. Primitive：生成模型的节点
-5. Utility：其他功能性节点
-6. Unreal：与Unreal引擎的互操作
-7. Volume： 和体积相关的节点
-8. RBD：和Rigid Body相关的节点，用于物理模拟
-9. UV：UV相关节点
-10. IO：和导入导出相关节点
-全节点简介在<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。
-<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br>用来架设传送门()。该节点可以设置需要跳转到的位置，点击插件变量面板中的按钮后可以直接跳转到对应位置。同时插件处理了双击事件，因此可以直接双击该节点以进行快速的传送。<br><br>用来解析简单结构的json数据。 由于几何体承载数据类型有限，以及json数据嵌套的复杂性，本节点只支持由字典组成的列表形式的json解析。如下：<br>[
-    {
-        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_GrassGroup01.SM_GrassGroup01'",
-        "propagate_dist":420.0,
-        "heliophile":0.12,
-        "species":"VegA",
-        "viability":0.9,
-        "viability_radius":0.035,
-        "animal_spread_factor":0.9,
-        "pioneer_order":0,
-        "init_seed_weight":0.6,
-        "reproductivity":8,
-        "up_align":0.6,
-        "plant_into_soil":0.02,
-        "hygrophile":-0.15
-    },
-    {
-        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_FlowerGroup01.SM_FlowerGroup01'",
-        "species":"VegB",
-        "propagate_dist":350.0,
-        "heliophile":0.1,
-        "viability":0.85,
-        "viability_radius":0.15,
-        "animal_spread_factor":0.6,
-        "pioneer_order":1,
-        "init_seed_weight":0.45,
-        "reproductivity":9,
-        "up_align":0.6,
-        "plant_into_soil":0.015,
-        "hygrophile":0.5
-    },
-    {
-        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_WeathGroup02.SM_WeathGroup02'",
-        "species":"VegC",
-        "propagate_dist":300.0,
-        "heliophile":0.1,
-        "viability":0.8,
-        "viability_radius":0.3,
-        "animal_spread_factor":0.5,
-        "pioneer_order":2,
-        "init_seed_weight":0.5,
-        "reproductivity":6,
-        "up_align":0.3,
-        "plant_into_soil":0.025,
-        "hygrophile":-0.2
-    }
-]
-<br>用户可选择Point和Primitive两种几何元素类型，此节点会将解析属性输出到用户选择的几何元素类型中。<br><br>此节点有两个输入，第一个输入是待划分的点，第二个输入是用来划分的数据，与<a data-tooltip-position="top" aria-label="Houdini节点 > Dolag Parse Json Data To Gemotry" data-href="Houdini节点#Dolag Parse Json Data To Gemotry" href="houdini-toolset\功能\houdini节点.html#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>搭配有奇效。 节点要求第二个输入包含用以划分的元信息：<br>
-<br>节点可以选择要读取的几何元素类型(Point和Primitive)，第二个输入的每一个对应几何元素都代表了一个划分
-<br>每个划分都需要有一个属性来表示该划分的权重，节点的Weight Attribute参数控制这一属性
-<br>对第一个节点的划分结果需要用类名来标识。如果第二个输入的每一个划分都有可以用于标识的类名，则可以将此类名作为划分结果的类名。 例如第二个输入有类名分别为Tree、Flower，权重分别为0.1、0.9的划分，其中类名的属性名为foliage_name，则划分的结果也会以foliage_name为类属性名进行标识，包含Tree和Flower两种划分。 当然也可以不使用第二个输入的类名作为划分的类名，可以使用节点的New Class Name和Class Prefix来分别设置划分类别的属性名和类名的前缀。 例如当New Class Name为class，Class Prefix为pile_时，划分后点属性可能为：
-
-<br>点1：class：pile_0
-<br>点2：class：pile_3
-<br>点3：class：pile_2
-<br>点4：class：pile_0 显而易见的，这个时候将<a data-tooltip-position="top" aria-label="Houdini节点 > Dolag Parse Json Data To Gemotry" data-href="Houdini节点#Dolag Parse Json Data To Gemotry" href="houdini-toolset\功能\houdini节点.html#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>的结果作为此节点的第二个输入。
-
-
-<br><br>将静态网格的uasset转换为FBX并导入houdini。 下为节点参数:<br>
-<br>Unreal Path: 资产的ue工程所对应版本的unreal根目录。 例如 F:\Unreal Engine\UE_4.26
-<br>Unreal Project Path: 资产所在的unreal项目的项目文件。例如 F:\unreal_project\ProcedrualWorld.uproject
-<br>Asset Path: 静态网格资产在unreal项目中的路径，可以通过右键资产，选择“复制引用”来获取引用，获取引用后还需要删除两个单引号以及资产的类型。例如/Game/Quixel/Mesh/Rock_01.Rock_01;/Game/Quixel/Mesh/Rock_02.Rock_02
-<br>Output Path: FBX的导出路径。FBX文件会维持其在Unreal项目中的路径。例如，如果Output Path是 C:/tmp而Asset Path为/Game/Mesh/obj1.obj1，那么模型会导出为C:/tmp/Game/Mesh/obj1.FBX&nbsp;注意，Unreal Project Path和Asset Path都不能包含空格和汉字
-<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:46:31 GMT</pubDate></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
- <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
-<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
-
-<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
-<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
-<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
-<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
-<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
-<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
-<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
-<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
-<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
-<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
-
-
-<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
-
-<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
-<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
-
-<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
-
-<br><a data-href="#常用操作" href="about:blank#常用操作" class="internal-link" target="_self" rel="noopener nofollow">常用操作</a>
-<br><a data-href="#整理节点" href="about:blank#整理节点" class="internal-link" target="_self" rel="noopener nofollow">整理节点</a>
-<br><a data-href="#节点样式" href="about:blank#节点样式" class="internal-link" target="_self" rel="noopener nofollow">节点样式</a>
-
-
-<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
-
-<br><a data-href="#Ramp 参数" href="about:blank#Ramp_参数" class="internal-link" target="_self" rel="noopener nofollow">Ramp 参数</a>
-<br><a data-href="#代码参数 (VEX/Python)" href="about:blank#代码参数_(VEX\Python)" class="internal-link" target="_self" rel="noopener nofollow">代码参数 (VEX/Python)</a>
-<br><a data-href="#按钮参数" href="about:blank#按钮参数" class="internal-link" target="_self" rel="noopener nofollow">按钮参数</a>
-<br><a data-href="#全局随机种子" href="about:blank#全局随机种子" class="internal-link" target="_self" rel="noopener nofollow">全局随机种子</a>
-
-
-
-
-<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
-
-<br><a data-href="#Python 相关 (不推荐直接使用)" href="about:blank#Python_相关_(不推荐直接使用)" class="internal-link" target="_self" rel="noopener nofollow">Python 相关 (不推荐直接使用)</a>
-
-
-<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
-
-
-<br><br><br>插件包含海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。节点专为提高开发效率而生，不包括任何特定的程序化生成效果。
-所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
-<br>Node Count: 节点计数
-<br>Open Python Shell: 打开 Python 命令行
-<br>Open Performance Monitor: 打开性能监测窗口
-<br>Merge Selected: 将选中的节点进行merge
-<br>Switch Selected: 将选中的节点进行Switch
-<br>Layout Nodes: 整理节点
-<br>Compress Node Space: 垂直压缩节点空间
-<br>Organize Wires:  通过自动添加 dot 节点来整理节点连线。
-<br>Nodes Snap to Grid: 将节点对齐到网格
-<br>...
-<br>快捷命令支持用户自定义任意指令，参考此篇文章：<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a><br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br><br>
-<br>Duplicate Node as Reference: 以引用形式复制节点。
-<br>Copy Node Parms Reference: 拷贝节点参数的引用。
-<br>Delete Expression and Keys: 删除节点所有表达式和关键帧。
-<br>Unlock Nodes Recursively: 递归解锁当前节点内的所有非官方节点。用于解除节点依赖，便于将HDA或HIP资产进行分发交付。
-<br>Copy/Paste Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点上。
-<br>Copy/Paste Parameter Value as Json to Clipboard: 将节点所有参数以JSON格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点参数上。可将节点的参数拷贝到另一个节点上。
-<br><br>
-<br>Compress Node Space: 收缩节点垂直间距。
-<br>Compress Node Space Downward: 向下收缩节点垂直间距。
-<br>Layout Nodes: 整理节点。能够保证逻辑上的上游节点一定在下游节点之上。
-<br>Layout Nodes Downward: 向下整理节点。
-<br>Organize Wire: 通过自动添加 dot 节点来整理节点连线。
-<br><br>
-<br>Copy Node Shape: 拷贝节点形状。
-<br>Copy Node Color: 拷贝节点颜色。
-<br>Copy Node Style: 拷贝节点颜色和形状。
-<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
-<br><br>参数菜单会在不同类型的参数处显示不同的内容。<br><br>
-<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
-<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
-<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
-<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
-<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
-<br>Mirror Ramp: 镜像 Ramp。
-<br><br>
-<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
-<br>Save Snippet: 保存 VEX/Python 代码片段。
-<br>Import Snippet: 导入已保存的代码片段。
-<br><br>
-<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
-<br><br>
-<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。(会破坏参数引用关系，不建议使用)
-<br><br>
-<br>Visit Github: 在浏览器中打开项目 Github 页面。
-<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
-<br>Open Plugin Folder: 打开插件所在的目录。
-<br>Open Doc: 在 Houdini 中打开此文档。
-<br>Open Doc Online: 在浏览器中打开在线文档。
-<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
-<br><br>
-<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
-<br>Pip Install: 使用 pip 安装 Python 模块。
-<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
-<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
-<br><br>
-<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
-<br>Emoji Sticker: (功能待补充)
-]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 17:42:56 GMT</pubDate></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
- <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。适用于Houdini18.5及以上版本。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="安装" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
-<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。所有节点均无外部依赖，可直接通过unlock的方式嵌入。
-所有节点均可在Tab菜单的 Dolag 分类下找到。
-<img alt="节点一览.png" src="lib\media\节点一览.png"><img alt="效果一览.png" src="lib\media\效果一览.png">
-<br>
-<br><a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。
-<img alt="quick console.gif" src="lib\media\quick-console.gif">
-<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
-
-<br>扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
-
-<br>一键整理节点布局。
-<br>保存与加载节点参数。
-<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
-<br>复制与粘贴节点样式。
-<br>递归解锁当前节点内的所有子节点。
-
-
-<br>主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-<br><a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
-
-
-<br>
-<br>扩展节点编辑器功能。
-
-<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。
-<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif">
-
-
-<br>更详细的功能预览请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。<br><br>
-<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
-<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
-<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
-<br>
-<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
-]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 08:02:13 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 10 Aug 2025 09:38:47 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 10 Aug 2025 09:38:24 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
@@ -422,7 +98,25 @@ void thread2() {
 	while (!y.load(std::memory_order_acquire)); // (3)  
 	assert(x.load()); // (4)  
 }
-<br>为什么会出现这种情况呢？因为memory_order_release会保证当前线程没有读写指令会被重排序到此条指令之后，因此x.store并不会在y.store之后执行；同样，memory_order_acquire会保证当前线程没有读写指令会被重排序到当前指令之前。<br><br>mutable是C++中的关键词，用于去掉const修饰符的作用。
+<br>为什么会出现这种情况呢？因为memory_order_release会保证当前线程没有读写指令会被重排序到此条指令之后，因此x.store并不会在y.store之后执行；同样，memory_order_acquire会保证当前线程没有读写指令会被重排序到当前指令之前。<br><br>这一节我们举一个引用计数器的例子：
+我们想要实现一个对象的引用计数器，使其能够在多线程情况下计数永远安全。我们聚焦于计数器自增操作：<br>inline T conditional_increment() {
+	while (true) {
+		T c = value.load(std::memory_order_acquire);
+		if (c == 0) {
+			return 0;
+		}
+		if (value.compare_exchange_weak(c, c + 1, std::memory_order_acq_rel)) {
+			return c + 1;
+		}
+	}
+}
+<br>我们想象有两个线程同时想要进行自增操作，引用计数初始值为1：<br><br>在步骤5时，线程B尝试对c进行自增，但是通过原子操作compare_exchange发现线程B中的c值与内存中的c值不一致，因此会立即自旋，进入下一次循环。在步骤8进入下一个循环时此时总算与内存值一致，因此可以成功修改引用计数。
+上述步骤中，至关重要的就是这个compare_exchange函数，此函数在x86平台上汇编指令为<br>mov eax, 1      ; 期望值 c=1
+mov ebx, 2      ; 新值 c+1=2
+lock cmpxchg [c_addr], ebx
+<br>首先，cmpxchg是x86上的一个指令，在寄存器(eax)的值与c的值相同时，会将exb的值与eax的值进行交换。重要的一点在于，这个指令实际上干了比较和交换两件事，但是却只需要一条指令，因此不可被打断。
+其次，compxchg前还有一个lock前缀，这个前缀表示当前指令会“占有”内存总线(如果缓存未跨行则会占有缓存行(Cache Line))。假设线程A已经锁定了内存总线，此时线程B想要执行相同的指令，那么线程B会被阻塞在流水线解码阶段，等待A执行完毕解锁总线后再继续执行。
+上述两点共同保证了compare_exchange指令只能够在缓存一致的情况下顺序执行。<br><br>mutable是C++中的关键词，用于去掉const修饰符的作用。
 当写了一个数据的接口如下时，get()函数表现为const，但是实际上会使用到一个读锁，因此需要让读锁打破const限制符。<br>template&lt;typename T&gt;
 class Data{
 	mutable read_lock;
@@ -457,10 +151,82 @@ else{
 }
 <br>从汇编来看，仅仅是把更可能的部分的跳转标签写到离跳转语句更近的地方而已。<br>
 <a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/357434227" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/357434227" target="_blank">C++关键字之likely和unlikely</a>
-<br><br><br><br>普通的new是一个内存申请+构造对象的过程，而申请内存是一个比较耗时的过程，而placement_new是在已申请的内存中构造对象的过程，非常常用在内存池中！<br>
+<br><br>
+准备好了吗，前面可是地狱哦。
+<br><br>本文大量引用此文章<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/655902377" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/655902377" target="_blank">真正意义上的理解 C++ 模板</a>。
+模板的最基本用法就是用于生成代码，让同一个函数、类型等能够自动支持不同类型的参数。如下所示，模板函数add将相加的两个操作数的类型作为模板，因此可以自动生成多种类型的相加函数。<br>template &lt;typename T&gt;
+T add(T a, T b) {
+    return a + b;
+}
+
+template int add&lt;&gt;(int, int);  // 显式实例化
+
+int main() {
+	Pos2D pos0 = {0, 1};  // 假设存在一个储存2D位置信息的结构，其重载了加号操作符
+	Pos2D pos1 = {-1, 1};
+    add(1, 2);         // 自动推导、隐式实例化
+    add(pos0, pos1);   // 自动推导、隐式实例化
+    add&lt;float&gt;(1, 2);  // 显式实例化
+}
+<br><br><br><br><br>普通的new是一个内存申请+构造对象的过程，而申请内存是一个比较耗时的过程，而placement_new是在已申请的内存中构造对象的过程，非常常用在内存池中！<br>
 <a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/584841690" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/584841690" target="_blank">C++ placement new/delete 运算符</a>
 <a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/1902488771443799731" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/1902488771443799731" target="_blank">Q38. placement new使用场景？</a>
-]]></description><link>编程\c++\语法杂记.html</link><guid isPermaLink="false">编程/C++/语法杂记.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 02 Aug 2025 18:15:41 GMT</pubDate></item><item><title><![CDATA[C++]]></title><description><![CDATA[ 
+<br><br>在存在大量对象的系统中，如果每个对象都使用new，会造成如下问题：<br>
+<br>分配内存时可能会进行系统调用。
+<br>分配的内存可能不连续，会导致缓存命中率下降。
+<br>分配的内存可能不连续，产生内存碎片。
+池分配器会一次性分配一大块连续的内存，而后在需要创建对象时，直接使用placement_new进行对象构造。
+Godot的池分配器算法非常精妙，释放和申请内存都只需要O(1)复杂度，唯一缺点在于其额外储存了一份空闲位置的指针数组，其数量为池的容量。(暂时没有精力梳理成笔记)
+<br><br>写时复制是指：<br>
+<br>读取时共享：多个对象共享同一块内存
+<br>写入时分离：当需要修改数据时fork一份内存再做修改
+Godot引擎的实现方法是通过对一块数据添加引用计数，记录有多少个对象引用了同一块内存。如果引用计数为0则会删除内存。当发生写事件时，会判断引用计数，若引用计数为1则说明只有自己引用，因此无需有其他操作；若引用计数大于1，则会拷贝对象再执行写操作。
+<br>Godot还进行了一些拷贝时的优化，其会判断该对象的类是否属于可平凡拷贝类，若为可平凡拷贝类则说明可以直接拷贝内存进行拷贝，否则需要使用拷贝构造进行开销稍大一些的拷贝。<br>// 对于平凡可复制的类型
+if constexpr (std::is_trivially_copyable_v&lt;T&gt;) {
+    memcpy((uint8_t *)_ptr, (uint8_t *)prev_data._ptr,
+           copied_element_count * sizeof(T));
+} else {
+    // 对于复杂类型，需要调用复制构造函数
+    for (USize i = 0; i &lt; copied_element_count; i++) {
+        memnew_placement(&amp;_ptr[i], T(prev_data._ptr[i]));
+    }
+}
+<br>而虚幻引擎的COW特别是字符串的COW更甚，他除了写时复制外，还会把字符串内容进行全局索引，全局去重更加高效。<br><br>这里的switch性能并不是想要探讨Nintendo Switch的CPU性能和GPU性能。
+这个故事要从一段代码说起。Godot引擎中，其最基础的数据类型Variant的转化为字符串的代码如下：<br>class Variant{
+...
+	enum Type {
+		NIL,
+		BOOL,
+		INT,
+		FLOAT,
+		STRING,
+		...
+	}
+...
+}
+
+String Variant::stringify(int recursion_count) const {
+	switch (type) {
+		case NIL:
+			return "&lt;null&gt;";
+		case BOOL:
+			return _data._bool ? "true" : "false";
+		case INT:
+			return itos(_data._int);
+		case FLOAT:
+			return String::num_real(_data._float, true);
+		case STRING:
+			return *reinterpret_cast&lt;const String *&gt;(_data._mem);
+		...
+	}
+}
+<br>其执行方式竟然是通过"低效"的switch进行逐行判断。作为一个性能要求非常高的游戏引擎，为什么不用跳转表的方式进行实现。仔细查阅资料后，发现对于switch条件数量较多、参数为整数且条件比较连续的情况下，编译器正是会倾向于编译为跳转表的实现！顺带一提，Lua解释器也是使用显式的跳转表以加速指令翻译速度。
+经简单测试，x86 Clang在分支较少的情况下也会使用跳转表，而x86 MSVC则会在分支较多才会进行跳转优化。
+<a data-tooltip-position="top" aria-label="0a290c65721034a4c0ff725593d6649a_MD5.jpeg" data-href="0a290c65721034a4c0ff725593d6649a_MD5.jpeg" href="_img\0a290c65721034a4c0ff725593d6649a_md5.jpeg" class="internal-link" target="_self" rel="noopener nofollow">Open: Pasted image 20250806000427.png</a>
+<img alt="0a290c65721034a4c0ff725593d6649a_MD5.jpeg" src="lib\media\0a290c65721034a4c0ff725593d6649a_md5.jpeg">
+此外，在分支条件很多且值很分散的情况下还会优化为二分查找。可参考下面的文章<br>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/38139553" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/38139553" target="_blank">C++性能榨汁机之switch语句</a>
+]]></description><link>编程\c++\语法杂记.html</link><guid isPermaLink="false">编程/C++/语法杂记.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 09 Aug 2025 08:05:41 GMT</pubDate><enclosure url="lib\media\0a290c65721034a4c0ff725593d6649a_md5.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\0a290c65721034a4c0ff725593d6649a_md5.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[C++]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="编程/C++/访问类的私有成员和方法.md" href="编程\c++\访问类的私有成员和方法.html" target="_self" rel="noopener nofollow">访问类的私有成员和方法</a>
 <br><a class="internal-link" data-href="编程/C++/语法杂记.md" href="编程\c++\语法杂记.html" target="_self" rel="noopener nofollow">语法杂记</a>
@@ -3916,7 +3682,32 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 增加了增量保存的选项，会在$HIP目录下复制此工程并对工程名进行编号或增加编号，以增量保存。 增量保存后不会切换目前工程到保存后的工程。
 <br>Save Backup
 备份工程，和Houdini自带的备份功能一致。
-]]></description><link>houdini-toolset\功能\菜单功能\主菜单.html</link><guid isPermaLink="false">Houdini-Toolset/功能/菜单功能/主菜单.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Tue, 04 Jul 2023 08:01:45 GMT</pubDate></item><item><title><![CDATA[功能]]></title><description><![CDATA[ 
+]]></description><link>houdini-toolset\功能\菜单功能\主菜单.html</link><guid isPermaLink="false">Houdini-Toolset/功能/菜单功能/主菜单.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Tue, 04 Jul 2023 08:01:45 GMT</pubDate></item><item><title><![CDATA[代码库]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/一些代码库.md" href="houdini-toolset\功能\代码库\一些代码库.html" target="_self" rel="noopener nofollow">一些代码库</a>
+]]></description><link>houdini-toolset\功能\代码库\代码库.html</link><guid isPermaLink="false">Houdini-Toolset/功能/代码库/代码库.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:42:24 GMT</pubDate></item><item><title><![CDATA[一些代码库]]></title><description><![CDATA[ 
+ <br><br>vex和Python的代码库。vex暂时没有内容。<br><br>Python是以模块形式导入和调用，被放置在HOUDINI_USER_PREF_DIR/DolagPlugin/python/python2.7libs文件夹下。 所有能作为代码库导入的模块都在Dolag文件夹下，因此要使用这些功能就需要先导入Dolag模块。<br>import Dolag
+<br>当然也可以从Dolag导入模块.<br>from Dolag import path
+<br><br>Dolag为所有模块的主模块，后文每一个标题代表Dolag的子模块。以path为例，可以通过如下代码导入。<br>from Dolag import path
+<br><br>和路径相关的模块。<br><br>计算目标路径相对于原始路径的相对路径。<br>
+<br>src：原始路径，应当形如“/obj/geo/scatter”
+<br>dest：目标路径。 如果原始路径为/obj/geo/button1，而目标路径为/obj/geo/file/reload，则计算结果为../geo/file/reload。 如果输入路径名不合规则返回None。
+<br><br>输入hda名，返回hda的Library路径。<br>
+<br>hda_name：hda的名称，也就是hda保存的文件名。例如dolag.hda，dolag.otl。 返回hda的Library路径，如果找不到则返回None。
+<br><br>一些有用的功能。<br><br>单例模式的元类。使用时将元类设为此类即可。<br># python2
+class foo():
+    __meta_class__ = Singleton
+    ...
+
+# python3
+class foo(__meta_class__ = Singleton)
+    ...
+<br><br>实现观察者模式的被观察类。使用时直接继承。<br><br>计算字符串str1和str2的最长公共子串。返回值第一项为最长公共子串， 第二项为第一个匹配相对于str1的位置。<br><br>计算字符串str1和str2的最长公共子序列。返回值为最长公共子串。<br><br>将text写入系统剪切板。<br><br>返回系统剪切板内容。<br><br>变量相关函数。<br><br>根据输入获取变量对象。<br>
+<br>parm_desc：变量的描述。可以是变量的路径、变量对象本身。 返回变量描述所指的变量对象，如果不能根据变量描述找到变量，则返回None。
+<br><br><br>根据输入获取节点对象。<br>
+<br>node_desc：节点的描述。可以是节点的路径、节点对象本身。
+<br>node_type：节点的类型，只有在节点为此类型的节点时才会返回节点。在houdini中节点的类型是指hou.rampParmType、hou.stringParmType等。此变量还可以是元组等可迭代对象，表示节点可以为其中一种类型。 返回符合要求的节点，否则返回None。
+]]></description><link>houdini-toolset\功能\代码库\一些代码库.html</link><guid isPermaLink="false">Houdini-Toolset/功能/代码库/一些代码库.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 03 Jul 2023 05:51:59 GMT</pubDate></item><item><title><![CDATA[功能]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/菜单功能/菜单功能.md" href="houdini-toolset\功能\菜单功能\菜单功能.html" target="_self" rel="noopener nofollow"><strong></strong></a>菜单功能
 
@@ -3925,12 +3716,83 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/菜单功能/主菜单.md" href="houdini-toolset\功能\菜单功能\主菜单.html" target="_self" rel="noopener nofollow">主菜单</a>
 
 
-<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库.md" href="houdini-toolset\功能\代码库.html" target="_self" rel="noopener nofollow">代码库</a>
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/代码库.md" href="houdini-toolset\功能\代码库\代码库.html" target="_self" rel="noopener nofollow"><strong></strong></a>代码库
+
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/一些代码库.md" href="houdini-toolset\功能\代码库\一些代码库.html" target="_self" rel="noopener nofollow">一些代码库</a>
+
+
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/快速命令.md" href="houdini-toolset\功能\快速命令.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/移动&amp;复制节点连接.md" href="houdini-toolset\功能\移动&amp;复制节点连接.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>移动&amp;复制节点连接</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini AI助手.md" href="houdini-toolset\功能\houdini-ai助手.html" target="_self" rel="noopener nofollow">Houdini AI助手</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini节点.md" href="houdini-toolset\功能\houdini节点.html" target="_self" rel="noopener nofollow">Houdini节点</a>
-]]></description><link>houdini-toolset\功能\功能.html</link><guid isPermaLink="false">Houdini-Toolset/功能/功能.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:22:19 GMT</pubDate></item><item><title><![CDATA[移动&复制节点连接]]></title><description><![CDATA[ 
+]]></description><link>houdini-toolset\功能\功能.html</link><guid isPermaLink="false">Houdini-Toolset/功能/功能.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 12 Jan 2024 13:22:19 GMT</pubDate></item><item><title><![CDATA[快速命令]]></title><description><![CDATA[ 
+ <br><br>快速命令工具让使用者能快速地搜索特定命令并执行。一些典型的命令如下：<br>
+<br>merge选中的节点
+<br>整理选中节点
+<br>打开python shell界面
+<br>整理节点
+<img alt="quick console.gif" src="lib\media\quick-console.gif">
+<br><br>用户在Network Editor，也就是节点编辑器面板，按下Ctrl+Space即可唤出快速命令搜索框，按照关键词搜索对应的命令，搜索后按下回车即可执行命令，按下Esc即可退出搜索窗口。<br><br>快速命令工具中的命令是可高度自定义的。用户目前可通过两种形式扩展命令。<br><br><br>快速命令工具提供了一个能完全自定义任何命令的框架。<br>
+<br>打开$HOUDINI_USER_PREF_DIR/DolagPlugin/user_data/UserCustomConsoleItems.py文件。
+<br>创建自定义指令的回调函数，回调函数会接受一个上下文参数。后文会详细介绍上下文参数的作用。
+<br>创建快捷指令对象。您需要配置快捷指令的名称、回调函数、别名及其是否优先显示。
+ConsoleItem(item_name, callback, alias=tuple(), important=False)
+<br>将创建的快捷指令对象插入列表USER_CUSTOM_ITEMS中，插件会自动读取加载此列表。
+<br># 1. 创建该指令的回调函数
+def switch_selected_cb(context):
+    if len(context["selected_nodes"]) &gt; 0:
+        network = context["network_node"]
+        switch_node = network.createNode("switch")
+        index = 0
+        for node in context["selected_nodes"]:
+            for i in range(len(node.outputNames())):
+                switch_node.setInput(index, node, i)
+                index += 1
+
+        switch_node.setPosition(context["editor_pos"])
+
+# 2. 创建快捷指令项
+tmp_item = ConsoleItem(item_name="Switch Selected", alias="switch", callback=switch_selected_cb)
+
+# 3. 将创建的快捷指令添加到指令列表中
+USER_CUSTOM_ITEMS.append(tmp_item)
+<br><br>回调函数会传入一个表示上下文的context参数，context参数记录了快速命令所需的一些属性，可作为字典访问对应属性。其键和值如下：<br>
+<br>selected_nodes: 选中节点的元组，如果没有选中则返回空元组
+<br>hit_item: 在鼠标下方的节点，如果没用则返回None
+<br>screen_pos: 鼠标在屏幕上的绝对位置，元组类型
+<br>editor_pos: 鼠标在Network Editor上的绝对位置，采用Network Editor的坐标系和单位，元组类型
+<br>editor: 当前Network Editor对象
+<br>qt_keys: 按下了哪些键，其值为PySide2中的key值
+<br>network_node: 当前Network Editor面板所显示的Network节点 快速命令工具会在合适的时候执行用户传入的callback回调函数。
+<br><br>Houdini中的UI线程表现比较奇怪，在某些时候一些命令(比如subprocess.call, os.system等)会导致UI线程被阻塞，因此需要使用threading模块新开线程(进程)来避免阻塞。
+例如快速命令中有Edit Code in VSC命令，打开VSC来编辑节点中的Vex和Python。其调用的函数使用了threading.thread来开启新线程(进程)，以避免阻塞。调用的函数代码如下：<br>def openVexInVSC(vex_str):  
+	if not isinstance(vex_str, str):  
+		return  
+	  
+	# escape quotes  
+	vex_str = vex_str.replace("\"", "`")  
+	  
+	# to avoid blocking houdini, we have to use threading  
+	def __tmp_vex_vsc_func():  
+		import subprocess
+		subprocess.call(["powershell", "-WindowStyle", "hidden", "-Command", r'''"{0}" | code -  
+		exit'''.format(vex_str)], shell=False)  
+	  
+	  
+	import threading  
+	t = threading.Thread(target=__tmp_vex_vsc_func)  
+	t.start()
+<br><br>用户可以在$HOUDINI_USER_PREF_DIR/DolagPlugin/user_data/user_console_items.json文件中添加自己的节点创建命令。 <br>[
+  ...
+  {
+    "item_name": "Subdivide",
+    "alias": "sd",
+    "important": true,
+    "type": "node"
+    "node_name": "subdivide"
+  }
+]
+]]></description><link>houdini-toolset\功能\快速命令.html</link><guid isPermaLink="false">Houdini-Toolset/功能/快速命令.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 12:43:08 GMT</pubDate><enclosure url="lib\media\quick-console.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\quick-console.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[移动&复制节点连接]]></title><description><![CDATA[ 
  <br><br>类似UE引擎中按住Ctrl然后转移连接的操作，本插件在Houdini中扩展了此功能，能够自由地移动或复制连接。<img alt="node exchanger.gif" src="lib\media\node-exchanger.gif"><br><br>
 <br>转移连接。示意动图中的红色方式，能够将一个节点的所有连接转移到另一个节点上。只需要按住Ctrl+Alt后拖动节点连接到目标节点后松手即可。
 <br>复制连接。示意动图中的绿色方式，能够将一个节点的所有连接复制到另一个节点上，不会删除原有连接。只需要按住Shift+Ctrl后拖动节点连接到目标节点后松手即可。
@@ -3956,7 +3818,275 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br>Free。AI会解答任何用户输入的Houdini相关问题。
 在下方的输入框输入提示词，而后按回车或点击Send按钮即可进行对话。
 按下Reset按钮可以重置当前对话。
-]]></description><link>houdini-toolset\功能\houdini-ai助手.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini AI助手.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 15 Jan 2024 04:42:48 GMT</pubDate><enclosure url="lib\media\houdini-master-settings.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\houdini-master-settings.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
+]]></description><link>houdini-toolset\功能\houdini-ai助手.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini AI助手.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 15 Jan 2024 04:42:48 GMT</pubDate><enclosure url="lib\media\houdini-master-settings.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\houdini-master-settings.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini节点]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="#简介" href="about:blank#简介" class="internal-link" target="_self" rel="noopener nofollow">简介</a>
+<br><a data-href="#节点说明" href="about:blank#节点说明" class="internal-link" target="_self" rel="noopener nofollow">节点说明</a>
+
+<br><a data-href="#Dolag Portal" href="about:blank#Dolag_Portal" class="internal-link" target="_self" rel="noopener nofollow">Dolag Portal</a>
+<br><a data-href="#Dolag Parse Json Data To Gemotry" href="about:blank#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>
+<br><a data-href="#Dolag Divide Points By Weight" href="about:blank#Dolag_Divide_Points_By_Weight" class="internal-link" target="_self" rel="noopener nofollow">Dolag Divide Points By Weight</a>
+<br><a data-href="#Dolag Unreal Mesh Importer" href="about:blank#Dolag_Unreal_Mesh_Importer" class="internal-link" target="_self" rel="noopener nofollow">Dolag Unreal Mesh Importer</a>
+<br><a data-href="#Dolag Variant Attribute" href="about:blank#Dolag_Variant_Attribute" class="internal-link" target="_self" rel="noopener nofollow">Dolag Variant Attribute</a>
+
+
+<br><br>本工具集提供了分门别类的Houdini资产，默认全局安装，可以以节点的形式直接调用。<br>
+<br>这些资产都放置在HOUDINI_USER_PREF_DIR/DolagPlugin/otls内。
+<br>资产名称以Dolag开头。
+<br>这些资产在Tab菜单中的Dolag分类内，并分为了如下七类：
+1. Attribute：和属性相关的节点
+2. Heightfield：和地形相关节点
+3. Polygon：对Polygon进行处理的节点
+4. Primitive：生成模型的节点
+5. Utility：其他功能性节点
+6. Unreal：与Unreal引擎的互操作
+7. Volume： 和体积相关的节点
+8. RBD：和Rigid Body相关的节点，用于物理模拟
+9. UV：UV相关节点
+10. IO：和导入导出相关节点
+全节点简介在<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。
+<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br>用来架设传送门()。该节点可以设置需要跳转到的位置，点击插件变量面板中的按钮后可以直接跳转到对应位置。同时插件处理了双击事件，因此可以直接双击该节点以进行快速的传送。<br><br>用来解析简单结构的json数据。 由于几何体承载数据类型有限，以及json数据嵌套的复杂性，本节点只支持由字典组成的列表形式的json解析。如下：<br>[
+    {
+        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_GrassGroup01.SM_GrassGroup01'",
+        "propagate_dist":420.0,
+        "heliophile":0.12,
+        "species":"VegA",
+        "viability":0.9,
+        "viability_radius":0.035,
+        "animal_spread_factor":0.9,
+        "pioneer_order":0,
+        "init_seed_weight":0.6,
+        "reproductivity":8,
+        "up_align":0.6,
+        "plant_into_soil":0.02,
+        "hygrophile":-0.15
+    },
+    {
+        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_FlowerGroup01.SM_FlowerGroup01'",
+        "species":"VegB",
+        "propagate_dist":350.0,
+        "heliophile":0.1,
+        "viability":0.85,
+        "viability_radius":0.15,
+        "animal_spread_factor":0.6,
+        "pioneer_order":1,
+        "init_seed_weight":0.45,
+        "reproductivity":9,
+        "up_align":0.6,
+        "plant_into_soil":0.015,
+        "hygrophile":0.5
+    },
+    {
+        "unreal_instance":"StaticMesh'/Game/STF/Pack03-LandscapePro/Environment/Foliage/Grass/SM_WeathGroup02.SM_WeathGroup02'",
+        "species":"VegC",
+        "propagate_dist":300.0,
+        "heliophile":0.1,
+        "viability":0.8,
+        "viability_radius":0.3,
+        "animal_spread_factor":0.5,
+        "pioneer_order":2,
+        "init_seed_weight":0.5,
+        "reproductivity":6,
+        "up_align":0.3,
+        "plant_into_soil":0.025,
+        "hygrophile":-0.2
+    }
+]
+<br>用户可选择Point和Primitive两种几何元素类型，此节点会将解析属性输出到用户选择的几何元素类型中。<br><br>此节点有两个输入，第一个输入是待划分的点，第二个输入是用来划分的数据，与<a data-tooltip-position="top" aria-label="Houdini节点 > Dolag Parse Json Data To Gemotry" data-href="Houdini节点#Dolag Parse Json Data To Gemotry" href="houdini-toolset\功能\houdini节点.html#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>搭配有奇效。 节点要求第二个输入包含用以划分的元信息：<br>
+<br>节点可以选择要读取的几何元素类型(Point和Primitive)，第二个输入的每一个对应几何元素都代表了一个划分
+<br>每个划分都需要有一个属性来表示该划分的权重，节点的Weight Attribute参数控制这一属性
+<br>对第一个节点的划分结果需要用类名来标识。如果第二个输入的每一个划分都有可以用于标识的类名，则可以将此类名作为划分结果的类名。 例如第二个输入有类名分别为Tree、Flower，权重分别为0.1、0.9的划分，其中类名的属性名为foliage_name，则划分的结果也会以foliage_name为类属性名进行标识，包含Tree和Flower两种划分。 当然也可以不使用第二个输入的类名作为划分的类名，可以使用节点的New Class Name和Class Prefix来分别设置划分类别的属性名和类名的前缀。 例如当New Class Name为class，Class Prefix为pile_时，划分后点属性可能为：
+
+<br>点1：class：pile_0
+<br>点2：class：pile_3
+<br>点3：class：pile_2
+<br>点4：class：pile_0 显而易见的，这个时候将<a data-tooltip-position="top" aria-label="Houdini节点 > Dolag Parse Json Data To Gemotry" data-href="Houdini节点#Dolag Parse Json Data To Gemotry" href="houdini-toolset\功能\houdini节点.html#Dolag_Parse_Json_Data_To_Gemotry" class="internal-link" target="_self" rel="noopener nofollow">Dolag Parse Json Data To Gemotry</a>的结果作为此节点的第二个输入。
+
+
+<br><br>将静态网格的uasset转换为FBX并导入houdini。 下为节点参数:<br>
+<br>Unreal Path: 资产的ue工程所对应版本的unreal根目录。 例如 F:\Unreal Engine\UE_4.26
+<br>Unreal Project Path: 资产所在的unreal项目的项目文件。例如 F:\unreal_project\ProcedrualWorld.uproject
+<br>Asset Path: 静态网格资产在unreal项目中的路径，可以通过右键资产，选择“复制引用”来获取引用，获取引用后还需要删除两个单引号以及资产的类型。例如/Game/Quixel/Mesh/Rock_01.Rock_01;/Game/Quixel/Mesh/Rock_02.Rock_02
+<br>Output Path: FBX的导出路径。FBX文件会维持其在Unreal项目中的路径。例如，如果Output Path是 C:/tmp而Asset Path为/Game/Mesh/obj1.obj1，那么模型会导出为C:/tmp/Game/Mesh/obj1.FBX&nbsp;注意，Unreal Project Path和Asset Path都不能包含空格和汉字
+<br><br>为每一个点添加一个范围内的int类型的variant属性。主要用在为撒点赋予上随机的variant属性。]]></description><link>houdini-toolset\功能\houdini节点.html</link><guid isPermaLink="false">Houdini-Toolset/功能/Houdini节点.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 03 Aug 2025 07:46:31 GMT</pubDate></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
+ <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
+<br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
+
+<br><a data-href="#多边形 (Polygon)" href="about:blank#多边形_(Polygon)" class="internal-link" target="_self" rel="noopener nofollow">多边形 (Polygon)</a>
+<br><a data-href="#实用工具 (Utils)" href="about:blank#实用工具_(Utils)" class="internal-link" target="_self" rel="noopener nofollow">实用工具 (Utils)</a>
+<br><a data-href="#属性 (Attribute)" href="about:blank#属性_(Attribute)" class="internal-link" target="_self" rel="noopener nofollow">属性 (Attribute)</a>
+<br><a data-href="#高度场 (HeightField)" href="about:blank#高度场_(HeightField)" class="internal-link" target="_self" rel="noopener nofollow">高度场 (HeightField)</a>
+<br><a data-href="#体积 (Volume)" href="about:blank#体积_(Volume)" class="internal-link" target="_self" rel="noopener nofollow">体积 (Volume)</a>
+<br><a data-href="#分组 (Group)" href="about:blank#分组_(Group)" class="internal-link" target="_self" rel="noopener nofollow">分组 (Group)</a>
+<br><a data-href="#IO" href="about:blank#IO" class="internal-link" target="_self" rel="noopener nofollow">IO</a>
+<br><a data-href="#UV" href="about:blank#UV" class="internal-link" target="_self" rel="noopener nofollow">UV</a>
+<br><a data-href="#虚幻引擎 (Unreal)" href="about:blank#虚幻引擎_(Unreal)" class="internal-link" target="_self" rel="noopener nofollow">虚幻引擎 (Unreal)</a>
+<br><a data-href="#游戏 (Game)" href="about:blank#游戏_(Game)" class="internal-link" target="_self" rel="noopener nofollow">游戏 (Game)</a>
+
+
+<br><a data-href="#通用功能" href="about:blank#通用功能" class="internal-link" target="_self" rel="noopener nofollow">通用功能</a>
+
+<br><a data-href="#快捷命令 (`Ctrl+Space`)" href="about:blank#快捷命令_(`Ctrl+Space`)" class="internal-link" target="_self" rel="noopener nofollow">快捷命令 (Ctrl+Space)</a>
+<br><a data-href="#右键菜单" href="about:blank#右键菜单" class="internal-link" target="_self" rel="noopener nofollow">右键菜单</a>
+
+<br><a data-href="#节点右键菜单" href="about:blank#节点右键菜单" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>
+
+<br><a data-href="#常用操作" href="about:blank#常用操作" class="internal-link" target="_self" rel="noopener nofollow">常用操作</a>
+<br><a data-href="#整理节点" href="about:blank#整理节点" class="internal-link" target="_self" rel="noopener nofollow">整理节点</a>
+<br><a data-href="#节点样式" href="about:blank#节点样式" class="internal-link" target="_self" rel="noopener nofollow">节点样式</a>
+
+
+<br><a data-href="#参数右键菜单" href="about:blank#参数右键菜单" class="internal-link" target="_self" rel="noopener nofollow">参数右键菜单</a>
+
+<br><a data-href="#常规参数" href="about:blank#常规参数" class="internal-link" target="_self" rel="noopener nofollow">常规参数</a>
+<br><a data-href="#Ramp 参数" href="about:blank#Ramp_参数" class="internal-link" target="_self" rel="noopener nofollow">Ramp 参数</a>
+<br><a data-href="#代码参数 (VEX/Python)" href="about:blank#代码参数_(VEX\Python)" class="internal-link" target="_self" rel="noopener nofollow">代码参数 (VEX/Python)</a>
+<br><a data-href="#按钮参数" href="about:blank#按钮参数" class="internal-link" target="_self" rel="noopener nofollow">按钮参数</a>
+<br><a data-href="#全局随机种子" href="about:blank#全局随机种子" class="internal-link" target="_self" rel="noopener nofollow">全局随机种子</a>
+
+
+
+
+<br><a data-href="#主菜单" href="about:blank#主菜单" class="internal-link" target="_self" rel="noopener nofollow">主菜单</a>
+
+<br><a data-href="#Python 相关 (不推荐直接使用)" href="about:blank#Python_相关_(不推荐直接使用)" class="internal-link" target="_self" rel="noopener nofollow">Python 相关 (不推荐直接使用)</a>
+
+
+<br><a data-href="#其他功能" href="about:blank#其他功能" class="internal-link" target="_self" rel="noopener nofollow">其他功能</a>
+
+
+<br><br><br>插件包含海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。节点专为提高开发效率而生，不包括任何特定的程序化生成效果。
+所有节点均以 Dolag 为前缀，可在 Tab 菜单的 Dolag 分类下找到。<br>Important所有节点均无外部依赖，可安全地通过Unlock/Embedding方式嵌入您的资产中。资产发布后使用方无需安装任何额外依赖。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在网络编辑器中按下 Ctrl+Space，可以快速搜索并调用各种指令。<br>
+<br>Node Count: 节点计数
+<br>Open Python Shell: 打开 Python 命令行
+<br>Open Performance Monitor: 打开性能监测窗口
+<br>Merge Selected: 将选中的节点进行merge
+<br>Switch Selected: 将选中的节点进行Switch
+<br>Layout Nodes: 整理节点
+<br>Compress Node Space: 垂直压缩节点空间
+<br>Organize Wires:  通过自动添加 dot 节点来整理节点连线。
+<br>Nodes Snap to Grid: 将节点对齐到网格
+<br>...
+<br>快捷命令支持用户自定义任意指令，参考此篇文章：<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a><br><br>为节点和参数的右键菜单添加了丰富的 “Dolag” 分类功能。<br><br><br>
+<br>Copy Node Path: 拷贝节点路径，结合变量右键菜单的Paste (Relative) Node Path功能使用。
+<br>Dependency Viewer: 显示节点的引用与被引用关系，也可以选中节点后按Ctrl+R键快捷打开。
+<img alt="23ad4bd07660fee658986b174a368847_MD5.jpeg" src="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg">
+<br>Find Unlocked Nodes: 查找所有解锁的节点。
+<img alt="480a9d052b756f90684beb08aa0b6ec3_MD5.jpeg" src="lib\media\480a9d052b756f90684beb08aa0b6ec3_md5.jpeg">
+<br>Duplicate Node as Reference: 以引用形式复制节点。
+<br>Copy/Paste Node Parms Reference: 拷贝粘贴节点参数的引用。
+<br>Delete Expression and Keys: 删除节点所有变量的表达式和关键帧。
+<br>Unlock Nodes Recursively: 递归解锁当前节点内的所有非官方节点。用于解除节点依赖，便于将HDA或HIP资产进行分发交付。
+<br>Copy/Paste Node Metadata Json to Clipboard: 将节点以 JSON 格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点上。
+<br>Copy/Paste Parameter Value as Json to Clipboard: 将节点所有参数以JSON格式复制到剪贴板；从剪贴板中的JSON文本解析并赋予到节点参数上。可将节点的参数拷贝到另一个节点上。
+<br><br>
+<br>Compress Node Space: 收缩节点垂直间距。
+<br>Compress Node Space Downward: 向下收缩节点垂直间距。
+<br>Layout Nodes: 整理节点。能够保证逻辑上的上游节点一定在下游节点之上。
+<br>Layout Nodes Downward: 向下整理节点。
+<br>Organize Wire: 通过自动添加 dot 节点来整理节点连线。
+<br><br>
+<br>Copy Node Shape: 拷贝节点形状。
+<br>Copy Node Color: 拷贝节点颜色。
+<br>Copy Node Style: 拷贝节点颜色和形状。
+<br>Preset Style: 应用预设的几种节点样式，用于标识不同功能的节点。
+<br><br>参数菜单会在不同类型的参数处显示不同的内容。<br><br>
+<br>Paste (Relative) Node Path: 拷贝绝对/相对节点路径。配合节点右键菜单的Copy Node Path使用。
+<br><br>
+<br>Subdivide Divide * n: 将 Ramp 细分 n 倍。
+<br>Randomize Ramp * n: 将 Ramp 的点值进行随机。
+<br>Randomize Interval * n: 将 Ramp 点的间距进行随机。
+<br>Smooth Ramp * n: 将 Ramp 进行平滑处理。
+<br>Set Ramp Interpolation: 批量设置 Ramp 所有点的插值方式。
+<br>Mirror Ramp: 镜像 Ramp。
+<br><br>
+<br>Edit in VSCode: 在 VSCode 中打开并编辑代码（注意：不会实时写回 Houdini）。
+<br>Save Snippet: 保存 VEX/Python 代码片段。
+<br>Import Snippet: 导入已保存的代码片段。
+<br><br>
+<br>Copy/Paste Button: 拷贝/粘贴按钮的点击事件脚本。
+<br><br>
+<br>Copy/Paste Global Seed: 拷贝/粘贴随机种子。(会破坏参数引用关系，不建议使用)
+<br><br>
+<br>Visit Github: 在浏览器中打开项目 Github 页面。
+<br>Edit Configure Json: 编辑插件的 JSON 配置文件。
+<br>Open Plugin Folder: 打开插件所在的目录。
+<br>Open Doc: 在 Houdini 中打开此文档。
+<br>Open Doc Online: 在浏览器中打开在线文档。
+<br>Houdini Master AI: 内置的 ChatGPT，需要提供 API Key。
+<br><br>
+<br>Install Pip: 为 Houdini 内置的 Python 安装 pip。
+<br>Pip Install: 使用 pip 安装 Python 模块。
+<br>Add Tuna Mirror: 添加清华镜像源以加速 pip 下载。
+<br>Clear Python Cache: 清空插件的 Python 缓存（开发用）。
+<br><br>
+<br>Node Exchanger: 按住 Ctrl+Alt 或 Shift+Ctrl 拖动节点连接线，可以移动或复制它们。
+<br>Dependency Viewer: 选中节点后按Ctrl+R键快捷打开引用查看面板。
+<br>Emoji Sticker: (功能待补充)
+]]></description><link>houdini-toolset\功能一览.html</link><guid isPermaLink="false">Houdini-Toolset/功能一览.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 09:30:22 GMT</pubDate><enclosure url="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\23ad4bd07660fee658986b174a368847_md5.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[简介]]></title><description><![CDATA[ 
+ <br>一款功能强大的Houdini工具集，为您带来海量实用SOP节点、无缝的菜单功能扩展以及高效的快捷命令。适用于Houdini18.5及以上版本。<br>Important此工具集以MIT协议进行开源，由于使用了SideFX的Game Development Toolset的部分节点，因此在协议上添加了SideFX的协议内容，因此如果使用了本开源仓库的内容，请将SideFX的协议内容添加到您的协议中。&nbsp;<a data-tooltip-position="top" aria-label="https://github.com/dolag233/Doalg-Houdini-Toolset/" rel="noopener nofollow" class="external-link" href="https://github.com/dolag233/Doalg-Houdini-Toolset/" target="_blank">此处</a>为github仓库链接，欢迎进行贡献😘。<br><a data-tooltip-position="top" aria-label="安装" data-href="安装" href="安装" class="internal-link" target="_self" rel="noopener nofollow">此处</a>为安装方法。<br><br>
+<br><a data-tooltip-position="top" aria-label="Houdini节点" data-href="Houdini节点" href="houdini-toolset\功能\houdini节点.html" class="internal-link" target="_self" rel="noopener nofollow">100+ HDA</a>。提供海量SOP HDA，涵盖建模、虚幻引擎、体积、高度场等多个模块，专为程序化生成设计，同时又包含许多通用功能。所有节点均无外部依赖，可直接通过unlock的方式嵌入。
+所有节点均可在Tab菜单的 Dolag 分类下找到。
+
+<img src="lib\media\节点一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
+<img src="lib\media\效果一览.png" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>
+<br>
+<a data-href="快速命令" href="houdini-toolset\功能\快速命令.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>。在网络编辑器（Network Editor）面板中，按下Ctrl+空格即可唤出一个快速搜索列表，允许用户通过关键词搜索并执行指令。
+
+<img src="lib\media\quick-console.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>
+<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩展菜单功能</a>。
+
+<br>
+扩充右键菜单。包含<a data-href="节点右键菜单" href="houdini-toolset\功能\菜单功能\节点右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">节点右键菜单</a>和<a data-href="变量右键菜单" href="houdini-toolset\功能\菜单功能\变量右键菜单.html" class="internal-link" target="_self" rel="noopener nofollow">变量右键菜单</a>。&nbsp;部分功能包括：
+
+<br>一键整理节点布局。
+<br>保存与加载节点参数。
+<br>一键设置Ramp参数的插值方式，并支持细分、随机、平滑等操作。
+<br>复制与粘贴节点样式。
+<br>递归解锁当前节点内的所有子节点。
+<br>显示已解锁节点。
+
+<img src="lib\media\480a9d052b756f90684beb08aa0b6ec3_md5.jpeg" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+<br>显示节点引用关系。
+
+<img src="lib\media\961e6710a868f8570ca94f7e8a1d2bfc_md5.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+
+
+<br>
+主菜单功能：在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+
+<br>
+<a data-tooltip-position="top" aria-label="主菜单" data-href="主菜单" href="houdini-toolset\功能\菜单功能\主菜单.html" class="internal-link" target="_self" rel="noopener nofollow">扩充主菜单功能</a>。在Houdini主菜单中添加了实用功能，如增量保存、为内置Python自动安装pip及通过pip安装模块等。
+
+
+
+<br>
+<br>扩展节点编辑器功能。
+
+<br>移动和复制节点连接线：按住Ctrl+Alt或Shift+Ctrl并拖动节点连接线，可以移动或复制它们，体验类似于在Unreal Engine中按住Ctrl键操作连接线。
+
+<img src="lib\media\node-exchanger.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
+
+
+
+
+<br>更详细的功能请参见<a data-href="功能一览" href="houdini-toolset\功能一览.html" class="internal-link" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="🥰" aria-label="🥰" data-icon="🥰" aria-hidden="true" style="transform: translateY(0px);"></span>功能一览</a>🥰。<br><br>
+<br>安装SideFX Labs：许多节点依赖于Labs插件，请确保已安装。本工具集未内嵌相关节点。
+<br>在 C:\Users\你的用户名\Documents\houdiniX.Y 目录下，使用Git克隆本仓库至 DolagPlugin 文件夹：
+<br>git clone https://github.com/dolag233/Dolag-Houdini-Toolset.git DolagPlugin
+<br>
+<br>将 DolagPlugin 文件夹下的 DolagPlugin.json 文件复制到 C:\Users\你的用户名\Documents\houdiniX.Y\packages 目录下。如果 packages 目录不存在，请先创建它。
+]]></description><link>houdini-toolset\简介.html</link><guid isPermaLink="false">Houdini-Toolset/简介.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 05:52:20 GMT</pubDate><enclosure url="lib\media\节点一览.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\节点一览.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Houdini-Toolset]]></title><description><![CDATA[ 
  <br>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/功能.md" href="houdini-toolset\功能\功能.html" target="_self" rel="noopener nofollow"><strong></strong></a>功能
 
@@ -3967,7 +4097,11 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/菜单功能/主菜单.md" href="houdini-toolset\功能\菜单功能\主菜单.html" target="_self" rel="noopener nofollow">主菜单</a>
 
 
-<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库.md" href="houdini-toolset\功能\代码库.html" target="_self" rel="noopener nofollow">代码库</a>
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/代码库.md" href="houdini-toolset\功能\代码库\代码库.html" target="_self" rel="noopener nofollow"><strong></strong></a>代码库
+
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/一些代码库.md" href="houdini-toolset\功能\代码库\一些代码库.html" target="_self" rel="noopener nofollow">一些代码库</a>
+
+
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/快速命令.md" href="houdini-toolset\功能\快速命令.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/移动&amp;复制节点连接.md" href="houdini-toolset\功能\移动&amp;复制节点连接.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>移动&amp;复制节点连接</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini AI助手.md" href="houdini-toolset\功能\houdini-ai助手.html" target="_self" rel="noopener nofollow">Houdini AI助手</a>
@@ -4164,7 +4298,11 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/菜单功能/主菜单.md" href="houdini-toolset\功能\菜单功能\主菜单.html" target="_self" rel="noopener nofollow">主菜单</a>
 
 
-<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库.md" href="houdini-toolset\功能\代码库.html" target="_self" rel="noopener nofollow">代码库</a>
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/代码库.md" href="houdini-toolset\功能\代码库\代码库.html" target="_self" rel="noopener nofollow"><strong></strong></a>代码库
+
+<br><a class="internal-link" data-href="Houdini-Toolset/功能/代码库/一些代码库.md" href="houdini-toolset\功能\代码库\一些代码库.html" target="_self" rel="noopener nofollow">一些代码库</a>
+
+
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/快速命令.md" href="houdini-toolset\功能\快速命令.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span><span class="iconize-icon-in-link" title="LiCodeSquare" aria-label="LiCodeSquare" data-icon="LiCodeSquare" aria-hidden="true" style="color: rgb(210, 133, 25); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-code-square"><path d="M10 9.5 8 12l2 2.5"></path><path d="m14 9.5 2 2.5-2 2.5"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></span>快速命令</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/移动&amp;复制节点连接.md" href="houdini-toolset\功能\移动&amp;复制节点连接.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><span class="iconize-icon-in-link" title="LiStar" aria-label="LiStar" data-icon="LiStar" aria-hidden="true" style="color: rgb(231, 149, 35); transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>移动&amp;复制节点连接</a>
 <br><a class="internal-link" data-href="Houdini-Toolset/功能/Houdini AI助手.md" href="houdini-toolset\功能\houdini-ai助手.html" target="_self" rel="noopener nofollow">Houdini AI助手</a>
@@ -4175,4 +4313,4 @@ AE使用定点数的原因一定是因为定点数的精度足够，定点数的
 <br><a class="internal-link" data-href="Houdini-Toolset/简介.md" href="houdini-toolset\简介.html" target="_self" rel="noopener nofollow"><span class="iconize-icon-in-link" title="LiBadgeInfo" aria-label="LiBadgeInfo" data-icon="LiBadgeInfo" aria-hidden="true" style="transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-badge-info"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span><span class="iconize-icon-in-link" title="LiBadgeInfo" aria-label="LiBadgeInfo" data-icon="LiBadgeInfo" aria-hidden="true" style="transform: translateY(20%);"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-badge-info"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>简介</a>
 
 
-]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 04 Mar 2024 15:58:34 GMT</pubDate></item></channel></rss>
+]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 10 Aug 2025 06:04:56 GMT</pubDate></item></channel></rss>
