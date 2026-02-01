@@ -1,6 +1,6 @@
 {
   "vaultName": "Notebook",
-  "lastExport": 1755350357499,
+  "lastExport": 1769927517472,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-dark show-ribbon",
   "useCustomHeadContent": false,
@@ -9,6 +9,8 @@
     "编程/C++/访问类的私有成员和方法.md",
     "编程/C++/语法杂记.md",
     "编程/C++/C++.md",
+    "编程/CMake/常用语法记录.md",
+    "编程/CMake/CMake.md",
     "编程/编程.md",
     "设计/动态设计/动态设计.md",
     "设计/动态设计/Seven课程笔记.md",
@@ -39,6 +41,8 @@
     "渲染相关/图形API/Vulkan/Vulkan.md",
     "渲染相关/图形API/Vulkan/Vulkan的Setup.md",
     "渲染相关/图形API/图形API.md",
+    "渲染相关/效果/效果.md",
+    "渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md",
     "渲染相关/渲染相关.md",
     "引擎/UE4/引擎源码/材质/材质.md",
     "引擎/UE4/引擎源码/材质/材质编译.md",
@@ -99,28 +103,35 @@
     "Houdini-Toolset/简介.md",
     "Houdini-Toolset/Houdini-Toolset.md",
     "Index.md",
-    "lib/media/引用查看器.png",
-    "lib/media/解锁节点查看器.png",
-    "lib/media/dolag-houdini-toolset-2000kpbs.mp4",
-    "lib/media/节点一览.png",
-    "lib/media/效果一览.png",
-    "lib/media/quick-console.gif",
-    "lib/media/引用查看器.gif",
-    "lib/media/node-exchanger.gif",
+    "lib/media/pasted-image-20260130233427.png",
+    "lib/media/pasted-image-20260130234257.png",
+    "lib/media/pasted-image-20260131005100.png",
+    "lib/media/pasted-image-20260131195351.png",
+    "lib/media/pixpin_2026-01-31_17-35-17.gif",
+    "lib/media/uv扭曲.gif",
+    "lib/media/pasted-image-20260131191059.png",
+    "lib/media/uv迭代扭曲.gif",
+    "lib/media/pixpin_2026-01-31_20-50-55.gif",
+    "lib/media/pixpin_2026-02-01_02-46-47.gif",
+    "lib/media/流体扭曲.gif",
+    "lib/media/pasted-image-20260131221156.png",
+    "lib/media/pasted-image-20260131221413.png",
+    "lib/media/pasted-image-20260131222253.png",
+    "lib/media/pasted-image-20260131222915.png",
+    "lib/media/pixpin_2025-11-07_22-59-18.gif",
+    "lib/media/pasted-image-20260131230648.png",
+    "lib/media/pasted-image-20260131230732.png",
+    "lib/media/pixpin_2026-01-31_22-52-20.gif",
+    "lib/media/pixpin_2026-02-01_00-25-14.gif",
+    "lib/media/pixpin_2026-02-01_01-41-35.gif",
     "lib/scripts/graph-wasm.wasm",
-    "lib/fonts/94f2f163d4b698242fef.otf",
-    "lib/fonts/72505e6a122c6acd5471.woff2",
-    "lib/fonts/2d5198822ab091ce4305.woff2",
-    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "lib/fonts/b5f0f109bc88052d4000.woff2",
-    "lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "lib/fonts/535a6cf662596b3bd6a6.woff2",
     "lib/fonts/70cc7ff27245e82ad414.ttf",
     "lib/fonts/454577c22304619db035.ttf",
     "lib/fonts/52ac8f3034507f1d9e53.ttf",
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/fonts/c504db5c06caaf7cdfba.woff2",
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
@@ -435,23 +446,25 @@
     "lib/media/snipaste_2024-01-12_16-28-38.png",
     "lib/media/snipaste_2024-01-12_16-28-48.png",
     "lib/media/snipaste_2024-01-12_16-53-28.png",
-    "lib/media/houdini-master-settings.png"
+    "lib/media/quick-console.gif",
+    "lib/media/node-exchanger.gif",
+    "lib/media/houdini-master-settings.png",
+    "lib/media/引用查看器.png",
+    "lib/media/解锁节点查看器.png",
+    "lib/media/dolag-houdini-toolset-2000kpbs.mp4",
+    "lib/media/节点一览.png",
+    "lib/media/效果一览.png",
+    "lib/media/引用查看器.gif"
   ],
   "mainDependencies": [
     "lib/scripts/graph-wasm.wasm",
-    "lib/fonts/94f2f163d4b698242fef.otf",
-    "lib/fonts/72505e6a122c6acd5471.woff2",
-    "lib/fonts/2d5198822ab091ce4305.woff2",
-    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "lib/fonts/b5f0f109bc88052d4000.woff2",
-    "lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "lib/fonts/535a6cf662596b3bd6a6.woff2",
     "lib/fonts/70cc7ff27245e82ad414.ttf",
     "lib/fonts/454577c22304619db035.ttf",
     "lib/fonts/52ac8f3034507f1d9e53.ttf",
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/fonts/c504db5c06caaf7cdfba.woff2",
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
@@ -3199,7 +3212,7 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
@@ -3253,37 +3266,37 @@
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
@@ -3421,99 +3434,283 @@
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1755350357499,
-      "sourceSize": 61430,
+      "modifiedTime": 1769927517472,
+      "sourceSize": 64228,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1755350357499,
-      "sourceSize": 4049,
+      "modifiedTime": 1769927517472,
+      "sourceSize": 4219,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1755350357499,
-      "sourceSize": 138258,
+      "modifiedTime": 1769927517472,
+      "sourceSize": 179785,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 62873,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 62210,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 262,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/snippets.css": {
-      "modifiedTime": 1755350357499,
+      "modifiedTime": 1769927517472,
       "sourceSize": 521,
       "exportedPath": "lib/styles/snippets.css",
+      "dependencies": []
+    },
+    "编程/CMake/常用语法记录.md": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 581,
+      "exportedPath": "编程/cmake/常用语法记录.html",
+      "dependencies": []
+    },
+    "编程/CMake/CMake.md": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 46,
+      "exportedPath": "编程/cmake/cmake.html",
+      "dependencies": []
+    },
+    "渲染相关/效果/效果.md": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 46,
+      "exportedPath": "渲染相关/效果/效果.html",
+      "dependencies": []
+    },
+    "渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 10316,
+      "exportedPath": "渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html",
+      "dependencies": [
+        "lib/media/pasted-image-20260130233427.png",
+        "lib/media/pasted-image-20260130234257.png",
+        "lib/media/pasted-image-20260131005100.png",
+        "lib/media/pasted-image-20260131195351.png",
+        "lib/media/pixpin_2026-01-31_17-35-17.gif",
+        "lib/media/uv扭曲.gif",
+        "lib/media/pasted-image-20260131191059.png",
+        "lib/media/uv迭代扭曲.gif",
+        "lib/media/pixpin_2026-01-31_20-50-55.gif",
+        "lib/media/pixpin_2026-02-01_02-46-47.gif",
+        "lib/media/流体扭曲.gif",
+        "lib/media/pasted-image-20260131221156.png",
+        "lib/media/pasted-image-20260131221413.png",
+        "lib/media/pasted-image-20260131222253.png",
+        "lib/media/pasted-image-20260131222915.png",
+        "lib/media/pixpin_2025-11-07_22-59-18.gif",
+        "lib/media/pasted-image-20260131230648.png",
+        "lib/media/pasted-image-20260131230732.png",
+        "lib/media/pixpin_2026-01-31_22-52-20.gif",
+        "lib/media/pixpin_2026-02-01_00-25-14.gif",
+        "lib/media/pixpin_2026-02-01_01-41-35.gif"
+      ]
+    },
+    "lib/media/pasted-image-20260130233427.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 200426,
+      "exportedPath": "lib/media/pasted-image-20260130233427.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260130234257.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 502261,
+      "exportedPath": "lib/media/pasted-image-20260130234257.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131005100.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 788742,
+      "exportedPath": "lib/media/pasted-image-20260131005100.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131195351.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 770883,
+      "exportedPath": "lib/media/pasted-image-20260131195351.png",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-01-31_17-35-17.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 2890216,
+      "exportedPath": "lib/media/pixpin_2026-01-31_17-35-17.gif",
+      "dependencies": []
+    },
+    "lib/media/uv扭曲.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 3235411,
+      "exportedPath": "lib/media/uv扭曲.gif",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131191059.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 346385,
+      "exportedPath": "lib/media/pasted-image-20260131191059.png",
+      "dependencies": []
+    },
+    "lib/media/uv迭代扭曲.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 3798640,
+      "exportedPath": "lib/media/uv迭代扭曲.gif",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-01-31_20-50-55.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 1064127,
+      "exportedPath": "lib/media/pixpin_2026-01-31_20-50-55.gif",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-02-01_02-46-47.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 5449046,
+      "exportedPath": "lib/media/pixpin_2026-02-01_02-46-47.gif",
+      "dependencies": []
+    },
+    "lib/media/流体扭曲.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 4106886,
+      "exportedPath": "lib/media/流体扭曲.gif",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131221156.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 816764,
+      "exportedPath": "lib/media/pasted-image-20260131221156.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131221413.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 927291,
+      "exportedPath": "lib/media/pasted-image-20260131221413.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131222253.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 301507,
+      "exportedPath": "lib/media/pasted-image-20260131222253.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131222915.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 1229899,
+      "exportedPath": "lib/media/pasted-image-20260131222915.png",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2025-11-07_22-59-18.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 2698173,
+      "exportedPath": "lib/media/pixpin_2025-11-07_22-59-18.gif",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131230648.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 926623,
+      "exportedPath": "lib/media/pasted-image-20260131230648.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260131230732.png": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 485779,
+      "exportedPath": "lib/media/pasted-image-20260131230732.png",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-01-31_22-52-20.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 1652390,
+      "exportedPath": "lib/media/pixpin_2026-01-31_22-52-20.gif",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-02-01_00-25-14.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 4997712,
+      "exportedPath": "lib/media/pixpin_2026-02-01_00-25-14.gif",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-02-01_01-41-35.gif": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 5486387,
+      "exportedPath": "lib/media/pixpin_2026-02-01_01-41-35.gif",
+      "dependencies": []
+    },
+    "lib/fonts/c504db5c06caaf7cdfba.woff2": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 352240,
+      "exportedPath": "lib/fonts/c504db5c06caaf7cdfba.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2": {
+      "modifiedTime": 1769927517472,
+      "sourceSize": 387976,
+      "exportedPath": "lib/fonts/01dcbad1bac635f9c9cd.woff2",
       "dependencies": []
     }
   }

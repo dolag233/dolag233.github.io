@@ -1,4 +1,58 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 16 Aug 2025 13:19:18 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 16 Aug 2025 13:19:17 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 01 Feb 2026 06:31:58 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 01 Feb 2026 06:31:57 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[常用语法记录]]></title><description><![CDATA[ 
+ <br><br><br>以json11为例<br>add_library(json11 STATIC
+    json11/json11.cpp
+)
+target_include_directories(json11 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/json11)
+<br>add_library表示会将其编译为一个库文件，而STATIC则表示编译为静态链接库，如果换成SHARED则表示编译为动态链接库。<br>include_directories代表了全局引入的附加包含目录，用于添加搜索头文件的目录。相对的，target_include_directories代表了让某个target单独添加附加包含目录。]]></description><link>编程\cmake\常用语法记录.html</link><guid isPermaLink="false">编程/CMake/常用语法记录.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 24 Aug 2025 06:21:38 GMT</pubDate></item><item><title><![CDATA[CMake]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="编程/CMake/常用语法记录.md" href="编程\cmake\常用语法记录.html" target="_self" rel="noopener nofollow">常用语法记录</a>
+]]></description><link>编程\cmake\cmake.html</link><guid isPermaLink="false">编程/CMake/CMake.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 24 Aug 2025 05:31:29 GMT</pubDate></item><item><title><![CDATA[效果]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html" target="_self" rel="noopener nofollow">游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果</a>
+]]></description><link>渲染相关\效果\效果.html</link><guid isPermaLink="false">渲染相关/效果/效果.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Fri, 07 Nov 2025 14:19:45 GMT</pubDate></item><item><title><![CDATA[游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果]]></title><description><![CDATA[ 
+ <br><br>本文标题虽有些“标题党”，但会以严肃、严谨的态度行文。本文将探讨扭曲的“本质”，并进一步探究优化扭曲效果的思路与方法。<br><br>扭曲效果在游戏中应用非常广泛，从燃烧的火焰，到潺潺的水流；从气流的扰动，到光效的流动；从流动的烟雾，到镜头的折射，大部分的游戏特效都将“扭曲”作为杀器，营造惊人的视觉效果。“扭曲”效果在游戏中出现得如此频繁，这令我产生了对“扭曲”效果更深层次的思考：为什么是“扭曲”，如何做到更好的扭曲效果。本文将首先探讨扭曲的原理，然后提出笔者对于提升扭曲效果品质的方法。<br><br><img alt="Pasted image 20260130233427.png" src="lib\media\pasted-image-20260130233427.png">
+<img alt="Pasted image 20260130234257.png" src="lib\media\pasted-image-20260130234257.png">
+游戏中的扭曲效果，本质上是将原图像素“移动”到另一位置的效果。
+如上图所示，左图为原始图像而右图为扭曲后图像，白色箭头表示了红色像素移动到了其他位置，因此形成了类似玻璃折射的扭曲的形态。<br>从上述定义来看，对于一个扭曲效果来说，唯一重要的就是每个像素的移动方向和距离，一旦得到了像素的移动方向和距离，扭曲效果的形态就能够确定下来。<br>需要注意的是，在游戏渲染中，像素实际上无法进行移动，取而代之的是通过移动当前像素位置(即采样UV)来采样原图，实现类似于像素移动的功能。这两者非常类似一个正向的过程和一个反向的过程，但是两者有着本质的区别，扭曲效果扭曲的是图像的采样位置(即UV)，这一点在后面关于扭曲穿插的讨论中会详细阐述。<br><br>我们先来回顾一下游戏材质中常用的像素“移动”方法，这些方法基本都在做同一件事：用一张或几张贴图生成位移向量，然后去采样图像。<br><br>最基础的做法是用一张灰度贴图作为移动距离，以某个特定方向作为移动方向（比如简单的向左或向右位移）。这样所有像素都朝同一方向移动，只是移动的距离不同。
+这种方法简单，但形态会偏“拉伸”，更像条状涂抹，容易显得不自然。
+<img alt="Pasted image 20260131005100.png" src="lib\media\pasted-image-20260131005100.png"><br><br>稍微复杂一点的做法是使用方向贴图（常使用法线贴图，因为法线也包含方向信息）直接作为位移方向。每个像素都有自己的方向与距离，于是扭曲形态更丰富。
+<img alt="Pasted image 20260131195351.png" src="lib\media\pasted-image-20260131195351.png"><br><br>本文探讨的扭曲“穿插”，是指当扭曲强度过大时，容易出现如右图所示的“气泡”状瑕疵。这类瑕疵的视觉观感有点像模型的“穿插”，故而笔者称其为扭曲“穿插”。
+在某些情况下这种“瑕疵”可以接受甚至能够作为一种特色；但是对于另一些情况，例如说液体的流动扭曲来说，这种瑕疵可能难以接受。因此本部分将会先分析“穿插”的成因，然后探究避免“穿插”的方法。
+<img alt="PixPin_2026-01-31_17-35-17.gif" src="lib\media\pixpin_2026-01-31_17-35-17.gif"><br><br>在讲解扭曲穿插之前，我们首先需要明白游戏渲染中是如何实现扭曲的。在游戏渲染中，实际上像素无法像前文说的这样“移动位置”，像素的位置是确定的，但材质可以通过扭曲采样图像的坐标（即UV）实现类似“像素移动”的效果。
+整个过程如下图所示，其中下方的图像表示原始图像，上方的网格表示UV，中间的箭头表示UV在原始图像中的采样位置。演示动画揭示了扭曲效果的扭曲UV、采样贴图、采样结果的过程。
+<img alt="UV扭曲.gif" src="lib\media\uv扭曲.gif">
+演示动画中，最开始的 UV 是正常的方形 UV，方形 UV 采样下方的原始图像自然就能得到正常的图像；随着 UV 扭曲程度逐渐增大，当扭曲幅度过大，扭曲后的 UV 会发生“穿插”，这意味着采样后图像的连续性被破坏。举例来说，下图红框区域内，原图紫色像素相邻的像素也应该是紫色，但由于 UV 发生了穿插，部分紫色像素周围的像素采样到了肉色区域，从而出现了中间的肉色区域。这就是扭曲“穿插”现象的成因。
+<img alt="Pasted image 20260131191059.png" src="lib\media\pasted-image-20260131191059.png">
+了解了成因之后，我们要如何避免出现这样的情况呢？最简单的方法是减小扭曲程度，让扭曲结果恰好处于出现“穿插”之前。那么，如果希望在不降低扭曲程度的情况下避免“穿插”，又该怎么做？
+接下来我将带大家拓宽思路，认清扭曲效果的本质。<br><br><img alt="UV迭代扭曲.gif" src="lib\media\uv迭代扭曲.gif">
+上图展示了迭代式扭曲的扭曲效果：尽管扭曲程度较大，但是扭曲后的UV仍然不会产生“穿插”，并不会出现扭曲“穿插”现象。
+那么，什么是“迭代式扭曲”呢？简单来说就是一次扭曲较小幅度，重复扭曲多次。如图所示，红点代表 UV，黄色线条代表扭曲贴图的扭曲方向。红点会沿着当前位置采样到的方向移动一小段距离，移动到新位置后再采样新位置的方向并继续移动，如此循环迭代，最终在移动一定距离后停止。
+<img alt="PixPin_2026-01-31_20-50-55.gif" src="lib\media\pixpin_2026-01-31_20-50-55.gif">
+这种方法能够避免穿插的原因在于：当 UV 之间距离过近、快要达到穿插状态时，它们的采样位置越来越近，因此采样到的移动方向也会越来越接近，最终朝着相同方向移动，从而避免穿插。<br>在材质里进行这样的迭代会增加纹理采样次数，增加材质开销，因此更轻量的做法是将这个迭代结果烘焙成一张新的贴图，然后当做一张普通的扭曲方向贴图进行采样。注意，预烘焙的方法只能保证在烘焙的距离范围内不产生穿插，但如果在材质中设置了超出预烘焙的扭曲程度的参数，那么仍然会出现穿插问题。<br>注意，迭代式扭曲不仅能避免出现扭曲“穿插”，还能够改变扭曲效果的形态。例如可以做出如下的类似旗帜飘动的效果和下一节所展示的流体效果，建议读者自行尝试不同发现贴图使用迭代式纹理后的效果。
+<img alt="PixPin_2026-02-01_02-46-47.gif" src="lib\media\pixpin_2026-02-01_02-46-47.gif"><br><br><img alt="流体扭曲.gif" src="lib\media\流体扭曲.gif">
+左图是使用方向扭曲制作的普通扭曲，单看已经可接受；而右图使用了本文的流体扭曲方法，其形态更符合流体的性质，效果更好。
+在讲解流体扭曲效果之前，我们先来认识一下常规的扭曲效果。<br><br>我们不妨先思考一个问题：用于扭曲的法线贴图一般都是如何生成的呢？
+一般来说，法线贴图是基于一张高度图生成。具体来说就是通过计算高度图每个像素的梯度方向的方向作为法线贴图的方向。
+梯度方向是指在某个位置，高度增长最快的方向，因此梯度的反方向也就是高度下降最快的方向。如下图所示，如果把高度图当成山地地形，想要最快下山，脚下的方向就是“最速下降方向”，也就是梯度方向的反方向。
+<img alt="Pasted image 20260131221156.png" src="lib\media\pasted-image-20260131221156.png">
+<img alt="Pasted image 20260131221413.png" src="lib\media\pasted-image-20260131221413.png">
+在Substance Designer中，Height To Normal和Normal Sobel节点都是通过计算梯度反方向生成的法线贴图。可以说所有基于高度图生成的法线贴图都是使用上述原理。<br>通过高度图生成的法线贴图，都会出现下图所示的这种“发散”或者“汇聚”的区域。
+<img alt="Pasted image 20260131222253.png" src="lib\media\pasted-image-20260131222253.png">
+这也就决定了通过高度图生成的法线，其扭曲效果更容易呈现“散开”和“汇聚”的形态。如下图所示，红色区域代表“发散”部分，蓝色区域代表“汇聚”部分。
+<img alt="Pasted image 20260131222915.png" src="lib\media\pasted-image-20260131222915.png">
+这样的扭曲形态对于例如空气折射、水面折射等扭曲效果时非常合适，但是对于例如火焰、水墨、颜料等的流体流动效果来说并不合适。
+<img alt="PixPin_2025-11-07_22-59-18.gif" src="lib\media\pixpin_2025-11-07_22-59-18.gif">
+这一点可以从物理学的角度来解释：这种“普通扭曲”更接近散度不为0、旋度为0 的有源场，表现为明显的汇聚/发散而缺少旋转结构。因此它更像法线/折射率变化带来的光线偏移，适合做折射类效果。
+但它并不适合用于流体所产生的扭曲。对于不可压缩流体而言，速度场满足散度为0、旋度不为0的特征，也就是说整体不发生持续的“收缩/膨胀”，但存在大量的旋转与环流。要得到“流体感”的扭曲，位移场就必须具备明显的旋度结构，而不是单纯的汇聚/发散。下面我们将探讨如何得到这样的扭曲方向贴图。<br><br>构造旋度不为0的矢量场有很多方法，本文介绍一个最简单的构造方式：先从一张高度图得到梯度反方向，然后与法线方向作叉积，得到平面内与梯度反方向垂直的方向。而这个方向所构成的矢量场就是一个散度接近 0、旋度不为 0的旋转场，天然带有“环流”的形态。下图中黄色线条代表梯度方向，蓝色线条代表旋转矢量方向。
+如果把高度图当成山地地形，直观上可以理解为“沿着等高线走”，不会持续上升或下降，却会在地形上形成绕行的流动。
+<img alt="Pasted image 20260131230648.png" src="lib\media\pasted-image-20260131230648.png">
+<img alt="Pasted image 20260131230732.png" src="lib\media\pasted-image-20260131230732.png">
+下面两张图演示了将“流体扭曲”和前文提到的“迭代式扭曲”结合起来，就能够实现非常出色的流体效果。
+<img alt="PixPin_2026-01-31_22-52-20.gif" src="lib\media\pixpin_2026-01-31_22-52-20.gif">
+<img alt="PixPin_2026-02-01_00-25-14.gif" src="lib\media\pixpin_2026-02-01_00-25-14.gif">
+对于不可压缩流体，可以使用上述散度为 0、旋度不为 0 的纯有旋场；而对于可压缩介质（例如火焰、烟雾等），可以在有旋场基础上加入适量散度，使其既有环流也有局部的汇聚/发散，更贴近真实形态。
+下图左边是纯旋转向量，右边在此基础上加入了散度变化来模拟气体膨胀。但可惜从视觉上看，提升并不明显。
+<img alt="PixPin_2026-02-01_01-41-35.gif" src="lib\media\pixpin_2026-02-01_01-41-35.gif">]]></description><link>渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html</link><guid isPermaLink="false">渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sun, 01 Feb 2026 06:28:53 GMT</pubDate><enclosure url="lib\media\pasted-image-20260130233427.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\pasted-image-20260130233427.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Dolag Houdini Toolset 功能一览]]></title><description><![CDATA[ 
  <br><br>本文档详细介绍了 Dolag Houdini Toolset 提供的所有 HDA 节点和通用功能，帮助您快速上手并充分利用其强大功能。<br>
 <br><a data-href="#HDA 节点" href="about:blank#HDA_节点" class="internal-link" target="_self" rel="noopener nofollow">HDA 节点</a>
 
