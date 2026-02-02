@@ -17,9 +17,8 @@
     <img alt="Pasted image 20260130233427" src="lib/media/pasted-image-20260130233427.png" referrerpolicy="no-referrer">
 </center></div><div class="el-center"><center>
     <img alt="Pasted image 20260130234257" src="lib/media/pasted-image-20260130234257.png" referrerpolicy="no-referrer">
-</center>
-游戏中的扭曲效果，本质上是将原图像素“移动”到另一位置的效果。
-如上图所示，左图为原始图像而右图为扭曲后图像，白色箭头表示了红色像素移动到了其他位置，因此形成了类似玻璃折射的扭曲的形态。</div><div class="el-p"><p dir="auto">从上述定义来看，对于一个扭曲效果来说，唯一重要的就是每个像素的<strong>移动方向和距离</strong>，一旦得到了像素的移动方向和距离，扭曲效果的形态就能够确定下来。</p></div><div class="el-p"><p dir="auto">需要注意的是，在游戏渲染中，像素实际上无法进行移动，取而代之的是通过移动当前像素位置(即采样UV)来采样原图，实现类似于像素移动的功能。这两者非常类似一个正向的过程和一个反向的过程，但是两者有着本质的区别，扭曲效果扭曲的是图像的采样位置(即UV)，这一点在后面关于<strong>扭曲穿插</strong>的讨论中会详细阐述。</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="扭曲方法" dir="auto" class="heading" id="扭曲方法"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>扭曲方法</h2><div class="heading-children"><div class="el-p"><p dir="auto">我们先来回顾一下游戏材质中常用的像素“移动”方法，这些方法基本都在做同一件事：用一张或几张贴图生成位移向量，然后去采样图像。</p></div><div class="el-h3 heading-wrapper"><h3 data-heading="定向扭曲" dir="auto" class="heading" id="定向扭曲"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>定向扭曲</h3><div class="heading-children"><div class="el-p"><p dir="auto">最基础的做法是<strong>用一张灰度贴图作为移动距离</strong>，以某个特定方向作为<strong>移动方向</strong>（比如简单的向左或向右位移）。这样所有像素都朝同一方向移动，只是移动的距离不同。
+</center></div><div class="el-p"><p dir="auto">游戏中的扭曲效果，本质上是将原图像素“移动”到另一位置的效果。
+如上图所示，左图为原始图像而右图为扭曲后图像，白色箭头表示了红色像素移动到了其他位置，因此形成了类似玻璃折射的扭曲的形态。</p></div><div class="el-p"><p dir="auto">从上述定义来看，对于一个扭曲效果来说，唯一重要的就是每个像素的<strong>移动方向和距离</strong>，一旦得到了像素的移动方向和距离，扭曲效果的形态就能够确定下来。</p></div><div class="el-p"><p dir="auto">需要注意的是，在游戏渲染中，像素实际上无法进行移动，取而代之的是通过移动当前像素位置(即采样UV)来采样原图，实现类似于像素移动的功能。这两者非常类似一个正向的过程和一个反向的过程，但是两者有着本质的区别，扭曲效果扭曲的是图像的采样位置(即UV)，这一点在后面关于<strong>扭曲穿插</strong>的讨论中会详细阐述。</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="扭曲方法" dir="auto" class="heading" id="扭曲方法"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>扭曲方法</h2><div class="heading-children"><div class="el-p"><p dir="auto">我们先来回顾一下游戏材质中常用的像素“移动”方法，这些方法基本都在做同一件事：用一张或几张贴图生成位移向量，然后去采样图像。</p></div><div class="el-h3 heading-wrapper"><h3 data-heading="定向扭曲" dir="auto" class="heading" id="定向扭曲"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>定向扭曲</h3><div class="heading-children"><div class="el-p"><p dir="auto">最基础的做法是<strong>用一张灰度贴图作为移动距离</strong>，以某个特定方向作为<strong>移动方向</strong>（比如简单的向左或向右位移）。这样所有像素都朝同一方向移动，只是移动的距离不同。
 这种方法简单，但形态会偏“拉伸”，更像条状涂抹，容易显得不自然。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131005100" src="lib/media/pasted-image-20260131005100.png" referrerpolicy="no-referrer">
 </center>
@@ -30,8 +29,7 @@
 </center>
 ## 扭曲“穿插”：成因与规避
 本文探讨的扭曲“穿插”，是指当扭曲强度过大时，容易出现如右图所示的“气泡”状瑕疵。这类瑕疵的视觉观感有点像模型的“穿插”，故而笔者称其为扭曲“穿插”。
-在某些情况下这种“瑕疵”可以接受甚至能够作为一种特色；但是对于另一些情况，例如说液体的流动扭曲来说，这种瑕疵可能难以接受。因此本部分将会先分析“穿插”的成因，然后探究避免“穿插”的方法。
-<center>
+在某些情况下这种“瑕疵”可以接受甚至能够作为一种特色；但是对于另一些情况，例如说液体的流动扭曲来说，这种瑕疵可能难以接受。因此本部分将会先分析“穿插”的成因，然后探究避免“穿插”的方法。</div><div class="el-center"><center>
     <img alt="PixPin_2026-01-31_17-35-17" src="lib/media/pixpin_2026-01-31_17-35-17.gif" referrerpolicy="no-referrer">
 </center>
 ### 扭曲原理
@@ -39,9 +37,7 @@
 整个过程如下图所示，其中**下方的图像**表示**原始图像**，**上方的网格**表示**UV**，**中间的箭头**表示UV在原始图像中的**采样位置**。演示动画揭示了扭曲效果的扭曲UV、采样贴图、采样结果的过程。
 <center>
     <img alt="UV扭曲" src="lib/media/uv扭曲.gif" referrerpolicy="no-referrer">
-</center>
-演示动画中，最开始的 UV 是正常的方形 UV，方形 UV 采样下方的原始图像自然就能得到正常的图像；随着 UV 扭曲程度逐渐增大，当扭曲幅度过大，扭曲后的 UV 会发生“穿插”，这意味着**采样后**图像的**连续性**被破坏。举例来说，下图红框区域内，原图紫色像素相邻的像素也应该是紫色，但由于 UV 发生了穿插，部分紫色像素周围的像素采样到了肉色区域，从而出现了中间的肉色区域。这就是扭曲“穿插”现象的成因。
-<center>
+</center></div><div class="el-p"><p dir="auto">演示动画中，最开始的 UV 是正常的方形 UV，方形 UV 采样下方的原始图像自然就能得到正常的图像；随着 UV 扭曲程度逐渐增大，当扭曲幅度过大，扭曲后的 UV 会发生“穿插”，这意味着<strong>采样后</strong>图像的<strong>连续性</strong>被破坏。举例来说，下图红框区域内，原图紫色像素相邻的像素也应该是紫色，但由于 UV 发生了穿插，部分紫色像素周围的像素采样到了肉色区域，从而出现了中间的肉色区域。这就是扭曲“穿插”现象的成因。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131191059" src="lib/media/pasted-image-20260131191059.png" referrerpolicy="no-referrer">
 </center>
 了解了成因之后，我们要如何避免出现这样的情况呢？最简单的方法是减小扭曲程度，让扭曲结果恰好处于出现“穿插”之前。那么，如果希望在不降低扭曲程度的情况下避免“穿插”，又该怎么做？
@@ -49,64 +45,45 @@
 ### 迭代式扭曲
 <center>
     <img alt="UV迭代扭曲" src="lib/media/uv迭代扭曲.gif" referrerpolicy="no-referrer">
-</center>
-上图展示了迭代式扭曲的扭曲效果：尽管扭曲程度较大，但是扭曲后的UV仍然不会产生“穿插”，并不会出现扭曲“穿插”现象。
-那么，什么是“迭代式扭曲”呢？简单来说就是**一次扭曲较小幅度，重复扭曲多次**。如图所示，红点代表 UV，黄色线条代表扭曲贴图的**扭曲方向**。红点会沿着**当前位置**采样到的方向移动一小段距离，移动到新位置后再采样新位置的方向并继续移动，如此循环迭代，最终在移动一定距离后停止。
-<center>
+</center></div><div class="el-p"><p dir="auto">上图展示了迭代式扭曲的扭曲效果：尽管扭曲程度较大，但是扭曲后的UV仍然不会产生“穿插”，并不会出现扭曲“穿插”现象。
+那么，什么是“迭代式扭曲”呢？简单来说就是<strong>一次扭曲较小幅度，重复扭曲多次</strong>。如图所示，红点代表 UV，黄色线条代表扭曲贴图的<strong>扭曲方向</strong>。红点会沿着<strong>当前位置</strong>采样到的方向移动一小段距离，移动到新位置后再采样新位置的方向并继续移动，如此循环迭代，最终在移动一定距离后停止。</p></div><div class="el-center"><center>
     <img alt="PixPin_2026-01-31_20-50-55" src="lib/media/pixpin_2026-01-31_20-50-55.gif" referrerpolicy="no-referrer" style="max-width: 100%;">
-</center>
-这种方法能够避免穿插的原因在于：当 UV 之间距离过近、快要达到穿插状态时，它们的采样位置越来越近，因此采样到的移动方向也会越来越接近，最终朝着相同方向移动，从而避免穿插。</div><div class="el-p"><p dir="auto">在材质里进行这样的迭代会增加纹理采样次数，增加材质开销，因此更轻量的做法是将这个迭代结果烘焙成一张新的贴图，然后当做一张普通的扭曲方向贴图进行采样。注意，预烘焙的方法只能保证在烘焙的距离范围内不产生穿插，但如果在材质中设置了超出预烘焙的扭曲程度的参数，那么仍然会出现穿插问题。</p></div><div class="el-p"><p dir="auto">注意，迭代式扭曲不仅能避免出现扭曲“穿插”，还能够改变扭曲效果的形态。例如可以做出如下的类似旗帜飘动的效果和下一节所展示的流体效果，建议读者自行尝试不同发现贴图使用迭代式纹理后的效果。</p></div><div class="el-center"><center>
+</center></div><div class="el-p"><p dir="auto">这种方法能够避免穿插的原因在于：当 UV 之间距离过近、快要达到穿插状态时，它们的采样位置越来越近，因此采样到的移动方向也会越来越接近，最终朝着相同方向移动，从而避免穿插。</p></div><div class="el-p"><p dir="auto">在材质里进行这样的迭代会增加纹理采样次数，增加材质开销，因此更轻量的做法是将这个迭代结果烘焙成一张新的贴图，然后当做一张普通的扭曲方向贴图进行采样。注意，预烘焙的方法只能保证在烘焙的距离范围内不产生穿插，但如果在材质中设置了超出预烘焙的扭曲程度的参数，那么仍然会出现穿插问题。</p></div><div class="el-p"><p dir="auto">注意，迭代式扭曲不仅能避免出现扭曲“穿插”，还能够改变扭曲效果的形态。例如可以做出如下的类似旗帜飘动的效果和下一节所展示的流体效果，建议读者自行尝试不同发现贴图使用迭代式纹理后的效果。</p></div><div class="el-center"><center>
     <img alt="PixPin_2026-02-01_02-46-47" src="lib/media/pixpin_2026-02-01_02-46-47.gif" referrerpolicy="no-referrer">
 </center>
 ## 流体扭曲
 <center>
     <img alt="流体扭曲" src="lib/media/流体扭曲.gif" referrerpolicy="no-referrer">
-</center>
-左图是使用方向扭曲制作的普通扭曲，单看已经可接受；而右图使用了本文的流体扭曲方法，其形态更符合流体的性质，效果更好。
-在讲解流体扭曲效果之前，我们先来认识一下常规的扭曲效果。
-### 常规扭曲的扭曲方向
-我们不妨先思考一个问题：用于扭曲的法线贴图一般都是如何生成的呢？
-一般来说，法线贴图是基于一张**高度图**生成。具体来说就是通过计算高度图每个像素的梯度方向的方向作为法线贴图的方向。
-梯度方向是指在某个位置，高度增长最快的方向，因此梯度的反方向也就是高度下降最快的方向。如下图所示，如果把高度图当成山地地形，想要最快下山，脚下的方向就是“最速下降方向”，也就是梯度方向的反方向。
-<center>
+</center></div><div class="el-p"><p dir="auto">左图是使用方向扭曲制作的普通扭曲，单看已经可接受；而右图使用了本文的流体扭曲方法，其形态更符合流体的性质，效果更好。
+在讲解流体扭曲效果之前，我们先来认识一下常规的扭曲效果。</p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="常规扭曲的扭曲方向" dir="auto" class="heading" id="常规扭曲的扭曲方向"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>常规扭曲的扭曲方向</h3><div class="heading-children"><div class="el-p"><p dir="auto">我们不妨先思考一个问题：用于扭曲的法线贴图一般都是如何生成的呢？
+一般来说，法线贴图是基于一张<strong>高度图</strong>生成。具体来说就是通过计算高度图每个像素的梯度方向的方向作为法线贴图的方向。
+梯度方向是指在某个位置，高度增长最快的方向，因此梯度的反方向也就是高度下降最快的方向。如下图所示，如果把高度图当成山地地形，想要最快下山，脚下的方向就是“最速下降方向”，也就是梯度方向的反方向。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131221156" src="lib/media/pasted-image-20260131221156.png" referrerpolicy="no-referrer" style="max-width: 100%;">
 </center></div><div class="el-center"><center>
     <img alt="Pasted image 20260131221413" src="lib/media/pasted-image-20260131221413.png" referrerpolicy="no-referrer" style="max-width: 100%;">
 </center>
 在Substance Designer中，Height To Normal和Normal Sobel节点都是通过计算梯度反方向生成的法线贴图。可以说所有基于高度图生成的法线贴图都是使用上述原理。</div><div class="el-p"><p dir="auto">通过高度图生成的法线贴图，都会出现下图所示的这种“发散”或者“汇聚”的区域。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131222253" src="lib/media/pasted-image-20260131222253.png" referrerpolicy="no-referrer">
-</center>
-这也就决定了通过高度图生成的法线，其扭曲效果更容易呈现“散开”和“汇聚”的形态。如下图所示，红色区域代表“发散”部分，蓝色区域代表“汇聚”部分。
-<center>
+</center></div><div class="el-p"><p dir="auto">这也就决定了通过高度图生成的法线，其扭曲效果更容易呈现“散开”和“汇聚”的形态。如下图所示，红色区域代表“发散”部分，蓝色区域代表“汇聚”部分。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131222915" src="lib/media/pasted-image-20260131222915.png" referrerpolicy="no-referrer" style="max-width: 100%;">
-</center>
-这样的扭曲形态对于例如**空气折射**、**水面折射**等扭曲效果时非常合适，但是对于例如火焰、水墨、颜料等的流体流动效果来说并不合适。
-<center>
+</center></div><div class="el-p"><p dir="auto">这样的扭曲形态对于例如<strong>空气折射</strong>、<strong>水面折射</strong>等扭曲效果时非常合适，但是对于例如火焰、水墨、颜料等的流体流动效果来说并不合适。</p></div><div class="el-center"><center>
     <img alt="PixPin_2025-11-07_22-59-18" src="lib/media/pixpin_2025-11-07_22-59-18.gif" referrerpolicy="no-referrer">
-</center>
-这一点可以从**物理学**的角度来解释：这种“普通扭曲”更接近**散度不为0、旋度为0 的有源场**，表现为明显的汇聚/发散而缺少旋转结构。因此它更像法线/折射率变化带来的光线偏移，适合做折射类效果。
-但它并不适合用于流体所产生的扭曲。对于不可压缩流体而言，速度场满足**散度为0、旋度不为0**的特征，也就是说整体不发生持续的“收缩/膨胀”，但存在大量的旋转与环流。要得到“流体感”的扭曲，位移场就必须具备明显的旋度结构，而不是单纯的汇聚/发散。下面我们将探讨如何得到这样的扭曲方向贴图。
-### 流体扭曲方向的构造
-构造旋度不为0的矢量场有很多方法，本文介绍一个最简单的构造方式：先从一张高度图得到梯度反方向，然后与法线方向作**叉积**，得到平面内与梯度反方向垂直的方向。而这个方向所构成的矢量场就是一个**散度接近 0、旋度不为 0**的旋转场，天然带有“环流”的形态。下图中黄色线条代表梯度方向，蓝色线条代表旋转矢量方向。
-如果把高度图当成山地地形，直观上可以理解为“沿着等高线走”，不会持续上升或下降，却会在地形上形成绕行的流动。
-<center>
+</center></div><div class="el-p"><p dir="auto">这一点可以从<strong>物理学</strong>的角度来解释：这种“普通扭曲”更接近<strong>散度不为0、旋度为0 的有源场</strong>，表现为明显的汇聚/发散而缺少旋转结构。因此它更像法线/折射率变化带来的光线偏移，适合做折射类效果。
+但它并不适合用于流体所产生的扭曲。对于不可压缩流体而言，速度场满足<strong>散度为0、旋度不为0</strong>的特征，也就是说整体不发生持续的“收缩/膨胀”，但存在大量的旋转与环流。要得到“流体感”的扭曲，位移场就必须具备明显的旋度结构，而不是单纯的汇聚/发散。下面我们将探讨如何得到这样的扭曲方向贴图。</p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="流体扭曲方向的构造" dir="auto" class="heading" id="流体扭曲方向的构造"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>流体扭曲方向的构造</h3><div class="heading-children"><div class="el-p"><p dir="auto">构造旋度不为0的矢量场有很多方法，本文介绍一个最简单的构造方式：先从一张高度图得到梯度反方向，然后与法线方向作<strong>叉积</strong>，得到平面内与梯度反方向垂直的方向。而这个方向所构成的矢量场就是一个<strong>散度接近 0、旋度不为 0</strong>的旋转场，天然带有“环流”的形态。下图中黄色线条代表梯度方向，蓝色线条代表旋转矢量方向。
+如果把高度图当成山地地形，直观上可以理解为“沿着等高线走”，不会持续上升或下降，却会在地形上形成绕行的流动。</p></div><div class="el-center"><center>
     <img alt="Pasted image 20260131230648" src="lib/media/pasted-image-20260131230648.png" referrerpolicy="no-referrer" style="max-width: 100%;">
 </center></div><div class="el-center"><center>
     <img alt="Pasted image 20260131230732" src="lib/media/pasted-image-20260131230732.png" referrerpolicy="no-referrer" style="max-width: 100%;">
-</center>
-下面两张图演示了将“流体扭曲”和前文提到的“迭代式扭曲”结合起来，就能够实现非常出色的流体效果。
-<center>
+</center></div><div class="el-p"><p dir="auto">下面两张图演示了将“流体扭曲”和前文提到的“迭代式扭曲”结合起来，就能够实现非常出色的流体效果。</p></div><div class="el-center"><center>
     <img alt="PixPin_2026-01-31_22-52-20" src="lib/media/pixpin_2026-01-31_22-52-20.gif" referrerpolicy="no-referrer">
 </center></div><div class="el-center"><center>
     <img alt="PixPin_2026-02-01_00-25-14" src="lib/media/pixpin_2026-02-01_00-25-14.gif" referrerpolicy="no-referrer">
-</center>
-对于不可压缩流体，可以使用上述散度为 0、旋度不为 0 的纯有旋场；而对于可压缩介质（例如火焰、烟雾等），可以在有旋场基础上加入适量散度，使其既有环流也有局部的汇聚/发散，更贴近真实形态。
-下图左边是纯旋转向量，右边在此基础上加入了散度变化来模拟气体膨胀。但可惜从视觉上看，提升并不明显。
-<center>
+</center></div><div class="el-p"><p dir="auto">对于不可压缩流体，可以使用上述散度为 0、旋度不为 0 的纯有旋场；而对于可压缩介质（例如火焰、烟雾等），可以在有旋场基础上加入适量散度，使其既有环流也有局部的汇聚/发散，更贴近真实形态。
+下图左边是纯旋转向量，右边在此基础上加入了散度变化来模拟气体膨胀。但可惜从视觉上看，提升并不明显。</p></div><div class="el-center"><center>
     <img alt="PixPin_2026-02-01_01-41-35" src="lib/media/pixpin_2026-02-01_01-41-35.gif" referrerpolicy="no-referrer">
 </center></div><div class="mod-footer mod-ui"></div></div></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
 		<div class="graph-view-container">
 			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
 			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
 		</div>
-		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All" title="Collapse All" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果"><div class="tree-item-contents heading-link" heading-name="游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果"><span class="tree-item-title">游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#扭曲的本质"><div class="tree-item-contents heading-link" heading-name="扭曲的本质"><span class="tree-item-title">扭曲的本质</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#扭曲方法"><div class="tree-item-contents heading-link" heading-name="扭曲方法"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">扭曲方法</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#定向扭曲"><div class="tree-item-contents heading-link" heading-name="定向扭曲"><span class="tree-item-title">定向扭曲</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All" title="Collapse All" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果"><div class="tree-item-contents heading-link" heading-name="游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果"><span class="tree-item-title">游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#扭曲的本质"><div class="tree-item-contents heading-link" heading-name="扭曲的本质"><span class="tree-item-title">扭曲的本质</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#扭曲方法"><div class="tree-item-contents heading-link" heading-name="扭曲方法"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">扭曲方法</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#定向扭曲"><div class="tree-item-contents heading-link" heading-name="定向扭曲"><span class="tree-item-title">定向扭曲</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#常规扭曲的扭曲方向"><div class="tree-item-contents heading-link" heading-name="常规扭曲的扭曲方向"><span class="tree-item-title">常规扭曲的扭曲方向</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html#流体扭曲方向的构造"><div class="tree-item-contents heading-link" heading-name="流体扭曲方向的构造"><span class="tree-item-title">流体扭曲方向的构造</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
