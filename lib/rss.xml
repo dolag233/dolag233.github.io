@@ -1,14 +1,68 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 02 Feb 2026 14:33:54 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 02 Feb 2026 14:33:53 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[如何在30秒内制作四方连续贴图]]></title><description><![CDATA[ 
- <br>我有一张如下的贴图，我要如何最快、效果最好地将其制作为四方连续贴图呢？
-<img alt="Pasted image 20260202222503.png" src="lib\media\pasted-image-20260202222503.png">
-首先，我们在图像编辑软件里面，将上图进行平铺
-<img alt="Pasted image 20260202222610.png" src="lib\media\pasted-image-20260202222610.png">
-可以看到现在边缘是不连续的。这时候，我们将其不连续的边缘涂黑，如果边缘越不连续，建议涂黑的部分越大
-<img alt="Pasted image 20260202222746.png" src="lib\media\pasted-image-20260202222746.png">
-然后，我们将它导入Gemini或者其他能够进行AI改图的软件，书写提示词让它帮我们生成补全后的图像
-<img alt="Pasted image 20260202222951.png" src="lib\media\pasted-image-20260202222951.png">
-这样我们就能够得到边缘连续的平铺图案。将其裁剪为原本的大小后，即可获得完美的四方连续贴图。
-<img alt="Pasted image 20260202223245.png" src="lib\media\pasted-image-20260202223245.png">]]></description><link>渲染相关\其他\如何在30秒内制作四方连续贴图.html</link><guid isPermaLink="false">渲染相关/其他/如何在30秒内制作四方连续贴图.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 02 Feb 2026 14:33:17 GMT</pubDate><enclosure url="lib\media\pasted-image-20260202222503.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\pasted-image-20260202222503.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notebook]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notebook</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 01 May 2026 08:02:17 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 01 May 2026 08:02:15 GMT</pubDate><copyright><![CDATA[Dolag]]></copyright><ttl>60</ttl><dc:creator>Dolag</dc:creator><item><title><![CDATA[体积云]]></title><description><![CDATA[ 
+ <br><br><br>真实的体积云渲染，对每条视线  需要计算：<br><br>其中 、、 对积分变量  都是常数，因此提到了积分号外。 积分内部只剩下沿射线变化的三项。
+<br>其中各项含义如下：<br><br><br><br><br> 是消光系数（extinction coefficient），表示光在介质中每前进单位距离、 每单位密度，被"移除"（吸收或散射出去）的概率。它由两部分组成：<br><br><br>对于普通白云：水滴几乎不吸收可见光，所以 ，因此 。
+这也是为什么云是白色的——光只是被散射，没有被吸收。<br><br>
+"Rain clouds are darker than other low-level clouds because the water droplets have condensed so much that most of the light gets absorbed before reaching our eye." — GPU Pro 7
+<br>雨云（积雨云 Cumulonimbus）看起来很暗，直觉上似乎是"吸收了光"。实际上这是多种效应共同导致的：<br>1. 极大的光学厚度（主因）<br>雨云的  和厚度都远超普通积云。即使 （纯散射），
+当光学厚度  达到 50~100 时，光在云中经过多次散射后大部分从云顶或侧面逃逸，
+只有极少量能到达云底并向下散射到观察者的眼睛。<br><br>从云底往上看，光走的路径最长，所以云底最暗——这不是因为光被"吸收了"，而是被散射到了其他方向。<br>2. 更大的水滴 → 更强的前向散射<br>雨云中的水滴直径可达 100+ μm（普通云 5~15 μm）。
+更大的水滴使 Mie 散射的前向散射更强（ 更接近 1），
+光子撞上水滴后几乎沿原方向继续前进，很少被"反弹"回来——
+观察者在云下方，接收到的反向散射光更少。<br>3. 微弱但非零的吸收<br>纯水对可见光的吸收系数极低，但并非严格为零：<br><br>对于普通云（光程 ~1 km），这点吸收完全可忽略。
+但对于极厚的雨云（光程可达 10+ km，且多次散射使等效光程更长），
+微弱的吸收也会累积成可观的衰减。红光吸收比蓝光强约 10 倍，
+这也是为什么极厚云层看起来偏蓝灰色而非纯白。<br>4. 气溶胶和杂质<br>真实的雨云中混有灰尘、烟尘等气溶胶粒子，这些粒子有显著的吸收。<br><br>用单次散射反照率（single scattering albedo）  来量化吸收与散射的比例：<br><br><br>：纯散射，光子永远不会消失，只是改变方向（理想白云）。
+：每次散射事件都有  的概率被吸收，多次散射后光子逐渐被"消耗"。<br><br>当  时，VRE 的结构不变，但需要区分  和 ：<br><br>其中透射率使用 （吸收+散射都会移除光子）：<br><br>但散射源项使用 （只有散射出去的光子才有机会到达你的眼睛，被吸收的光子直接消失）：<br><br>实际效果： 越大光衰减越快， 越大散射越亮，
+当 （）时，衰减的速度快于散射的补充，云整体变暗。<br>实用参考值：<br><br> 的量纲是 （当  是无量纲的 0~1 密度时）。 直觉： 意味着光穿过 1 单位密度、1 单位距离的介质后， 大约只剩  的强度。<br><br>Beer-Lambert 定律不是凭空给出的，它来自一个极其简单的物理假设：<br>假设：光在介质中前进一小段距离 ，被移除的比例正比于当前光强和当地密度。<br>用数学语言写出来：<br><br>各项含义：<br>
+<br>：光在位置  的强度
+<br>：位置  的介质密度
+<br>：消光系数（比例常数）
+<br>：穿过  后光强的变化量（负号表示减少）
+<br>这就是一个一阶线性 ODE。分离变量：<br><br>两边积分，从  到 ：<br><br><br><br>两边取 ：<br><br>左边就是透射率 （出射光强 / 入射光强）：<br><br><br><br>当一个光子撞上云中的水滴时，它会被散射到某个方向。 相位函数  描述了散射到各个方向的概率分布， 其中  是入射方向和出射方向的夹角。<br>要求归一化：对整个球面积分等于 1。<br><br>精确的散射分布由 Mie 理论 给出（解 Maxwell 方程）， 但 Mie 解析解非常复杂，包含大量高频振荡，不适合实时渲染。<br><br>Henyey &amp; Greenstein (1941) 提出了一个经验近似公式， 不是从 Maxwell 方程推导的，而是被设计出来满足以下要求：<br>
+<br>归一化：
+<br>单参数控制：用一个参数  控制前向/后向散射的偏好
+<br>平均余弦 = g：
+<br><br>任何球面上的函数都可以展开为 Legendre 多项式：<br><br>Henyey-Greenstein 的聪明之处在于，他们选择了最简单的系数：<br><br>代入并利用 Legendre 多项式的母函数公式：<br><br>这恰好是一个封闭形式！除以  就得到：<br><br><br><br>云中的水滴直径约 5~15 μm，远大于可见光波长 (~0.5 μm)， 属于 Mie 散射范畴，呈现强前向散射特征，因此 。<br><br>实践中常混合两个 HG 瓣来更好地拟合真实散射：<br><br>例如 （前向瓣），（后向瓣），。 后向瓣的作用：模拟光在云中多次散射后部分"回头"的效果。<br><br><br><br>单纯的 Beer 定律给出的能量分布是：<br><br>其中  是光学厚度。这意味着：<br>
+<br>云的向光边缘最亮（，）
+
+<br>越往里越暗，指数衰减
+
+<br>但现实中观察云，你会发现向光边缘反而偏暗—— 这是因为边缘处的云虽然离光源近（光到达得多）， 但那里的散射机会也少（光大部分直穿过去了，没机会"拐弯"到你眼睛里）。<br>这就是 Powdered Sugar Effect（粉糖效应）： 把糖粉撒在深色桌面上，边缘薄的地方看起来反而比中间厚的地方暗。<br><br>在云的某个采样点，光子被散射到你的视线方向的概率，取决于两个因素：<br>
+<br>光到达了这个点：Beer 定律，太阳光穿过  厚度的云到达该点 → 概率为 ， 越大概率越低
+<br>光在这个点发生了散射：光子需要和水滴碰撞才能改变方向 → 在云的极边缘（），密度太低，碰撞概率也低 → 这个概率近似为 
+<br>两个条件需要同时满足：<br><br><br><br>前面的系数 2 是归一化用的，让峰值在一个合理的范围。<br><br><br>关键差异：<br>
+<br>Beer：边缘最亮，单调衰减
+
+<br>Beer-Powder：边缘暗 → 稍内侧最亮 → 再衰减，呈"钟形"分布
+
+<br>这让云的边缘有一种"暗边"效果，中间区域反而更亮， 看起来更有体积感，更接近真实云的观感。<br><br>Energy<br>
+│<br>
+│ &nbsp; &nbsp; &nbsp;  ╱╲<br>
+│ &nbsp; &nbsp; &nbsp; ╱  ╲ &nbsp; &nbsp; &nbsp;  Beer-Powder（有暗边 + 峰值）<br>
+│ &nbsp; &nbsp;  ╱ &nbsp;  ╲<br>
+│ &nbsp; &nbsp; ╱ &nbsp; &nbsp;  ╲<br>
+│ &nbsp;  ╱ &nbsp; &nbsp; &nbsp;  ╲<br>
+│ &nbsp; ╱ &nbsp; &nbsp; &nbsp; &nbsp;  ╲<br>
+│  ╱ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ╲───────<br>
+│ ╱<br>
+│╱<br>
+└────────────────────────── d (光学厚度)<br>
+0<br>
+​<br>
+│╲<br>
+│ ╲<br>
+│  ╲<br>
+│ &nbsp; ╲ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Beer（纯指数衰减）<br>
+│ &nbsp;  ╲<br>
+│ &nbsp; &nbsp; ╲<br>
+│ &nbsp; &nbsp;  ╲<br>
+│ &nbsp; &nbsp; &nbsp; ╲────────────────<br>
+│<br>
+└────────────────────────── d<br>
+0<br>]]></description><link>图形学\渲染\体积云.html</link><guid isPermaLink="false">图形学/渲染/体积云.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 18 Apr 2026 12:27:40 GMT</pubDate></item><item><title><![CDATA[渲染]]></title><description><![CDATA[ 
+ <br>
+<br><a class="internal-link" data-href="图形学/渲染/体积云.md" href="图形学\渲染\体积云.html" target="_self" rel="noopener nofollow">体积云</a>
+]]></description><link>图形学\渲染\渲染.html</link><guid isPermaLink="false">图形学/渲染/渲染.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Sat, 18 Apr 2026 07:55:28 GMT</pubDate></item><item><title><![CDATA[游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果]]></title><description><![CDATA[ 
  <br><br>本文标题虽有些“标题党”，但会以严肃、严谨的态度行文。本文将探讨扭曲的“本质”，并进一步探究优化扭曲效果的思路与方法。<br><br>扭曲效果在游戏中应用非常广泛，从燃烧的火焰，到潺潺的水流；从气流的扰动，到光效的流动；从流动的烟雾，到镜头的折射，大部分的游戏特效都将“扭曲”作为杀器，营造惊人的视觉效果。
 “扭曲”效果在游戏中出现得如此频繁，这让我产生了对“扭曲”效果更深层次的思考：什么是“扭曲”，如何做到更好的扭曲。
 本文将首先探讨扭曲的原理，然后提出笔者对于提升扭曲效果品质的方法。<br><br>
@@ -79,7 +133,17 @@
 <br>对于不可压缩流体，可以使用上述散度为 0、旋度不为 0 的纯有旋场；而对于可压缩介质（例如火焰、烟雾等），可以在有旋场基础上加入适量散度，使其既有环流也有局部的汇聚/发散，更贴近真实形态。
 下图左边是纯旋转向量，右边在此基础上加入了散度变化来模拟气体膨胀。但可惜从视觉上看，提升并不明显。<br>
     <img alt="PixPin_2026-02-01_01-41-35" src="lib\media\pixpin_2026-02-01_01-41-35.gif" referrerpolicy="no-referrer">
-]]></description><link>渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html</link><guid isPermaLink="false">渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 02 Feb 2026 14:18:21 GMT</pubDate><enclosure url="lib\media\pasted-image-20260130233427.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\pasted-image-20260130233427.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
+]]></description><link>渲染相关\效果\游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.html</link><guid isPermaLink="false">渲染相关/效果/游戏扭曲效果大揭秘：一文讲透扭曲本质、缺陷、提升与流体效果.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 02 Feb 2026 16:09:50 GMT</pubDate><enclosure url="lib\media\pasted-image-20260130233427.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\pasted-image-20260130233427.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[如何在30秒内制作四方连续贴图]]></title><description><![CDATA[ 
+ <br>我有一张如下的贴图，我要如何最快、效果最好地将其制作为四方连续贴图呢？
+<img alt="Pasted image 20260202222503.png" src="lib\media\pasted-image-20260202222503.png">
+首先，我们在图像编辑软件里面，将上图进行平铺
+<img alt="Pasted image 20260202222610.png" src="lib\media\pasted-image-20260202222610.png">
+可以看到现在边缘是不连续的。这时候，我们将其不连续的边缘涂黑，如果边缘越不连续，建议涂黑的部分越大
+<img alt="Pasted image 20260202222746.png" src="lib\media\pasted-image-20260202222746.png">
+然后，我们将它导入Gemini或者其他能够进行AI改图的软件，书写提示词让它帮我们生成补全后的图像
+<img alt="Pasted image 20260202222951.png" src="lib\media\pasted-image-20260202222951.png">
+这样我们就能够得到边缘连续的平铺图案。将其裁剪为原本的大小后，即可获得完美的四方连续贴图。
+<img alt="Pasted image 20260202223245.png" src="lib\media\pasted-image-20260202223245.png">]]></description><link>渲染相关\其他\如何在30秒内制作四方连续贴图.html</link><guid isPermaLink="false">渲染相关/其他/如何在30秒内制作四方连续贴图.md</guid><dc:creator><![CDATA[Dolag]]></dc:creator><pubDate>Mon, 02 Feb 2026 14:33:17 GMT</pubDate><enclosure url="lib\media\pasted-image-20260202222503.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib\media\pasted-image-20260202222503.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[访问类的私有成员和方法]]></title><description><![CDATA[ 
  <br><img alt="89d6a45ad2f880f68bd64e61ccdaf057.png" src="lib\media\89d6a45ad2f880f68bd64e61ccdaf057.png"><br>#include &lt;iostream&gt;
 
 class Foo
