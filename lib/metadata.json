@@ -1,11 +1,13 @@
 {
   "vaultName": "Notebook",
-  "lastExport": 1777622535424,
+  "lastExport": 1788688827116,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-dark show-ribbon",
+  "validBodyClasses": "publish css-settings-manager theme-dark styled-scrollbars show-ribbon",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "编程/软件工程/让AI成为“万能许愿机”.md",
+    "编程/软件工程/软件工程.md",
     "编程/C++/访问类的私有成员和方法.md",
     "编程/C++/语法杂记.md",
     "编程/C++/C++.md",
@@ -106,27 +108,18 @@
     "Houdini-Toolset/简介.md",
     "Houdini-Toolset/Houdini-Toolset.md",
     "Index.md",
-    "lib/media/pasted-image-20260130233427.png",
-    "lib/media/pasted-image-20260130234257.png",
-    "lib/media/pasted-image-20260131005100.png",
-    "lib/media/pasted-image-20260131195351.png",
-    "lib/media/pixpin_2026-01-31_17-35-17.gif",
-    "lib/media/uv扭曲.gif",
-    "lib/media/pasted-image-20260131191059.png",
-    "lib/media/uv迭代扭曲.gif",
-    "lib/media/pixpin_2026-01-31_20-50-55.gif",
-    "lib/media/pixpin_2026-02-01_02-46-47.gif",
-    "lib/media/流体扭曲.gif",
-    "lib/media/pasted-image-20260131221156.png",
-    "lib/media/pasted-image-20260131221413.png",
-    "lib/media/pasted-image-20260131222253.png",
-    "lib/media/pasted-image-20260131222915.png",
-    "lib/media/pixpin_2025-11-07_22-59-18.gif",
-    "lib/media/pasted-image-20260131230648.png",
-    "lib/media/pasted-image-20260131230732.png",
-    "lib/media/pixpin_2026-01-31_22-52-20.gif",
-    "lib/media/pixpin_2026-02-01_00-25-14.gif",
-    "lib/media/pixpin_2026-02-01_01-41-35.gif",
+    "lib/media/pasted-image-20260906152920.png",
+    "lib/media/许愿机.png",
+    "lib/media/grillme.png",
+    "lib/media/serpent架构.png",
+    "lib/media/pixpin_2026-09-06_14-26-54.png",
+    "lib/media/pasted-image-20260906165240.png",
+    "lib/media/pasted-image-20260906154559.png",
+    "lib/media/pasted-image-20260906154637.png",
+    "lib/media/pasted-image-20260906154828.png",
+    "lib/media/pasted-image-20260906160916.png",
+    "lib/media/pasted-image-20260906161002.png",
+    "lib/media/pasted-image-20260906161644.png",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/70cc7ff27245e82ad414.ttf",
     "lib/fonts/454577c22304619db035.ttf",
@@ -136,28 +129,6 @@
     "lib/fonts/c504db5c06caaf7cdfba.woff2",
     "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
-    "lib/fonts/mathjax_zero.woff",
-    "lib/fonts/mathjax_main-regular.woff",
-    "lib/fonts/mathjax_main-bold.woff",
-    "lib/fonts/mathjax_math-italic.woff",
-    "lib/fonts/mathjax_main-italic.woff",
-    "lib/fonts/mathjax_math-bolditalic.woff",
-    "lib/fonts/mathjax_size1-regular.woff",
-    "lib/fonts/mathjax_size2-regular.woff",
-    "lib/fonts/mathjax_size3-regular.woff",
-    "lib/fonts/mathjax_size4-regular.woff",
-    "lib/fonts/mathjax_ams-regular.woff",
-    "lib/fonts/mathjax_calligraphic-regular.woff",
-    "lib/fonts/mathjax_calligraphic-bold.woff",
-    "lib/fonts/mathjax_fraktur-regular.woff",
-    "lib/fonts/mathjax_fraktur-bold.woff",
-    "lib/fonts/mathjax_sansserif-regular.woff",
-    "lib/fonts/mathjax_sansserif-bold.woff",
-    "lib/fonts/mathjax_sansserif-italic.woff",
-    "lib/fonts/mathjax_script-regular.woff",
-    "lib/fonts/mathjax_typewriter-regular.woff",
-    "lib/fonts/mathjax_vector-regular.woff",
-    "lib/fonts/mathjax_vector-bold.woff",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -273,6 +244,27 @@
     "lib/media/pasted-image-20260202222951.png",
     "lib/media/pasted-image-20260202223245.png",
     "lib/media/一张图理解字体渲染中的大小及其转换-哔哩哔哩.jpg",
+    "lib/media/pasted-image-20260130233427.png",
+    "lib/media/pasted-image-20260130234257.png",
+    "lib/media/pasted-image-20260131005100.png",
+    "lib/media/pasted-image-20260131195351.png",
+    "lib/media/pixpin_2026-01-31_17-35-17.gif",
+    "lib/media/uv扭曲.gif",
+    "lib/media/pasted-image-20260131191059.png",
+    "lib/media/uv迭代扭曲.gif",
+    "lib/media/pixpin_2026-01-31_20-50-55.gif",
+    "lib/media/pixpin_2026-02-01_02-46-47.gif",
+    "lib/media/流体扭曲.gif",
+    "lib/media/pasted-image-20260131221156.png",
+    "lib/media/pasted-image-20260131221413.png",
+    "lib/media/pasted-image-20260131222253.png",
+    "lib/media/pasted-image-20260131222915.png",
+    "lib/media/pixpin_2025-11-07_22-59-18.gif",
+    "lib/media/pasted-image-20260131230648.png",
+    "lib/media/pasted-image-20260131230732.png",
+    "lib/media/pixpin_2026-01-31_22-52-20.gif",
+    "lib/media/pixpin_2026-02-01_00-25-14.gif",
+    "lib/media/pixpin_2026-02-01_01-41-35.gif",
     "lib/media/pasted-image-20240330213343.png",
     "lib/media/popo-screenshot-20230515-101940.png",
     "lib/media/popo-screenshot-20230423-164826.png",
@@ -496,28 +488,6 @@
     "lib/fonts/c504db5c06caaf7cdfba.woff2",
     "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
-    "lib/fonts/mathjax_zero.woff",
-    "lib/fonts/mathjax_main-regular.woff",
-    "lib/fonts/mathjax_main-bold.woff",
-    "lib/fonts/mathjax_math-italic.woff",
-    "lib/fonts/mathjax_main-italic.woff",
-    "lib/fonts/mathjax_math-bolditalic.woff",
-    "lib/fonts/mathjax_size1-regular.woff",
-    "lib/fonts/mathjax_size2-regular.woff",
-    "lib/fonts/mathjax_size3-regular.woff",
-    "lib/fonts/mathjax_size4-regular.woff",
-    "lib/fonts/mathjax_ams-regular.woff",
-    "lib/fonts/mathjax_calligraphic-regular.woff",
-    "lib/fonts/mathjax_calligraphic-bold.woff",
-    "lib/fonts/mathjax_fraktur-regular.woff",
-    "lib/fonts/mathjax_fraktur-bold.woff",
-    "lib/fonts/mathjax_sansserif-regular.woff",
-    "lib/fonts/mathjax_sansserif-bold.woff",
-    "lib/fonts/mathjax_sansserif-italic.woff",
-    "lib/fonts/mathjax_script-regular.woff",
-    "lib/fonts/mathjax_typewriter-regular.woff",
-    "lib/fonts/mathjax_vector-regular.woff",
-    "lib/fonts/mathjax_vector-bold.woff",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -3436,55 +3406,55 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/fonts/c504db5c06caaf7cdfba.woff2": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 352240,
       "exportedPath": "lib/fonts/c504db5c06caaf7cdfba.woff2",
       "dependencies": []
     },
     "lib/fonts/01dcbad1bac635f9c9cd.woff2": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 387976,
       "exportedPath": "lib/fonts/01dcbad1bac635f9c9cd.woff2",
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
@@ -3622,97 +3592,97 @@
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1777622535424,
-      "sourceSize": 65796,
+      "modifiedTime": 1788688827116,
+      "sourceSize": 67060,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1777622535424,
-      "sourceSize": 4320,
+      "modifiedTime": 1788688827116,
+      "sourceSize": 4395,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1777622535424,
-      "sourceSize": 179275,
+      "modifiedTime": 1788688827116,
+      "sourceSize": 224084,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 53649,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 62210,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 262,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/snippets.css": {
-      "modifiedTime": 1777622535424,
+      "modifiedTime": 1788688827116,
       "sourceSize": 521,
       "exportedPath": "lib/styles/snippets.css",
       "dependencies": []
@@ -3769,6 +3739,103 @@
       "modifiedTime": 1777622535424,
       "sourceSize": 46,
       "exportedPath": "图形学/渲染/渲染.html",
+      "dependencies": []
+    },
+    "编程/软件工程/让AI成为“万能许愿机”.md": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 16205,
+      "exportedPath": "编程/软件工程/让ai成为“万能许愿机”.html",
+      "dependencies": [
+        "lib/media/pasted-image-20260906152920.png",
+        "lib/media/许愿机.png",
+        "lib/media/grillme.png",
+        "lib/media/serpent架构.png",
+        "lib/media/pixpin_2026-09-06_14-26-54.png",
+        "lib/media/pasted-image-20260906165240.png",
+        "lib/media/pasted-image-20260906154559.png",
+        "lib/media/pasted-image-20260906154637.png",
+        "lib/media/pasted-image-20260906154828.png",
+        "lib/media/pasted-image-20260906160916.png",
+        "lib/media/pasted-image-20260906161002.png",
+        "lib/media/pasted-image-20260906161644.png"
+      ]
+    },
+    "编程/软件工程/软件工程.md": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 46,
+      "exportedPath": "编程/软件工程/软件工程.html",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906152920.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 2521590,
+      "exportedPath": "lib/media/pasted-image-20260906152920.png",
+      "dependencies": []
+    },
+    "lib/media/许愿机.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 1292651,
+      "exportedPath": "lib/media/许愿机.png",
+      "dependencies": []
+    },
+    "lib/media/grillme.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 136141,
+      "exportedPath": "lib/media/grillme.png",
+      "dependencies": []
+    },
+    "lib/media/serpent架构.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 55124,
+      "exportedPath": "lib/media/serpent架构.png",
+      "dependencies": []
+    },
+    "lib/media/pixpin_2026-09-06_14-26-54.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 456611,
+      "exportedPath": "lib/media/pixpin_2026-09-06_14-26-54.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906165240.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 56025,
+      "exportedPath": "lib/media/pasted-image-20260906165240.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906154559.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 26752,
+      "exportedPath": "lib/media/pasted-image-20260906154559.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906154637.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 11869,
+      "exportedPath": "lib/media/pasted-image-20260906154637.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906154828.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 35170,
+      "exportedPath": "lib/media/pasted-image-20260906154828.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906160916.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 15997,
+      "exportedPath": "lib/media/pasted-image-20260906160916.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906161002.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 43977,
+      "exportedPath": "lib/media/pasted-image-20260906161002.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20260906161644.png": {
+      "modifiedTime": 1788688827116,
+      "sourceSize": 300714,
+      "exportedPath": "lib/media/pasted-image-20260906161644.png",
       "dependencies": []
     }
   }
